@@ -9,12 +9,39 @@ import { ThemeProvider } from "../components/theme-provider"
 import { ThemeSwitcher } from "../components/ThemeSwitcher"
 import { TimeSlider } from "../components/TimeSlider"
 import { DynamicFavicon } from "../components/DynamicFavicon"
+import Schema from './Schema'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: 'Tordar Tømmervik - Full-stack Developer',
-    description: 'Portfolio of Tordar Tømmervik, a full-stack developer'
+    metadataBase: new URL('https://tordar.no'),
+    title: 'Tordar | Web Developer & Software Engineer',
+    description: 'Personal portfolio of Tordar Tømmervik, a web developer specializing in React, Next.js, and modern JavaScript applications.',
+    keywords: 'Tordar, Tordar Tømmervik, web developer, software engineer, React developer, Next.js, JavaScript',
+    authors: [{ name: 'Tordar Tømmervik' }],
+    creator: 'Tordar Tømmervik',
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://tordar.no',
+        title: 'Tordar Tømmervik | Web Developer',
+        description: 'Personal portfolio and projects by Tordar Tømmervik',
+        siteName: 'Tordar Portfolio',
+        images: [
+            {
+                url: '/og-image.png', // Create an Open Graph image
+                width: 1200,
+                height: 630,
+                alt: 'Tordar Tømmervik Portfolio',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Tordar Tømmervik | Web Developer',
+        description: 'Personal portfolio and projects by Tordar Tømmervik',
+        images: ['/og-image.png'],
+    },
 }
 
 export default function RootLayout({
@@ -30,6 +57,7 @@ export default function RootLayout({
             <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
             <meta httpEquiv="Pragma" content="no-cache"/>
             <meta httpEquiv="Expires" content="0"/>
+            <Schema />
         </head>
         <body className={inter.className}>
         <ThemeProvider>
