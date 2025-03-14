@@ -1,8 +1,8 @@
 import React from 'react'
-import { Card, CardProps } from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 
-export interface HoverCardProps extends CardProps {}
+export type HoverCardProps = React.HTMLAttributes<HTMLDivElement>;
 
 export const HoverCard = React.forwardRef<HTMLDivElement, HoverCardProps>(
     ({ className, ...props }, ref) => {
