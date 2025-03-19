@@ -8,6 +8,13 @@ const nextConfig = {
         destination: 'https://tordar.no/:path*',
         permanent: true,
       },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'tordar.no' }],
+        missing: [{ type: 'header', key: 'x-forwarded-proto', value: 'https' }],
+        destination: 'https://tordar.no/:path*',
+        permanent: true,
+      }
     ];
   },
 };

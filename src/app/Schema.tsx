@@ -6,13 +6,12 @@ export default function Schema() {
     "url": "https://tordar.no",
     "sameAs": [
       "https://github.com/tordar",
-      "https://linkedin.com/in/yourprofile", // update with your actual LinkedIn
-      // Add other social profiles
+      "https://linkedin.com/in/tordar",
     ],
-    "jobTitle": "Web Developer",
+    "jobTitle": "Full-stack developer", 
     "worksFor": {
       "@type": "Organization",
-      "name": "Your Current Company" // Update as needed
+      "name": "Umain" 
     },
     "knowsAbout": ["React", "Next.js", "JavaScript", "Web Development"]
   };

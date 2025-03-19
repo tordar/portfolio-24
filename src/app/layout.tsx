@@ -60,6 +60,7 @@ export default function RootLayout({
             <meta httpEquiv="Cache-Control" content="max-age=86400, public" />
             <meta httpEquiv="Pragma" content="no-cache"/>
             <meta httpEquiv="Expires" content="0"/>
+            <link rel="canonical" href="https://tordar.no/" />
             <Schema />
         </head>
         <body className={inter.className}>
