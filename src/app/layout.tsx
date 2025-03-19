@@ -42,6 +42,9 @@ export const metadata: Metadata = {
         description: 'Personal portfolio and projects by Tordar Tømmervik',
         images: ['/og-image.png'],
     },
+    alternates: {
+        canonical: 'https://tordar.no/',
+    }
 }
 
 export default function RootLayout({
@@ -54,7 +57,7 @@ export default function RootLayout({
         <head>
             <title>{metadata.title as string}</title>
             <meta name="description" content={metadata.description as string}/>
-            <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+            <meta httpEquiv="Cache-Control" content="max-age=86400, public" />
             <meta httpEquiv="Pragma" content="no-cache"/>
             <meta httpEquiv="Expires" content="0"/>
             <Schema />
