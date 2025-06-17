@@ -15,7 +15,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://tordar.no'),
-    title: 'Tordar | Web Developer & Software Engineer',
+    title: {
+        default: 'Tordar Tømmervik | Web Developer',
+        template: '%s | Tordar Tømmervik'
+    },
     description: 'Personal portfolio of Tordar Tømmervik, a web developer specializing in React, Next.js, and modern JavaScript applications.',
     keywords: 'Tordar, Tordar Tømmervik, web developer, software engineer, React developer, Next.js, JavaScript',
     authors: [{ name: 'Tordar Tømmervik' }],
@@ -55,7 +58,6 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
         <head>
-            <title>{metadata.title as string}</title>
             <meta name="description" content={metadata.description as string}/>
             <meta httpEquiv="Cache-Control" content="max-age=86400, public" />
             <meta httpEquiv="Pragma" content="no-cache"/>
