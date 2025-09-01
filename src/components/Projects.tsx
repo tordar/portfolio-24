@@ -74,9 +74,9 @@ export default function Projects() {
             
             {/* Mobile view - horizontal scrolling with wider cards */}
             <div className="md:hidden w-full overflow-x-auto pb-6">
-                <div className="flex space-x-4 px-4 min-w-max snap-x snap-mandatory">
+                <div className="flex space-x-4 px-2 min-w-max snap-x snap-mandatory">
                     {projects.map((project, index) => (
-                        <div key={index} className="w-[85vw] max-w-[400px] flex-shrink-0 snap-center first:ml-4 last:mr-4">
+                        <div key={index} className="w-[90vw] max-w-[400px] flex-shrink-0 snap-center first:ml-2 last:mr-2">
                             <HoverCard className="h-full flex flex-col overflow-hidden rounded-lg bg-card text-card-foreground shadow">
                                 <div className="relative w-full h-44 overflow-hidden group">
                                     <Image
