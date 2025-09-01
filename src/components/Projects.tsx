@@ -74,18 +74,19 @@ export default function Projects() {
             
             {/* Mobile view - horizontal scrolling with wider cards */}
             <div className="md:hidden w-full overflow-x-auto pb-6">
-                <div className="flex space-x-4 px-1 min-w-max">
+                <div className="flex space-x-4 px-4 min-w-max snap-x snap-mandatory">
                     {projects.map((project, index) => (
-                        <div key={index} className="w-[320px] flex-shrink-0">
-                            <HoverCard className="h-full flex flex-col overflow-hidden rounded-lg border bg-card text-card-foreground shadow">
-                                <div className="relative w-full h-44 overflow-hidden">
+                        <div key={index} className="w-[85vw] max-w-[400px] flex-shrink-0 snap-center first:ml-4 last:mr-4">
+                            <HoverCard className="h-full flex flex-col overflow-hidden rounded-lg bg-card text-card-foreground shadow">
+                                <div className="relative w-full h-44 overflow-hidden group">
                                     <Image
                                         src={project.image}
                                         alt={`${project.title} preview`}
                                         fill
-                                        className="object-cover transition-transform duration-300 hover:scale-105"
+                                        className="object-cover transition-transform duration-300 group-hover:scale-105"
                                         sizes="320px"
                                     />
+                                    <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:opacity-0" />
                                 </div>
                                 <CardHeader className="p-4 pb-2">
                                     <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
@@ -123,15 +124,16 @@ export default function Projects() {
             {/* Desktop view - grid layout */}
             <div className="hidden md:grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project, index) => (
-                    <HoverCard key={index} className="flex flex-col overflow-hidden rounded-lg border bg-card text-card-foreground shadow">
-                        <div className="relative w-full h-48 overflow-hidden">
+                    <HoverCard key={index} className="flex flex-col overflow-hidden rounded-lg bg-card text-card-foreground shadow">
+                        <div className="relative w-full h-48 overflow-hidden group">
                             <Image
                                 src={project.image}
                                 alt={`${project.title} preview`}
                                 fill
-                                className="object-cover transition-transform duration-300 hover:scale-105"
+                                className="object-cover transition-transform duration-300 group-hover:scale-105"
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
+                            <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-0" />
                         </div>
                         <CardHeader>
                             <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>

@@ -63,7 +63,12 @@ export function SongRecommendationButton() {
                     <DialogTitle>Song Recommendation</DialogTitle>
                     <DialogDescription>Here&apos;s a song from my playlist you might enjoy!</DialogDescription>
                 </DialogHeader>
-                {song && (
+                {loading ? (
+                    <div className="mt-4 flex items-center justify-center py-8">
+                        <Loader2 className="h-8 w-8 animate-spin" />
+                        <span className="ml-2 text-sm text-muted-foreground">Searching...</span>
+                    </div>
+                ) : song ? (
                     <div className="mt-4">
                         <h3 className="font-semibold text-lg">{song.name}</h3>
                         <p className="text-sm text-muted-foreground">{song.artist}</p>
@@ -77,7 +82,7 @@ export function SongRecommendationButton() {
                             Listen on Spotify
                         </a>
                     </div>
-                )}
+                ) : null}
             </DialogContent>
         </Dialog>
     )
