@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { Github, Linkedin, Mail, MapPin } from 'lucide-react'
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -11,7 +11,17 @@ import { TimeSlider } from "../components/TimeSlider"
 import { DynamicFavicon } from "../components/DynamicFavicon"
 import Schema from './Schema'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+    subsets: ['latin'],
+    variable: '--font-inter',
+    display: 'swap'
+})
+
+const spaceGrotesk = Space_Grotesk({ 
+    subsets: ['latin'],
+    variable: '--font-space-grotesk',
+    display: 'swap'
+})
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://tordar.no'),
@@ -71,7 +81,7 @@ export default function RootLayout({
             <link rel="manifest" href="/site.webmanifest" />
             <Schema />
         </head>
-        <body className={inter.className}>
+        <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans`}>
         <ThemeProvider>
             <DynamicFavicon/>
             <div className="min-h-screen font-sans flex flex-col transition-colors duration-100">

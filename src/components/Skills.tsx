@@ -221,8 +221,10 @@ const TechTile = ({ skill }: { skill: Skill }) => {
 export default function SkillsSection() {
     return (
         <section className="py-16">
-            <h2 className="text-3xl font-semibold mb-4">Tech Stack</h2>
-            <p className="text-muted-foreground mb-4">Preferred technologies when building new things</p>
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 mb-8">
+                <h2 className="text-3xl font-semibold mb-4 text-card-foreground">Tech Stack</h2>
+                <p className="text-muted-foreground">Preferred technologies when building new things</p>
+            </div>
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                 {skills.map((skill, index) => (
                     <TechTile key={index} skill={skill}/>

@@ -60,7 +60,17 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-space-grotesk), 'Space Grotesk', system-ui, -apple-system, sans-serif;
     transition: background-color 0.3s ease, color 0.1s ease;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
   }
 }
 

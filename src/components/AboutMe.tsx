@@ -78,25 +78,27 @@ export default function AboutMe() {
                 </div>
             </div>
             <div className="md:w-2/3">
-                <h2 className="text-3xl font-semibold mb-4">About Me</h2>
-                <p className="text-muted-foreground mb-4">
-                    I&apos;m a full-stack developer with experience in React, Next.js, and modern web technologies.
-                    I&apos;m a largely self-taught developer, after beginning to learn Python during the pandemic,
-                    to accomodate my degree in international relations. From there, I went on to work for Norwegian
-                    Red Cross, maintaining their in-house developed web application Nyss. 
-                    I also enjoy working on different side-projects, learning new technologies, and keeping up to date
-                    with new developments and ways of making things.
-                </p>
-                <p className="text-muted-foreground mb-4">
-                    When I&apos;m not coding, you can find me:
-                </p>
-                <ul className="list-disc list-inside text-muted-foreground mb-4">
-                    <li>Running</li>
-                    <li>Cooking</li>
-                    <li>Taking pictures</li>
-                    <li>Going to concerts</li>
-                    <li>Planning a new adventure</li>
-                </ul>
+                <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                    <h2 className="text-3xl font-semibold mb-4 text-card-foreground">About Me</h2>
+                    <p className="text-muted-foreground mb-4">
+                        I&apos;m a full-stack developer with experience in React, Next.js, and modern web technologies.
+                        I&apos;m a largely self-taught developer, after beginning to learn Python during the pandemic,
+                        to accomodate my degree in international relations. From there, I went on to work for Norwegian
+                        Red Cross, maintaining their in-house developed web application Nyss. 
+                        I also enjoy working on different side-projects, learning new technologies, and keeping up to date
+                        with new developments and ways of making things.
+                    </p>
+                    <p className="text-muted-foreground mb-4">
+                        When I&apos;m not coding, you can find me:
+                    </p>
+                    <ul className="list-disc list-inside text-muted-foreground mb-4">
+                        <li>Running</li>
+                        <li>Cooking</li>
+                        <li>Taking pictures</li>
+                        <li>Going to concerts</li>
+                        <li>Planning a new adventure</li>
+                    </ul>
+                </div>
             </div>
         </div>
         </section>

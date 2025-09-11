@@ -68,9 +68,11 @@ const projects: Project[] = [
 export default function Projects() {
     return(
         <section>
-            <h2 className="text-3xl font-semibold mb-4">My Projects</h2>
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            <p className="text-muted-foreground mb-4">A selection of various personal projects I'm working on</p>
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 mb-8">
+                <h2 className="text-3xl font-semibold mb-4 text-card-foreground">My Projects</h2>
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                <p className="text-muted-foreground">A selection of various personal projects I'm working on</p>
+            </div>
             
             {/* Mobile view - horizontal scrolling with wider cards */}
             <div className="md:hidden w-full overflow-x-auto pb-6">
