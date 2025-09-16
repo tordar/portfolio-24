@@ -53,18 +53,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
         // Primary colors for each hour
         const hourlyColors = [
-            '#0A0A28', '#0F0F32', '#14143C', '#191946', '#1E1E50', '#FF9678',
-            '#FFB896', '#FFD7B4', '#bdddff', '#B4DCFF', '#C8E6FF', '#DCF0FF',
-            '#F0FFFF', '#E6FAFF', '#DCF0FF', '#C8DCFF', '#FFD7B4', '#FFB896',
-            '#FF9678', '#FF8C6E', '#5A3264', '#46325A', '#322846', '#1E143C'
+            '#E8E8F5', '#E0E0F0', '#D8D8EB', '#D0D0E6', '#C8C8E1', '#FFE5DC',
+            '#FFE8D1', '#FFEBD6', '#E6F3FF', '#E0F0FF', '#E6F5FF', '#F0F8FF',
+            '#F8FFFF', '#F0F8FF', '#F0F8FF', '#E6F0FF', '#FFEBD6', '#FFE8D1',
+            '#FFE5DC', '#FFE2D7', '#E8D8ED', '#E0D0E8', '#D8C8E3', '#E0D8F0'
         ];
 
-        // Gradient complementary colors for each hour - with more contrast for intensity
+        // Gradient complementary colors for each hour - lighter versions with good contrast
         const hourlyGradientColors = [
-            '#4040A0', '#3F3FA2', '#4444BC', '#4949C6', '#4E4ED0', '#FF5040',
-            '#FF9040', '#FFBE80', '#80CCFF', '#40B0FF', '#60C0FF', '#90E0FF',
-            '#C0FFFF', '#A0F0FF', '#90E0FF', '#80C0FF', '#FFBE80', '#FF9040',
-            '#FF5040', '#FF3030', '#A060C0', '#9050B0', '#8040A0', '#603090'
+            '#D0D0F0', '#CFCFF2', '#D4D4FC', '#D9D9F6', '#DEDEF0', '#FFD0C0',
+            '#FFE0C0', '#FFE8D0', '#D0E6FF', '#C0E0FF', '#D0E6FF', '#E0F0FF',
+            '#F0FFFF', '#E0F0FF', '#E0F0FF', '#D0E0FF', '#FFE8D0', '#FFE0C0',
+            '#FFD0C0', '#FFC0C0', '#D0C0E0', '#C0B0D0', '#B0A0C0', '#A090D0'
         ];
 
         const interpolateColor = (color1: string, color2: string, factor: number): string => {
@@ -83,14 +83,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
             return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
         };
 
-        const setTextColorForContrast = (backgroundColor: string): string => {
-            const r = parseInt(backgroundColor.slice(1, 3), 16) / 255;
-            const g = parseInt(backgroundColor.slice(3, 5), 16) / 255;
-            const b = parseInt(backgroundColor.slice(5, 7), 16) / 255;
-
-            const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-
-            return luminance > 0.5 ? '#000000' : '#FFFFFF';
+        const setTextColorForContrast = (): string => {
+            return '#000000';
         };
 
         const currentColor = hourlyColors[hour];
@@ -119,7 +113,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         const gradientBg = `linear-gradient(${gradientDirection}, ${bgColor}, ${midColor} 50%, ${gradientColor})`;
         setSkyBackgroundColor(gradientBg);
         setSkyPrimaryColor(bgColor); // Store the primary color for the favicon
-        setTextColor(setTextColorForContrast(bgColor));
+        setTextColor(setTextColorForContrast());
     };
     
     return (

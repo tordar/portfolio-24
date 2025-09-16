@@ -78,7 +78,7 @@ export default function AboutMe() {
                         <Button 
                             asChild 
                             variant="outline" 
-                            className="w-full bg-white hover:bg-gray-100 border-gray-300"
+                            className="w-full bg-white hover:bg-gray-100 border-gray-300 mb-2"
                         >
                             <Link 
                                 href="/top-albums"
