@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Search, Music, Play } from 'lucide-react'
+import { Search, Music, Play, Grid3X3, List, X } from 'lucide-react'
 
 interface AlbumImage {
   height: number
@@ -100,6 +100,7 @@ export default function TopAlbumsPage() {
   const [albumsData, setAlbumsData] = useState<AlbumsData | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(true)
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -143,66 +144,178 @@ export default function TopAlbumsPage() {
             {albumsData?.metadata.consolidatedTotalAlbums} albums from the past 15 years
           </p>
           
-          {/* Search */}
-          <div className="relative max-w-md mx-auto">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-            <input
-              type="text"
-              placeholder="Search albums or artists..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-            />
+          {/* Search and View Toggle */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 max-w-md mx-auto">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search albums or artists..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-10 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm('')}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+            
+            {/* View Toggle */}
+            <div className="flex border border-input rounded-md bg-background">
+              <button
+                onClick={() => setViewMode('grid')}
+                className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors ${
+                  viewMode === 'grid' 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                <Grid3X3 className="w-4 h-4" />
+                Grid
+              </button>
+              <button
+                onClick={() => setViewMode('list')}
+                className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors ${
+                  viewMode === 'list' 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                <List className="w-4 h-4" />
+                List
+              </button>
+            </div>
           </div>
         </div>
         
-        {/* Albums Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-          {filteredAlbums.map((album) => (
-            <Card key={album.albumId} className="group hover:shadow-lg transition-shadow duration-200">
-              <CardContent className="p-3">
-                {/* Album Image */}
-                <div className="mb-3">
-                  <LazyAlbumImage album={album.album} rank={album.rank} />
-                </div>
-                
-                {/* Album Info */}
-                <div className="space-y-2">
-                  {/* Rank Badge */}
-                  <div className="flex items-center justify-between">
-                    <Badge variant="secondary" className="text-xs">
-                      #{album.rank}
-                    </Badge>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <Play className="w-3 h-3 mr-1" />
-                      {album.count}
-                    </div>
+        {/* Albums Display */}
+        {viewMode === 'grid' ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+            {filteredAlbums.map((album) => (
+              <Card key={album.albumId} className="group hover:shadow-lg transition-shadow duration-200">
+                <CardContent className="p-3">
+                  {/* Album Image */}
+                  <div className="mb-3">
+                    <LazyAlbumImage album={album.album} rank={album.rank} />
                   </div>
                   
-                  {/* Album Name */}
-                  <h3 className="font-semibold text-sm leading-tight line-clamp-2 group-hover:text-primary transition-colors">
-                    {album.album.name}
-                  </h3>
-                  
-                  {/* Artist Name */}
-                  <p className="text-xs text-muted-foreground line-clamp-1">
-                    {album.artist.name}
-                  </p>
-                  
-                  {/* Duration */}
-                  <p className="text-xs text-muted-foreground">
-                    {(() => {
-                      const totalMinutes = Math.floor(album.duration_ms / 60000)
-                      const hours = Math.floor(totalMinutes / 60)
-                      const minutes = totalMinutes % 60
-                      return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
-                    })()}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                  {/* Album Info */}
+                  <div className="space-y-2">
+                    {/* Rank Badge */}
+                    <div className="flex items-center justify-between">
+                      <Badge variant="secondary" className="text-xs">
+                        #{album.rank}
+                      </Badge>
+                      <div className="flex items-center text-xs text-muted-foreground">
+                        <Play className="w-3 h-3 mr-1" />
+                        {album.count}
+                      </div>
+                    </div>
+                    
+                    {/* Album Name */}
+                    <h3 className="font-semibold text-sm leading-tight line-clamp-2 group-hover:text-primary transition-colors">
+                      {album.album.name}
+                    </h3>
+                    
+                    {/* Artist Name */}
+                    <button
+                      onClick={() => setSearchTerm(album.artist.name)}
+                      className="text-xs text-muted-foreground hover:text-primary transition-colors line-clamp-1 text-left"
+                    >
+                      {album.artist.name}
+                    </button>
+                    
+                    {/* Duration */}
+                    <p className="text-xs text-muted-foreground">
+                      {(() => {
+                        const totalMinutes = Math.floor(album.duration_ms / 60000)
+                        const hours = Math.floor(totalMinutes / 60)
+                        const minutes = totalMinutes % 60
+                        return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
+                      })()}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        ) : (
+          <div className="space-y-1">
+            {/* Header */}
+            <div className="grid grid-cols-12 gap-4 px-4 py-1 text-xs font-medium text-muted-foreground border-b">
+              <div className="col-span-1">Rank</div>
+              <div className="col-span-1"></div>
+              <div className="col-span-4">Album</div>
+              <div className="col-span-3">Artist</div>
+              <div className="col-span-1">Plays</div>
+              <div className="col-span-2">Duration</div>
+            </div>
+            
+            {filteredAlbums.map((album) => (
+              <Card key={album.albumId} className="group hover:shadow-lg transition-shadow duration-200">
+                <CardContent className="p-2">
+                  <div className="grid grid-cols-12 gap-4 items-center">
+                    {/* Rank */}
+                    <div className="col-span-1">
+                      <Badge variant="secondary" className="text-xs">
+                        #{album.rank}
+                      </Badge>
+                    </div>
+                    
+                    {/* Album Image */}
+                    <div className="col-span-1">
+                      <div className="w-12 h-12">
+                        <LazyAlbumImage album={album.album} rank={album.rank} />
+                      </div>
+                    </div>
+                    
+                    {/* Album Name */}
+                    <div className="col-span-4">
+                      <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors">
+                        {album.album.name}
+                      </h3>
+                    </div>
+                    
+                    {/* Artist Name */}
+                    <div className="col-span-3">
+                      <button
+                        onClick={() => setSearchTerm(album.artist.name)}
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
+                      >
+                        {album.artist.name}
+                      </button>
+                    </div>
+                    
+                    {/* Play Count */}
+                    <div className="col-span-1">
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Play className="w-3 h-3 mr-1" />
+                        {album.count}
+                      </div>
+                    </div>
+                    
+                    {/* Duration */}
+                    <div className="col-span-2">
+                      <p className="text-sm text-muted-foreground">
+                        {(() => {
+                          const totalMinutes = Math.floor(album.duration_ms / 60000)
+                          const hours = Math.floor(totalMinutes / 60)
+                          const minutes = totalMinutes % 60
+                          return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
+                        })()}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
         
         {filteredAlbums.length === 0 && searchTerm && (
           <div className="text-center py-12">
