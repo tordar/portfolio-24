@@ -246,8 +246,8 @@ export default function TopAlbumsPage() {
           </div>
         ) : (
           <div className="space-y-1">
-            {/* Header */}
-            <div className="grid grid-cols-12 gap-4 px-4 py-1 text-xs font-medium text-muted-foreground border-b">
+            {/* Header - Hidden on mobile */}
+            <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-1 text-xs font-medium text-muted-foreground border-b">
               <div className="col-span-1">Rank</div>
               <div className="col-span-1"></div>
               <div className="col-span-4">Album</div>
@@ -258,8 +258,9 @@ export default function TopAlbumsPage() {
             
             {filteredAlbums.map((album) => (
               <Card key={album.albumId} className="group hover:shadow-lg transition-shadow duration-200">
-                <CardContent className="p-2">
-                  <div className="grid grid-cols-12 gap-4 items-center">
+                <CardContent className="p-3 md:p-2">
+                  {/* Desktop Layout */}
+                  <div className="hidden md:grid grid-cols-12 gap-4 items-center">
                     {/* Rank */}
                     <div className="col-span-1">
                       <Badge variant="secondary" className="text-xs">
@@ -269,7 +270,7 @@ export default function TopAlbumsPage() {
                     
                     {/* Album Image */}
                     <div className="col-span-1">
-                      <div className="w-12 h-12">
+                      <div className="w-12 h-12 aspect-square">
                         <LazyAlbumImage album={album.album} rank={album.rank} />
                       </div>
                     </div>
@@ -302,6 +303,47 @@ export default function TopAlbumsPage() {
                     {/* Duration */}
                     <div className="col-span-2">
                       <p className="text-sm text-muted-foreground">
+                        {(() => {
+                          const totalMinutes = Math.floor(album.duration_ms / 60000)
+                          const hours = Math.floor(totalMinutes / 60)
+                          const minutes = totalMinutes % 60
+                          return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
+                        })()}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Mobile Layout */}
+                  <div className="md:hidden flex items-center gap-3">
+                    {/* Album Image */}
+                    <div className="w-16 h-16 flex-shrink-0 aspect-square">
+                      <LazyAlbumImage album={album.album} rank={album.rank} />
+                    </div>
+                    
+                    {/* Album Info */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between mb-1">
+                        <Badge variant="secondary" className="text-xs">
+                          #{album.rank}
+                        </Badge>
+                        <div className="flex items-center text-xs text-muted-foreground">
+                          <Play className="w-3 h-3 mr-1" />
+                          {album.count}
+                        </div>
+                      </div>
+                      
+                      <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors mb-1">
+                        {album.album.name}
+                      </h3>
+                      
+                      <button
+                        onClick={() => setSearchTerm(album.artist.name)}
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors text-left mb-1"
+                      >
+                        {album.artist.name}
+                      </button>
+                      
+                      <p className="text-xs text-muted-foreground">
                         {(() => {
                           const totalMinutes = Math.floor(album.duration_ms / 60000)
                           const hours = Math.floor(totalMinutes / 60)
