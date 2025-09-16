@@ -206,7 +206,7 @@ export default function TopAlbumsPage() {
         
         {filteredAlbums.length === 0 && searchTerm && (
           <div className="text-center py-12">
-            <p className="text-muted-foreground">No albums found matching "{searchTerm}"</p>
+            <p className="text-muted-foreground">No albums found matching &quot;{searchTerm}&quot;</p>
           </div>
         )}
       </div>
