@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "originalTotalAlbums": 1000,
+    "originalTotalAlbums": 1500,
     "consolidatedTotalAlbums": 500,
-    "duplicatesRemoved": 97,
-    "consolidationRate": 9.7,
-    "timestamp": "2025-09-16T19:04:44.450Z"
+    "duplicatesRemoved": 161,
+    "consolidationRate": 10.73,
+    "timestamp": "2025-09-16T19:24:32.752Z"
   },
   "albums": [
     {
@@ -46,44 +46,8 @@
       "rank": 1
     },
     {
-      "duration_ms": 54178245,
-      "count": 412,
-      "albumId": "0cruHSkBmlUqwXDFxyAGl8",
-      "album": {
-        "name": "Last Summer",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2735f19050327c81b2cdb5f38a9",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e025f19050327c81b2cdb5f38a9",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048515f19050327c81b2cdb5f38a9",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Barnes Blvd.",
-        "genres": [
-          "lo-fi beats"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "0cruHSkBmlUqwXDFxyAGl8"
-      ],
-      "rank": 2
-    },
-    {
-      "duration_ms": 78059451,
-      "count": 388,
+      "duration_ms": 84425722,
+      "count": 417,
       "albumId": "7i6AHMD700GlwhHdFx1CIG",
       "album": {
         "name": "In The Aeroplane Over The Sea",
@@ -116,11 +80,48 @@
           "noise pop"
         ]
       },
-      "consolidated_count": 3,
+      "consolidated_count": 4,
       "original_albumIds": [
         "7i6AHMD700GlwhHdFx1CIG",
         "0vVekV45lOaVKs6RZQQNob",
-        "5COXoP5kj2DWfCDg0vxi4F"
+        "5COXoP5kj2DWfCDg0vxi4F",
+        "0HjEJRTWuP2qkKLlRDH2gg"
+      ],
+      "rank": 2
+    },
+    {
+      "duration_ms": 54178245,
+      "count": 412,
+      "albumId": "0cruHSkBmlUqwXDFxyAGl8",
+      "album": {
+        "name": "Last Summer",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2735f19050327c81b2cdb5f38a9",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e025f19050327c81b2cdb5f38a9",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048515f19050327c81b2cdb5f38a9",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Barnes Blvd.",
+        "genres": [
+          "lo-fi beats"
+        ]
+      },
+      "consolidated_count": 1,
+      "original_albumIds": [
+        "0cruHSkBmlUqwXDFxyAGl8"
       ],
       "rank": 3
     },
@@ -1255,6 +1256,47 @@
       "rank": 31
     },
     {
+      "duration_ms": 52805553,
+      "count": 231,
+      "albumId": "1147s32sIAabDpmBeBf2bN",
+      "album": {
+        "name": "Meir",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27387e9b11459469217d7ca8d0a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0287e9b11459469217d7ca8d0a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485187e9b11459469217d7ca8d0a",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Kvelertak",
+        "genres": [
+          "black 'n' roll",
+          "black thrash",
+          "norwegian metal",
+          "norwegian rock",
+          "rogaland musikk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "1147s32sIAabDpmBeBf2bN",
+        "5PAjZGAD8j0XZANLxJWulb"
+      ],
+      "rank": 32
+    },
+    {
       "duration_ms": 58351297,
       "count": 230,
       "albumId": "2noRn2Aes5aoNVsU6iWThc",
@@ -1290,7 +1332,7 @@
       "original_albumIds": [
         "2noRn2Aes5aoNVsU6iWThc"
       ],
-      "rank": 32
+      "rank": 33
     },
     {
       "duration_ms": 38260128,
@@ -1329,7 +1371,7 @@
         "13xlpKbai3GGoMSr75lOeX",
         "4kgUVxCBvTnJIeyHpclrNl"
       ],
-      "rank": 33
+      "rank": 34
     },
     {
       "duration_ms": 40256938,
@@ -1369,7 +1411,7 @@
         "2XgBQwGRxr4P7cHLDYiqrO",
         "15sAOLghamZ9dfEFgTvE2R"
       ],
-      "rank": 34
+      "rank": 35
     },
     {
       "duration_ms": 22918784,
@@ -1408,7 +1450,7 @@
       "original_albumIds": [
         "7dUrduNuWHYQ8pdDKtBedD"
       ],
-      "rank": 35
+      "rank": 36
     },
     {
       "duration_ms": 53369807,
@@ -1449,7 +1491,48 @@
         "2JLDMOX168DhnueBb946kw",
         "1r5JEclOv0s5S8GhFet0Wx"
       ],
-      "rank": 36
+      "rank": 37
+    },
+    {
+      "duration_ms": 47678916,
+      "count": 210,
+      "albumId": "3X9sIttglnkMeSE9iMbZPP",
+      "album": {
+        "name": "Ompa Til Du Dør",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273f1934340f86823c363f87478",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02f1934340f86823c363f87478",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851f1934340f86823c363f87478",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Kaizers Orchestra",
+        "genres": [
+          "dark cabaret",
+          "norwegian alternative rock",
+          "norwegian rock",
+          "rogaland indie",
+          "rogaland musikk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "3X9sIttglnkMeSE9iMbZPP",
+        "3iESdWCUjPJvVd3uwSIS6A"
+      ],
+      "rank": 38
     },
     {
       "duration_ms": 41280857,
@@ -1489,7 +1572,7 @@
       "original_albumIds": [
         "2yNaksHgeMQM9Quse463b5"
       ],
-      "rank": 37
+      "rank": 39
     },
     {
       "duration_ms": 49917842,
@@ -1530,47 +1613,7 @@
       "original_albumIds": [
         "5Dh4qVmcMpDv5qhgdaqGtj"
       ],
-      "rank": 38
-    },
-    {
-      "duration_ms": 47156507,
-      "count": 208,
-      "albumId": "1147s32sIAabDpmBeBf2bN",
-      "album": {
-        "name": "Meir",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27387e9b11459469217d7ca8d0a",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0287e9b11459469217d7ca8d0a",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485187e9b11459469217d7ca8d0a",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Kvelertak",
-        "genres": [
-          "black 'n' roll",
-          "black thrash",
-          "norwegian metal",
-          "norwegian rock",
-          "rogaland musikk"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "1147s32sIAabDpmBeBf2bN"
-      ],
-      "rank": 39
+      "rank": 40
     },
     {
       "duration_ms": 54558750,
@@ -1612,7 +1655,7 @@
         "5vkqYmiPBYLaalcmjujWxK",
         "7eyQXxuf2nGj9d2367Gi5f"
       ],
-      "rank": 40
+      "rank": 41
     },
     {
       "duration_ms": 45462504,
@@ -1650,7 +1693,7 @@
       "original_albumIds": [
         "0bUTHlWbkSQysoM3VsWldT"
       ],
-      "rank": 41
+      "rank": 42
     },
     {
       "duration_ms": 38149754,
@@ -1687,7 +1730,7 @@
       "original_albumIds": [
         "2sgh0d7DbHvtaTiYD5YWdD"
       ],
-      "rank": 42
+      "rank": 43
     },
     {
       "duration_ms": 47940411,
@@ -1725,7 +1768,7 @@
         "7pRlHTBSENFfpnfNpPllpv",
         "54tH0ATGrULhdkdyWyiV15"
       ],
-      "rank": 43
+      "rank": 44
     },
     {
       "duration_ms": 30999940,
@@ -1768,7 +1811,7 @@
       "original_albumIds": [
         "6agQKhrctciHD4QH7KufOS"
       ],
-      "rank": 44
+      "rank": 45
     },
     {
       "duration_ms": 38118977,
@@ -1809,7 +1852,7 @@
       "original_albumIds": [
         "1ljgNdyFCcnQxAbzejZrax"
       ],
-      "rank": 45
+      "rank": 46
     },
     {
       "duration_ms": 34769031,
@@ -1850,7 +1893,7 @@
         "54DU59anGQsdrFP7utpshG",
         "0aldG5AoqOUDkEbsGtI9TW"
       ],
-      "rank": 46
+      "rank": 47
     },
     {
       "duration_ms": 33948183,
@@ -1891,7 +1934,7 @@
         "0kZTbq30ooteyJG5QRsS5W",
         "4VDX4YuDzvaRPfHaZ4FrFV"
       ],
-      "rank": 47
+      "rank": 48
     },
     {
       "duration_ms": 46334358,
@@ -1934,7 +1977,7 @@
         "5BWl0bB1q0TqyFmkBEupZy",
         "5G5UwqPsxDKpxJLX4xsyuh"
       ],
-      "rank": 48
+      "rank": 49
     },
     {
       "duration_ms": 40164514,
@@ -1970,46 +2013,6 @@
       "consolidated_count": 1,
       "original_albumIds": [
         "67smHJOf5YlFwad6dAlppm"
-      ],
-      "rank": 49
-    },
-    {
-      "duration_ms": 42066963,
-      "count": 185,
-      "albumId": "3X9sIttglnkMeSE9iMbZPP",
-      "album": {
-        "name": "Ompa Til Du Dør",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273f1934340f86823c363f87478",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02f1934340f86823c363f87478",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851f1934340f86823c363f87478",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Kaizers Orchestra",
-        "genres": [
-          "dark cabaret",
-          "norwegian alternative rock",
-          "norwegian rock",
-          "rogaland indie",
-          "rogaland musikk"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "3X9sIttglnkMeSE9iMbZPP"
       ],
       "rank": 50
     },
@@ -2483,6 +2486,92 @@
       "rank": 62
     },
     {
+      "duration_ms": 35841051,
+      "count": 172,
+      "albumId": "3mBkqf9YinecSWrDhrxTa2",
+      "album": {
+        "name": "Chinese Fountain",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273a0b25506925441b31d9ed88a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02a0b25506925441b31d9ed88a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851a0b25506925441b31d9ed88a",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Growlers",
+        "genres": [
+          "garage rock revival",
+          "indie garage rock",
+          "indie surf"
+        ]
+      },
+      "consolidated_count": 4,
+      "original_albumIds": [
+        "3mBkqf9YinecSWrDhrxTa2",
+        "1J8bCuVSRL57pkdIEuYio6",
+        "3JGfv0a5gfoEwVROJPxtdW",
+        "6exFB8EKturdauvN5XV0ov"
+      ],
+      "rank": 63
+    },
+    {
+      "duration_ms": 36488450,
+      "count": 170,
+      "albumId": "1EPRNth3JNPGwH2tYZkfLe",
+      "album": {
+        "name": "Afraid of Heights",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273259b8943d6e33378f0d64af2",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02259b8943d6e33378f0d64af2",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851259b8943d6e33378f0d64af2",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Wavves",
+        "genres": [
+          "indie garage rock",
+          "indie rock",
+          "indie surf",
+          "lo-fi",
+          "noise pop",
+          "noise rock",
+          "nu gaze",
+          "san diego indie",
+          "surf punk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "1EPRNth3JNPGwH2tYZkfLe",
+        "2nSZvRRmbMjBHhNSrEpiVJ"
+      ],
+      "rank": 64
+    },
+    {
       "duration_ms": 46371447,
       "count": 169,
       "albumId": "7BmMOUo8nrmYHB2EHBGkSt",
@@ -2517,7 +2606,7 @@
       "original_albumIds": [
         "7BmMOUo8nrmYHB2EHBGkSt"
       ],
-      "rank": 63
+      "rank": 65
     },
     {
       "duration_ms": 56282588,
@@ -2556,7 +2645,47 @@
         "6LBiuhK7PZKjVXyMfPxPoh",
         "20r762YmB5HeofjMCiPMLv"
       ],
-      "rank": 64
+      "rank": 66
+    },
+    {
+      "duration_ms": 32114860,
+      "count": 169,
+      "albumId": "6hGTojkpsuz7uDG3FtkP3T",
+      "album": {
+        "name": "Uleste Bøker Og Utgåtte Sko",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27376eb0bdf578c3957121578d9",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0276eb0bdf578c3957121578d9",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485176eb0bdf578c3957121578d9",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Oslo Ess",
+        "genres": [
+          "norwegian punk rock",
+          "norwegian rock"
+        ]
+      },
+      "consolidated_count": 4,
+      "original_albumIds": [
+        "6hGTojkpsuz7uDG3FtkP3T",
+        "4MDXUjRJEVyseC15j3iGgM",
+        "7zjZH3XItx462mC4L8PRU6",
+        "3iq4ZLLojm1ztF0ysl5KGq"
+      ],
+      "rank": 67
     },
     {
       "duration_ms": 39837948,
@@ -2596,7 +2725,7 @@
       "original_albumIds": [
         "71QyofYesSsRMwFOTafnhB"
       ],
-      "rank": 65
+      "rank": 68
     },
     {
       "duration_ms": 39027174,
@@ -2636,7 +2765,7 @@
       "original_albumIds": [
         "6IYPmM3xsOPL2XPSvf1ZAz"
       ],
-      "rank": 66
+      "rank": 69
     },
     {
       "duration_ms": 40181331,
@@ -2680,7 +2809,7 @@
         "03IZHkwzDRhuHZypKeXB3e",
         "0xG5uUfuUNugWXhYPtwxoH"
       ],
-      "rank": 67
+      "rank": 70
     },
     {
       "duration_ms": 26924308,
@@ -2725,7 +2854,7 @@
         "4G7MAOJFv98Oi6XjbczQA3",
         "4a2rTSSbkZgNUPo3y32yCw"
       ],
-      "rank": 68
+      "rank": 71
     },
     {
       "duration_ms": 20803917,
@@ -2764,7 +2893,7 @@
       "original_albumIds": [
         "4pEcCqGx1RFaXWJD0mrG10"
       ],
-      "rank": 69
+      "rank": 72
     },
     {
       "duration_ms": 38571478,
@@ -2803,7 +2932,7 @@
       "original_albumIds": [
         "5sY6UIQ32GqwMLAfSNEaXb"
       ],
-      "rank": 70
+      "rank": 73
     },
     {
       "duration_ms": 35154722,
@@ -2843,7 +2972,7 @@
         "7cO0T3BJ6xAkv0BX3TXFAp",
         "6HZ8ACXr1OOiAmkq7mNn4h"
       ],
-      "rank": 71
+      "rank": 74
     },
     {
       "duration_ms": 24280098,
@@ -2884,7 +3013,7 @@
         "3OdI6e43crvyAHhaqpxSyz",
         "50o7kf2wLwVmOTVYJOTplm"
       ],
-      "rank": 72
+      "rank": 75
     },
     {
       "duration_ms": 34096733,
@@ -2921,7 +3050,7 @@
       "original_albumIds": [
         "2nkto6YNI4rUYTLqEwWJ3o"
       ],
-      "rank": 73
+      "rank": 76
     },
     {
       "duration_ms": 51926231,
@@ -2960,7 +3089,46 @@
       "original_albumIds": [
         "748dZDqSZy6aPXKcI9H80u"
       ],
-      "rank": 74
+      "rank": 77
+    },
+    {
+      "duration_ms": 35736370,
+      "count": 156,
+      "albumId": "4GRDFQ9HRoO0by8H0r2a3I",
+      "album": {
+        "name": "Late Registration",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2734c7dd2b7fc516356e037bf68",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e024c7dd2b7fc516356e037bf68",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048514c7dd2b7fc516356e037bf68",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Kanye West",
+        "genres": [
+          "chicago rap",
+          "hip hop",
+          "rap"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "4GRDFQ9HRoO0by8H0r2a3I",
+        "5ll74bqtkcXlKE7wwkMq4g"
+      ],
+      "rank": 78
     },
     {
       "duration_ms": 30056044,
@@ -2997,7 +3165,7 @@
       "original_albumIds": [
         "5c2AzoNyr46fCQM5d8mxE0"
       ],
-      "rank": 75
+      "rank": 79
     },
     {
       "duration_ms": 34731339,
@@ -3038,7 +3206,7 @@
       "original_albumIds": [
         "6QYoRO2sXThCORAifrP4Bl"
       ],
-      "rank": 76
+      "rank": 80
     },
     {
       "duration_ms": 34515636,
@@ -3080,7 +3248,7 @@
         "7iQ7Es143ejfki6YqXkDIt",
         "1PmjkPnG41KneMR04CmyqF"
       ],
-      "rank": 77
+      "rank": 81
     },
     {
       "duration_ms": 33921247,
@@ -3118,7 +3286,7 @@
       "original_albumIds": [
         "0EXLFY4NFNx4FlpAlFO7ly"
       ],
-      "rank": 78
+      "rank": 82
     },
     {
       "duration_ms": 21991052,
@@ -3154,7 +3322,7 @@
       "original_albumIds": [
         "2weOG4ZiOjfxiuFMsHm9JQ"
       ],
-      "rank": 79
+      "rank": 83
     },
     {
       "duration_ms": 28047142,
@@ -3196,7 +3364,7 @@
       "original_albumIds": [
         "755yBlrk0Sz8tIgMMTgyr1"
       ],
-      "rank": 80
+      "rank": 84
     },
     {
       "duration_ms": 32371457,
@@ -3238,7 +3406,7 @@
         "6MQXgLKSXLb8SwZ4m7STNc",
         "4yP7cyoeE3F6EyJPZ9v47V"
       ],
-      "rank": 81
+      "rank": 85
     },
     {
       "duration_ms": 29058152,
@@ -3277,7 +3445,46 @@
         "2gxY9LNCWzuhLUaXcZZR07",
         "6UfzZVuscMz4EHdrol4WPC"
       ],
-      "rank": 82
+      "rank": 86
+    },
+    {
+      "duration_ms": 22342277,
+      "count": 148,
+      "albumId": "7zlf5gmgcFBUSLZpVsh9EE",
+      "album": {
+        "name": "Everything So Far",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2734e48dddf8b7fa7f224015588",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e024e48dddf8b7fa7f224015588",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048514e48dddf8b7fa7f224015588",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Pinegrove",
+        "genres": [
+          "countrygaze",
+          "new jersey indie",
+          "small room"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "7zlf5gmgcFBUSLZpVsh9EE",
+        "3CIisDFciv06JbPrZNzNqW"
+      ],
+      "rank": 87
     },
     {
       "duration_ms": 34026835,
@@ -3319,47 +3526,7 @@
         "4CVzsnMQTcC5mfU4XNTTaI",
         "4X0bhkSBOfcnOPyfG5Ef6a"
       ],
-      "rank": 83
-    },
-    {
-      "duration_ms": 30828438,
-      "count": 148,
-      "albumId": "3mBkqf9YinecSWrDhrxTa2",
-      "album": {
-        "name": "Chinese Fountain",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273a0b25506925441b31d9ed88a",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02a0b25506925441b31d9ed88a",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851a0b25506925441b31d9ed88a",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The Growlers",
-        "genres": [
-          "garage rock revival",
-          "indie garage rock",
-          "indie surf"
-        ]
-      },
-      "consolidated_count": 3,
-      "original_albumIds": [
-        "3mBkqf9YinecSWrDhrxTa2",
-        "1J8bCuVSRL57pkdIEuYio6",
-        "3JGfv0a5gfoEwVROJPxtdW"
-      ],
-      "rank": 84
+      "rank": 88
     },
     {
       "duration_ms": 37883808,
@@ -3399,7 +3566,7 @@
       "original_albumIds": [
         "4I5zzKYd2SKDgZ9DRf5LVk"
       ],
-      "rank": 85
+      "rank": 89
     },
     {
       "duration_ms": 26922207,
@@ -3439,7 +3606,7 @@
         "24nD6WCXgd7JMA90nzWar9",
         "6QDNTEgCBoGd6zaKZ19vNC"
       ],
-      "rank": 86
+      "rank": 90
     },
     {
       "duration_ms": 41981729,
@@ -3477,7 +3644,7 @@
         "4mMJMXxteSxAVtAswHN0ky",
         "1udCeAJjxGO8BuhDbpvVJv"
       ],
-      "rank": 87
+      "rank": 91
     },
     {
       "duration_ms": 23258705,
@@ -3515,7 +3682,7 @@
         "2jNz80JJeTFaXENhwTwBmh",
         "6QbJHG7oF5wVt8CZKUKgRG"
       ],
-      "rank": 88
+      "rank": 92
     },
     {
       "duration_ms": 24022059,
@@ -3552,7 +3719,7 @@
       "original_albumIds": [
         "2kCDZ3gCr5hXFgbFsPMcxP"
       ],
-      "rank": 89
+      "rank": 93
     },
     {
       "duration_ms": 19379587,
@@ -3593,7 +3760,47 @@
         "4RpPpNoZQQcSvDvNBHlMKU",
         "4RUOulgO9x2Dnf9QxmMXmk"
       ],
-      "rank": 90
+      "rank": 94
+    },
+    {
+      "duration_ms": 21477604,
+      "count": 143,
+      "albumId": "7Jg2tDzP6qZQHO2A37m2ab",
+      "album": {
+        "name": "You're Gonna Miss It All",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27393e88bb4055872ca4ed31b8d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0293e88bb4055872ca4ed31b8d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485193e88bb4055872ca4ed31b8d",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Modern Baseball",
+        "genres": [
+          "alternative emo",
+          "emo",
+          "philly indie",
+          "pov: indie"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "7Jg2tDzP6qZQHO2A37m2ab",
+        "4QElAwQufg6wCeyvpafqwA"
+      ],
+      "rank": 95
     },
     {
       "duration_ms": 15820576,
@@ -3632,51 +3839,7 @@
         "3efgo1fUo21py17Z7jGsle",
         "4pvIaEmpn7dKN2TGKzh4nZ"
       ],
-      "rank": 91
-    },
-    {
-      "duration_ms": 30423120,
-      "count": 141,
-      "albumId": "1EPRNth3JNPGwH2tYZkfLe",
-      "album": {
-        "name": "Afraid of Heights",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273259b8943d6e33378f0d64af2",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02259b8943d6e33378f0d64af2",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851259b8943d6e33378f0d64af2",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Wavves",
-        "genres": [
-          "indie garage rock",
-          "indie rock",
-          "indie surf",
-          "lo-fi",
-          "noise pop",
-          "noise rock",
-          "nu gaze",
-          "san diego indie",
-          "surf punk"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "1EPRNth3JNPGwH2tYZkfLe"
-      ],
-      "rank": 92
+      "rank": 96
     },
     {
       "duration_ms": 36005912,
@@ -3718,46 +3881,7 @@
         "0U8DeqqKDgIhIiWOdqiQXE",
         "64xtjfsPHNHch0CZ7fPTjS"
       ],
-      "rank": 93
-    },
-    {
-      "duration_ms": 26684259,
-      "count": 140,
-      "albumId": "6hGTojkpsuz7uDG3FtkP3T",
-      "album": {
-        "name": "Uleste Bøker Og Utgåtte Sko",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27376eb0bdf578c3957121578d9",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0276eb0bdf578c3957121578d9",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485176eb0bdf578c3957121578d9",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Oslo Ess",
-        "genres": [
-          "norwegian punk rock",
-          "norwegian rock"
-        ]
-      },
-      "consolidated_count": 3,
-      "original_albumIds": [
-        "6hGTojkpsuz7uDG3FtkP3T",
-        "4MDXUjRJEVyseC15j3iGgM",
-        "7zjZH3XItx462mC4L8PRU6"
-      ],
-      "rank": 94
+      "rank": 97
     },
     {
       "duration_ms": 32152573,
@@ -3795,7 +3919,7 @@
       "original_albumIds": [
         "0gxJVoQZFdmoKJU1YhpoTn"
       ],
-      "rank": 95
+      "rank": 98
     },
     {
       "duration_ms": 44215011,
@@ -3835,7 +3959,7 @@
       "original_albumIds": [
         "1aGapZGHBovnmhwqVNI6JZ"
       ],
-      "rank": 96
+      "rank": 99
     },
     {
       "duration_ms": 28049698,
@@ -3871,7 +3995,7 @@
       "original_albumIds": [
         "4Hai0uVzRbyTSaTPzxTY4e"
       ],
-      "rank": 97
+      "rank": 100
     },
     {
       "duration_ms": 43111549,
@@ -3911,7 +4035,7 @@
       "original_albumIds": [
         "2b0omXZa81eCbv2oXl8NqZ"
       ],
-      "rank": 98
+      "rank": 101
     },
     {
       "duration_ms": 30430776,
@@ -3951,7 +4075,7 @@
         "5y0kLa3OexlQ1o5gfPr4AR",
         "4nmPZgECViB7oLrM6yAvTC"
       ],
-      "rank": 99
+      "rank": 102
     },
     {
       "duration_ms": 18235076,
@@ -3988,7 +4112,7 @@
       "original_albumIds": [
         "04q0xbiK6k25UHW4yMbn9p"
       ],
-      "rank": 100
+      "rank": 103
     },
     {
       "duration_ms": 29114738,
@@ -4028,7 +4152,7 @@
       "original_albumIds": [
         "1bt6q2SruMsBtcerNVtpZB"
       ],
-      "rank": 101
+      "rank": 104
     },
     {
       "duration_ms": 26035150,
@@ -4066,7 +4190,85 @@
       "original_albumIds": [
         "6XzoFb3hP14jVQeCMRdVJR"
       ],
-      "rank": 102
+      "rank": 105
+    },
+    {
+      "duration_ms": 23506909,
+      "count": 134,
+      "albumId": "2k295WaUi9nTfLZvqAHvRd",
+      "album": {
+        "name": "Alle Hjerter Deler Seg",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273833ae2943368d00167bfc455",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02833ae2943368d00167bfc455",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851833ae2943368d00167bfc455",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Oslo Ess",
+        "genres": [
+          "norwegian punk rock",
+          "norwegian rock"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "2k295WaUi9nTfLZvqAHvRd",
+        "1Rp9llhLJq2IX3KviX72oq"
+      ],
+      "rank": 106
+    },
+    {
+      "duration_ms": 20081366,
+      "count": 133,
+      "albumId": "6nn717WLSMptx36NhArqsT",
+      "album": {
+        "name": "Hadeland Hardcore",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273aac075ee586deecb3e495516",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02aac075ee586deecb3e495516",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851aac075ee586deecb3e495516",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Good The Bad and The Zugly",
+        "genres": [
+          "action rock",
+          "norwegian punk rock",
+          "norwegian rock"
+        ]
+      },
+      "consolidated_count": 3,
+      "original_albumIds": [
+        "6nn717WLSMptx36NhArqsT",
+        "3xnlBMMIrKbBSLq33O7ktH",
+        "6nJaj3BZ8phpmMhmvS7OYi"
+      ],
+      "rank": 107
     },
     {
       "duration_ms": 38668313,
@@ -4106,7 +4308,7 @@
       "original_albumIds": [
         "2xkZV2Hl1Omi8rk2D7t5lN"
       ],
-      "rank": 103
+      "rank": 108
     },
     {
       "duration_ms": 29346975,
@@ -4145,7 +4347,7 @@
       "original_albumIds": [
         "1E1eyI5uGllppJZCxNoF9w"
       ],
-      "rank": 104
+      "rank": 109
     },
     {
       "duration_ms": 32303419,
@@ -4182,45 +4384,7 @@
       "original_albumIds": [
         "1pIsO2loAVLYcjjSVv6oVe"
       ],
-      "rank": 105
-    },
-    {
-      "duration_ms": 29252929,
-      "count": 130,
-      "albumId": "4GRDFQ9HRoO0by8H0r2a3I",
-      "album": {
-        "name": "Late Registration",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2734c7dd2b7fc516356e037bf68",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e024c7dd2b7fc516356e037bf68",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048514c7dd2b7fc516356e037bf68",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Kanye West",
-        "genres": [
-          "chicago rap",
-          "hip hop",
-          "rap"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "4GRDFQ9HRoO0by8H0r2a3I"
-      ],
-      "rank": 106
+      "rank": 110
     },
     {
       "duration_ms": 20797967,
@@ -4259,7 +4423,7 @@
         "1HisV3ZKLs9It3KlGcPki5",
         "596cCa6FfamS1WvGbIyFGl"
       ],
-      "rank": 107
+      "rank": 111
     },
     {
       "duration_ms": 27896005,
@@ -4296,7 +4460,7 @@
       "original_albumIds": [
         "0DFYbYCcHCEJPcN1hODG6K"
       ],
-      "rank": 108
+      "rank": 112
     },
     {
       "duration_ms": 29292237,
@@ -4337,7 +4501,7 @@
       "original_albumIds": [
         "11yHtE6IzOk6elh9cJzldJ"
       ],
-      "rank": 109
+      "rank": 113
     },
     {
       "duration_ms": 36205207,
@@ -4381,7 +4545,7 @@
       "original_albumIds": [
         "2ODAEaYlqS88SU4ZZu1bI6"
       ],
-      "rank": 110
+      "rank": 114
     },
     {
       "duration_ms": 32051389,
@@ -4421,7 +4585,7 @@
       "original_albumIds": [
         "6m9cpSfRCYltkhxl23wq0j"
       ],
-      "rank": 111
+      "rank": 115
     },
     {
       "duration_ms": 14886587,
@@ -4459,7 +4623,7 @@
       "original_albumIds": [
         "3Alr3YRWtyH8J315fqb9wT"
       ],
-      "rank": 112
+      "rank": 116
     },
     {
       "duration_ms": 17335374,
@@ -4499,7 +4663,7 @@
       "original_albumIds": [
         "6QPou2e8WCSHa24mBIOoaa"
       ],
-      "rank": 113
+      "rank": 117
     },
     {
       "duration_ms": 33456862,
@@ -4537,7 +4701,7 @@
       "original_albumIds": [
         "6mUdeDZCsExyJLMdAfDuwh"
       ],
-      "rank": 114
+      "rank": 118
     },
     {
       "duration_ms": 30967058,
@@ -4575,7 +4739,7 @@
       "original_albumIds": [
         "1NRRN5RWwfuLmQdjshz0L7"
       ],
-      "rank": 115
+      "rank": 119
     },
     {
       "duration_ms": 35511326,
@@ -4614,7 +4778,7 @@
       "original_albumIds": [
         "31qVWUdRrlb8thMvts0yYL"
       ],
-      "rank": 116
+      "rank": 120
     },
     {
       "duration_ms": 18192165,
@@ -4650,45 +4814,7 @@
       "original_albumIds": [
         "4NPe1Iq9dS7vnFBbyc83Um"
       ],
-      "rank": 117
-    },
-    {
-      "duration_ms": 19861994,
-      "count": 125,
-      "albumId": "7zlf5gmgcFBUSLZpVsh9EE",
-      "album": {
-        "name": "Everything So Far",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2734e48dddf8b7fa7f224015588",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e024e48dddf8b7fa7f224015588",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048514e48dddf8b7fa7f224015588",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Pinegrove",
-        "genres": [
-          "countrygaze",
-          "new jersey indie",
-          "small room"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "7zlf5gmgcFBUSLZpVsh9EE"
-      ],
-      "rank": 118
+      "rank": 121
     },
     {
       "duration_ms": 25421639,
@@ -4726,7 +4852,7 @@
       "original_albumIds": [
         "3T6hM5LbfFxp9AUjnJP6fN"
       ],
-      "rank": 119
+      "rank": 122
     },
     {
       "duration_ms": 24525947,
@@ -4762,7 +4888,7 @@
       "original_albumIds": [
         "74uJy9HM8Tg4iqzFBaSVRD"
       ],
-      "rank": 120
+      "rank": 123
     },
     {
       "duration_ms": 16996382,
@@ -4802,7 +4928,7 @@
         "02KuwrUe9r1knIfI0rVf7c",
         "2hLv475JrrDPh5Q2WQKKYT"
       ],
-      "rank": 121
+      "rank": 124
     },
     {
       "duration_ms": 31204136,
@@ -4844,7 +4970,7 @@
       "original_albumIds": [
         "7Ln81p86r5cCsesd3KBWIY"
       ],
-      "rank": 122
+      "rank": 125
     },
     {
       "duration_ms": 30425688,
@@ -4883,7 +5009,7 @@
         "0AF0eSjB3atcLpJ7gQBop5",
         "0iyWxTBrrClm4XW0pz5V7S"
       ],
-      "rank": 123
+      "rank": 126
     },
     {
       "duration_ms": 28463262,
@@ -4925,7 +5051,7 @@
       "original_albumIds": [
         "0JwHz5SSvpYWuuCNbtYZoV"
       ],
-      "rank": 124
+      "rank": 127
     },
     {
       "duration_ms": 36518413,
@@ -4965,7 +5091,7 @@
       "original_albumIds": [
         "0lITGovWgaQGi42EfqcE5P"
       ],
-      "rank": 125
+      "rank": 128
     },
     {
       "duration_ms": 26095998,
@@ -5002,7 +5128,7 @@
       "original_albumIds": [
         "4Fps84SWAUVJongTEpp945"
       ],
-      "rank": 126
+      "rank": 129
     },
     {
       "duration_ms": 18455940,
@@ -5039,7 +5165,44 @@
       "original_albumIds": [
         "2Vg8YkTkuG4Y9MD4hB4KNN"
       ],
-      "rank": 127
+      "rank": 130
+    },
+    {
+      "duration_ms": 33663609,
+      "count": 119,
+      "albumId": "1C2guFV2LqsNWdtMTKInyZ",
+      "album": {
+        "name": "At Least For Now (Deluxe)",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d9460c81ee1a3e6b28017aea",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02d9460c81ee1a3e6b28017aea",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851d9460c81ee1a3e6b28017aea",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Benjamin Clementine",
+        "genres": [
+          "art pop"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "1C2guFV2LqsNWdtMTKInyZ",
+        "0kmS5PSTDOgA1riwnqbueC"
+      ],
+      "rank": 131
     },
     {
       "duration_ms": 23414288,
@@ -5079,7 +5242,7 @@
       "original_albumIds": [
         "5yMCA6HdFAeL1aqUjxO3MO"
       ],
-      "rank": 128
+      "rank": 132
     },
     {
       "duration_ms": 24132660,
@@ -5116,7 +5279,7 @@
       "original_albumIds": [
         "0XnqQzdSFAml08XZoRt1St"
       ],
-      "rank": 129
+      "rank": 133
     },
     {
       "duration_ms": 25926734,
@@ -5154,7 +5317,7 @@
       "original_albumIds": [
         "2dIGnmEIy1WZIcZCFSj6i8"
       ],
-      "rank": 130
+      "rank": 134
     },
     {
       "duration_ms": 22195005,
@@ -5194,7 +5357,7 @@
       "original_albumIds": [
         "50Zz8CkIhATKUlQMbHO3k1"
       ],
-      "rank": 131
+      "rank": 135
     },
     {
       "duration_ms": 19697479,
@@ -5232,7 +5395,7 @@
         "4VJGAU5yH56Z9zqGbllv0S",
         "5GgsYoD0QMQyCaJ1MhEtPz"
       ],
-      "rank": 132
+      "rank": 136
     },
     {
       "duration_ms": 24823841,
@@ -5269,46 +5432,48 @@
       "original_albumIds": [
         "6MiQ7JVsKlOBJFJzWQZ2Kz"
       ],
-      "rank": 133
+      "rank": 137
     },
     {
-      "duration_ms": 17582139,
+      "duration_ms": 26663044,
       "count": 116,
-      "albumId": "7Jg2tDzP6qZQHO2A37m2ab",
+      "albumId": "6jbtJwRmuezfOSXyJy3tRZ",
       "album": {
-        "name": "You're Gonna Miss It All",
+        "name": "Violeta Violeta Volume I",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27393e88bb4055872ca4ed31b8d",
+            "url": "https://i.scdn.co/image/ab67616d0000b273d9f339625b4d4fc5f3182d7c",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0293e88bb4055872ca4ed31b8d",
+            "url": "https://i.scdn.co/image/ab67616d00001e02d9f339625b4d4fc5f3182d7c",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485193e88bb4055872ca4ed31b8d",
+            "url": "https://i.scdn.co/image/ab67616d00004851d9f339625b4d4fc5f3182d7c",
             "width": 64
           }
         ]
       },
       "artist": {
-        "name": "Modern Baseball",
+        "name": "Kaizers Orchestra",
         "genres": [
-          "alternative emo",
-          "emo",
-          "philly indie",
-          "pov: indie"
+          "dark cabaret",
+          "norwegian alternative rock",
+          "norwegian rock",
+          "rogaland indie",
+          "rogaland musikk"
         ]
       },
-      "consolidated_count": 1,
+      "consolidated_count": 2,
       "original_albumIds": [
-        "7Jg2tDzP6qZQHO2A37m2ab"
+        "6jbtJwRmuezfOSXyJy3tRZ",
+        "5uaYXPZpLnhUZLyNFeX2P4"
       ],
-      "rank": 134
+      "rank": 138
     },
     {
       "duration_ms": 26767867,
@@ -5347,7 +5512,7 @@
       "original_albumIds": [
         "13WjgUEEAQp0d9JqojlWp1"
       ],
-      "rank": 135
+      "rank": 139
     },
     {
       "duration_ms": 24635974,
@@ -5386,7 +5551,7 @@
       "original_albumIds": [
         "1vz94WpXDVYIEGja8cjFNa"
       ],
-      "rank": 136
+      "rank": 140
     },
     {
       "duration_ms": 17519859,
@@ -5423,7 +5588,7 @@
       "original_albumIds": [
         "2s6fTO9H8HWzl0yxBeS5n9"
       ],
-      "rank": 137
+      "rank": 141
     },
     {
       "duration_ms": 28956648,
@@ -5466,7 +5631,7 @@
       "original_albumIds": [
         "6WgGWYw6XXQyLTsWt7tXky"
       ],
-      "rank": 138
+      "rank": 142
     },
     {
       "duration_ms": 25285052,
@@ -5505,7 +5670,7 @@
       "original_albumIds": [
         "7J0uECwRkAFLiZljgYFq1w"
       ],
-      "rank": 139
+      "rank": 143
     },
     {
       "duration_ms": 16569867,
@@ -5546,7 +5711,7 @@
         "6RRdYa0AcFd8oF7IDPfxVP",
         "1vA4pfmBUT9ei4Ukq8uTx1"
       ],
-      "rank": 140
+      "rank": 144
     },
     {
       "duration_ms": 26750769,
@@ -5584,7 +5749,7 @@
       "original_albumIds": [
         "4LO26juP3UnGdO3mB2imxl"
       ],
-      "rank": 141
+      "rank": 145
     },
     {
       "duration_ms": 22557565,
@@ -5623,7 +5788,7 @@
       "original_albumIds": [
         "3Zkggi5I9uH5x94DuN6u1S"
       ],
-      "rank": 142
+      "rank": 146
     },
     {
       "duration_ms": 24081842,
@@ -5663,7 +5828,7 @@
       "original_albumIds": [
         "72mfhbEsMtXR6s7v9UhKe3"
       ],
-      "rank": 143
+      "rank": 147
     },
     {
       "duration_ms": 15458098,
@@ -5703,7 +5868,7 @@
       "original_albumIds": [
         "13Q0AfGNq7GwUXGeUwWViH"
       ],
-      "rank": 144
+      "rank": 148
     },
     {
       "duration_ms": 17890433,
@@ -5743,7 +5908,7 @@
       "original_albumIds": [
         "2vMWoMKeyq9m1xIghMKkaL"
       ],
-      "rank": 145
+      "rank": 149
     },
     {
       "duration_ms": 21774686,
@@ -5779,7 +5944,7 @@
       "original_albumIds": [
         "3KbuvIJRqejRJ4gtO9xwC3"
       ],
-      "rank": 146
+      "rank": 150
     },
     {
       "duration_ms": 23044068,
@@ -5816,7 +5981,7 @@
       "original_albumIds": [
         "3y4AaloFccKNLQcZNS9L8c"
       ],
-      "rank": 147
+      "rank": 151
     },
     {
       "duration_ms": 18003205,
@@ -5857,7 +6022,50 @@
         "2sZGDqHfU884z3iFris122",
         "64QRcbdwSnTl82g1LvBHoO"
       ],
-      "rank": 148
+      "rank": 152
+    },
+    {
+      "duration_ms": 24132166,
+      "count": 110,
+      "albumId": "5o6rAfcrvCMOE2Xdu1SHIz",
+      "album": {
+        "name": "The Rip Tide",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273764267bc39adb669faa9ff75",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02764267bc39adb669faa9ff75",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851764267bc39adb669faa9ff75",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Beirut",
+        "genres": [
+          "albuquerque indie",
+          "baroque pop",
+          "chamber pop",
+          "indie rock",
+          "indietronica",
+          "stomp and holler"
+        ]
+      },
+      "consolidated_count": 3,
+      "original_albumIds": [
+        "5o6rAfcrvCMOE2Xdu1SHIz",
+        "7HYptJX2aQJPWbxXviXLwQ",
+        "7ri0EOAjJuuyawBbbEyU2L"
+      ],
+      "rank": 153
     },
     {
       "duration_ms": 14838995,
@@ -5896,7 +6104,7 @@
       "original_albumIds": [
         "0imzdlOmhG0lRx4IYxdgpI"
       ],
-      "rank": 149
+      "rank": 154
     },
     {
       "duration_ms": 27453951,
@@ -5933,7 +6141,7 @@
       "original_albumIds": [
         "4scplu2ZeU0dbfb4LCVlZz"
       ],
-      "rank": 150
+      "rank": 155
     },
     {
       "duration_ms": 14892204,
@@ -5972,7 +6180,7 @@
       "original_albumIds": [
         "34aFnrFRBlErcbU6moRZR3"
       ],
-      "rank": 151
+      "rank": 156
     },
     {
       "duration_ms": 25177934,
@@ -6008,44 +6216,46 @@
       "original_albumIds": [
         "6cmFNl8lllA6BGc7SKLy3y"
       ],
-      "rank": 152
+      "rank": 157
     },
     {
-      "duration_ms": 18733797,
+      "duration_ms": 18392589,
       "count": 106,
-      "albumId": "2k295WaUi9nTfLZvqAHvRd",
+      "albumId": "1dSogW0WzPI6usIWtZbGiT",
       "album": {
-        "name": "Alle Hjerter Deler Seg",
+        "name": "Vandrer på solskinn",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273833ae2943368d00167bfc455",
+            "url": "https://i.scdn.co/image/ab67616d0000b27323a63638ddddcfb74e12da5e",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02833ae2943368d00167bfc455",
+            "url": "https://i.scdn.co/image/ab67616d00001e0223a63638ddddcfb74e12da5e",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851833ae2943368d00167bfc455",
+            "url": "https://i.scdn.co/image/ab67616d0000485123a63638ddddcfb74e12da5e",
             "width": 64
           }
         ]
       },
       "artist": {
-        "name": "Oslo Ess",
+        "name": "brenn.",
         "genres": [
-          "norwegian punk rock",
-          "norwegian rock"
+          "norwegian alternative rock",
+          "norwegian indie",
+          "norwegian pop rap"
         ]
       },
-      "consolidated_count": 1,
+      "consolidated_count": 2,
       "original_albumIds": [
-        "2k295WaUi9nTfLZvqAHvRd"
+        "1dSogW0WzPI6usIWtZbGiT",
+        "74ptfVGy0TQqoobpYEqCF8"
       ],
-      "rank": 153
+      "rank": 158
     },
     {
       "duration_ms": 19046902,
@@ -6090,46 +6300,7 @@
         "39ve9pwi7p3kOYKNkRKcSs",
         "7Mn0aXVHjaoFZPKLssqI9d"
       ],
-      "rank": 154
-    },
-    {
-      "duration_ms": 16086636,
-      "count": 106,
-      "albumId": "6nn717WLSMptx36NhArqsT",
-      "album": {
-        "name": "Hadeland Hardcore",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273aac075ee586deecb3e495516",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02aac075ee586deecb3e495516",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851aac075ee586deecb3e495516",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The Good The Bad and The Zugly",
-        "genres": [
-          "action rock",
-          "norwegian punk rock",
-          "norwegian rock"
-        ]
-      },
-      "consolidated_count": 2,
-      "original_albumIds": [
-        "6nn717WLSMptx36NhArqsT",
-        "3xnlBMMIrKbBSLq33O7ktH"
-      ],
-      "rank": 155
+      "rank": 159
     },
     {
       "duration_ms": 20619430,
@@ -6169,7 +6340,7 @@
       "original_albumIds": [
         "1XkGORuUX2QGOEIL4EbJKm"
       ],
-      "rank": 156
+      "rank": 160
     },
     {
       "duration_ms": 16495079,
@@ -6208,7 +6379,7 @@
       "original_albumIds": [
         "3xK27g0o3FzltPGJrA51DC"
       ],
-      "rank": 157
+      "rank": 161
     },
     {
       "duration_ms": 21488602,
@@ -6245,7 +6416,7 @@
         "6DAL46eCFRxgj624atbOYY",
         "3nR8btC3svZmUktrXDBuRY"
       ],
-      "rank": 158
+      "rank": 162
     },
     {
       "duration_ms": 10423384,
@@ -6284,7 +6455,7 @@
         "2tQSaVTntSAVbDognInDQo",
         "13CIkqepI5OsilnbvSmDqk"
       ],
-      "rank": 159
+      "rank": 163
     },
     {
       "duration_ms": 25860721,
@@ -6325,7 +6496,7 @@
         "5MjC805qLtwgqXH1c0kpjK",
         "6G2VFrsyr7jAiUYklrdKob"
       ],
-      "rank": 160
+      "rank": 164
     },
     {
       "duration_ms": 23671108,
@@ -6366,7 +6537,7 @@
       "original_albumIds": [
         "5CIQzwSZOEvRx66odcOv6C"
       ],
-      "rank": 161
+      "rank": 165
     },
     {
       "duration_ms": 27681141,
@@ -6407,7 +6578,7 @@
         "1f4I0SpE0O8yg4Eg2ywwv1",
         "1zaPsC8dBFfesoY62MwMFa"
       ],
-      "rank": 162
+      "rank": 166
     },
     {
       "duration_ms": 22614203,
@@ -6447,7 +6618,90 @@
       "original_albumIds": [
         "6fQElzBNTiEMGdIeY0hy5l"
       ],
-      "rank": 163
+      "rank": 167
+    },
+    {
+      "duration_ms": 17691169,
+      "count": 101,
+      "albumId": "7lelUe4aaCQmOMJKsQvirf",
+      "album": {
+        "name": "The Dream Is Over",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273403711acc2bca1de5e08991d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02403711acc2bca1de5e08991d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851403711acc2bca1de5e08991d",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "PUP",
+        "genres": [
+          "alternative emo",
+          "bubblegrunge",
+          "canadian indie",
+          "canadian pop punk",
+          "canadian punk",
+          "emo",
+          "indie punk",
+          "toronto indie"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "7lelUe4aaCQmOMJKsQvirf",
+        "7mQSfTIli4awcQj1w1Fbou"
+      ],
+      "rank": 168
+    },
+    {
+      "duration_ms": 38996101,
+      "count": 101,
+      "albumId": "20U1UWeGcGq7JVW0tf8yfH",
+      "album": {
+        "name": "Twin Fantasy",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273e4221d183898a2c206626b64",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02e4221d183898a2c206626b64",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851e4221d183898a2c206626b64",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Car Seat Headrest",
+        "genres": [
+          "furry",
+          "indie rock",
+          "pov: indie"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "20U1UWeGcGq7JVW0tf8yfH",
+        "6gDtROOIYa6OQxwhDNkDRM"
+      ],
+      "rank": 169
     },
     {
       "duration_ms": 21604354,
@@ -6486,7 +6740,7 @@
       "original_albumIds": [
         "06UoTVgpPiGnRPGjowrG3g"
       ],
-      "rank": 164
+      "rank": 170
     },
     {
       "duration_ms": 22387824,
@@ -6523,7 +6777,7 @@
       "original_albumIds": [
         "0JGOiO34nwfUdDrD612dOp"
       ],
-      "rank": 165
+      "rank": 171
     },
     {
       "duration_ms": 16646963,
@@ -6561,7 +6815,87 @@
       "original_albumIds": [
         "7vHBQDqwzB7uDvoE5bncMM"
       ],
-      "rank": 166
+      "rank": 172
+    },
+    {
+      "duration_ms": 30300750,
+      "count": 100,
+      "albumId": "2p2Z9x8UIB8BCHzG8qE1w2",
+      "album": {
+        "name": "The Hands That Thieve",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273a2339c6395d96de5ec0df9df",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02a2339c6395d96de5ec0df9df",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851a2339c6395d96de5ec0df9df",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Streetlight Manifesto",
+        "genres": [
+          "ska",
+          "ska punk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "2p2Z9x8UIB8BCHzG8qE1w2",
+        "3sZ300pdz8v0l1Jd4NFQbY"
+      ],
+      "rank": 173
+    },
+    {
+      "duration_ms": 20389505,
+      "count": 100,
+      "albumId": "21m7s6qWpksbj6l08OM7Pu",
+      "album": {
+        "name": "Flume",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273758a1363ae72d75ddadf875e",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02758a1363ae72d75ddadf875e",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851758a1363ae72d75ddadf875e",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Flume",
+        "genres": [
+          "australian dance",
+          "australian electropop",
+          "australian indie",
+          "downtempo",
+          "edm",
+          "indietronica"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "21m7s6qWpksbj6l08OM7Pu",
+        "1Ya2L1SaukipRj53e0dIYc"
+      ],
+      "rank": 174
     },
     {
       "duration_ms": 24074692,
@@ -6605,7 +6939,7 @@
         "4aKM77gbrLlDK5egwbmosm",
         "5WXkhXajktSjUJxN2S50qo"
       ],
-      "rank": 167
+      "rank": 175
     },
     {
       "duration_ms": 17265595,
@@ -6641,7 +6975,7 @@
       "original_albumIds": [
         "1EbEG39Z6qjFRkFA428qH6"
       ],
-      "rank": 168
+      "rank": 176
     },
     {
       "duration_ms": 31407031,
@@ -6684,7 +7018,7 @@
       "original_albumIds": [
         "5z090LQztiqh13wYspQvKQ"
       ],
-      "rank": 169
+      "rank": 177
     },
     {
       "duration_ms": 25565016,
@@ -6723,7 +7057,7 @@
         "2QxM7wcDd7qsB95FEftuga",
         "15P0EFs78iLbc5rOLSkYYG"
       ],
-      "rank": 170
+      "rank": 178
     },
     {
       "duration_ms": 12813219,
@@ -6760,7 +7094,7 @@
       "original_albumIds": [
         "3VHxlMnG9PDcXyzWrITCf6"
       ],
-      "rank": 171
+      "rank": 179
     },
     {
       "duration_ms": 31058696,
@@ -6804,7 +7138,7 @@
       "original_albumIds": [
         "6NTrwu1XJ56jBPx7HMksbZ"
       ],
-      "rank": 172
+      "rank": 180
     },
     {
       "duration_ms": 19868975,
@@ -6845,7 +7179,7 @@
       "original_albumIds": [
         "6ZCbYO3B5eslkY3zHdss4A"
       ],
-      "rank": 173
+      "rank": 181
     },
     {
       "duration_ms": 21293271,
@@ -6885,7 +7219,7 @@
         "0ZGu9S5IAwD8FskQO18KmK",
         "7Lr9pQMAupeFYgHXtN9dBJ"
       ],
-      "rank": 174
+      "rank": 182
     },
     {
       "duration_ms": 23554862,
@@ -6928,7 +7262,7 @@
       "original_albumIds": [
         "1C30LhZB9I48LdpVCRRYvq"
       ],
-      "rank": 175
+      "rank": 183
     },
     {
       "duration_ms": 26335400,
@@ -6967,7 +7301,7 @@
       "original_albumIds": [
         "20Gu1wmoZZiauIswi3BAHR"
       ],
-      "rank": 176
+      "rank": 184
     },
     {
       "duration_ms": 14964253,
@@ -7004,7 +7338,7 @@
       "original_albumIds": [
         "2A1RY2fEJAucP1uAiGL5nb"
       ],
-      "rank": 177
+      "rank": 185
     },
     {
       "duration_ms": 28849792,
@@ -7042,7 +7376,7 @@
       "original_albumIds": [
         "2MxcbOGFi99D9JACvj74AH"
       ],
-      "rank": 178
+      "rank": 186
     },
     {
       "duration_ms": 19390849,
@@ -7079,7 +7413,7 @@
       "original_albumIds": [
         "0bXxZ917yYSGxRutDBiCha"
       ],
-      "rank": 179
+      "rank": 187
     },
     {
       "duration_ms": 14433525,
@@ -7123,7 +7457,87 @@
       "original_albumIds": [
         "4YXtgZunaJyWZifBp0pNa1"
       ],
-      "rank": 180
+      "rank": 188
+    },
+    {
+      "duration_ms": 24304554,
+      "count": 96,
+      "albumId": "0hoeWFBKo9kGoKMhKOuKRY",
+      "album": {
+        "name": "Våre Demoner",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273973a6e7e31bd5623af93aa31",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02973a6e7e31bd5623af93aa31",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851973a6e7e31bd5623af93aa31",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Kaizers Orchestra",
+        "genres": [
+          "dark cabaret",
+          "norwegian alternative rock",
+          "norwegian rock",
+          "rogaland indie",
+          "rogaland musikk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "0hoeWFBKo9kGoKMhKOuKRY",
+        "6CSTOAMHphZGon9leEyN9c"
+      ],
+      "rank": 189
+    },
+    {
+      "duration_ms": 18951575,
+      "count": 96,
+      "albumId": "6ID0d3Tjr93iCWzVnQGwnW",
+      "album": {
+        "name": "Are You In Or Out?",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273478d2a96f1c075847d544cd4",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02478d2a96f1c075847d544cd4",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851478d2a96f1c075847d544cd4",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Growlers",
+        "genres": [
+          "garage rock revival",
+          "indie garage rock",
+          "indie surf"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "6ID0d3Tjr93iCWzVnQGwnW",
+        "5Lce4lhMsm9V35kMQzHNHr"
+      ],
+      "rank": 190
     },
     {
       "duration_ms": 9868213,
@@ -7160,7 +7574,7 @@
       "original_albumIds": [
         "1JSanboctECdzwkzLTbys0"
       ],
-      "rank": 181
+      "rank": 191
     },
     {
       "duration_ms": 16919775,
@@ -7199,7 +7613,7 @@
       "original_albumIds": [
         "3KAguv1g8qM0iPx5Z2cd8u"
       ],
-      "rank": 182
+      "rank": 192
     },
     {
       "duration_ms": 23949242,
@@ -7239,7 +7653,7 @@
       "original_albumIds": [
         "6mm1Skz3JE6AXneya9Nyiv"
       ],
-      "rank": 183
+      "rank": 193
     },
     {
       "duration_ms": 16760714,
@@ -7279,7 +7693,7 @@
         "6ymZBbRSmzAvoSGmwAFoxm",
         "0DQyTVcDhK9wm0f6RaErWO"
       ],
-      "rank": 184
+      "rank": 194
     },
     {
       "duration_ms": 19108289,
@@ -7317,7 +7731,7 @@
       "original_albumIds": [
         "0NvirtaDCaZU5PAW1O5FDE"
       ],
-      "rank": 185
+      "rank": 195
     },
     {
       "duration_ms": 19292990,
@@ -7355,7 +7769,7 @@
       "original_albumIds": [
         "2VP96XdMOKTXefI8Nui23s"
       ],
-      "rank": 186
+      "rank": 196
     },
     {
       "duration_ms": 19617895,
@@ -7395,7 +7809,7 @@
       "original_albumIds": [
         "2de6LD7eOW8zrlorbS28na"
       ],
-      "rank": 187
+      "rank": 197
     },
     {
       "duration_ms": 15214696,
@@ -7434,7 +7848,7 @@
       "original_albumIds": [
         "5hryhrT7wEdLnZCbJX9F6L"
       ],
-      "rank": 188
+      "rank": 198
     },
     {
       "duration_ms": 22880363,
@@ -7472,7 +7886,7 @@
       "original_albumIds": [
         "5uvoX0fFiT1QFpZXntsI3j"
       ],
-      "rank": 189
+      "rank": 199
     },
     {
       "duration_ms": 21171639,
@@ -7508,47 +7922,7 @@
       "original_albumIds": [
         "6WbMZYQ1SAU8HrgZSuH0xJ"
       ],
-      "rank": 190
-    },
-    {
-      "duration_ms": 21796522,
-      "count": 94,
-      "albumId": "6jbtJwRmuezfOSXyJy3tRZ",
-      "album": {
-        "name": "Violeta Violeta Volume I",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273d9f339625b4d4fc5f3182d7c",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02d9f339625b4d4fc5f3182d7c",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851d9f339625b4d4fc5f3182d7c",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Kaizers Orchestra",
-        "genres": [
-          "dark cabaret",
-          "norwegian alternative rock",
-          "norwegian rock",
-          "rogaland indie",
-          "rogaland musikk"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "6jbtJwRmuezfOSXyJy3tRZ"
-      ],
-      "rank": 191
+      "rank": 200
     },
     {
       "duration_ms": 21158184,
@@ -7586,7 +7960,7 @@
       "original_albumIds": [
         "4kkVGtCqE2NiAKosri9Rnd"
       ],
-      "rank": 192
+      "rank": 201
     },
     {
       "duration_ms": 19652537,
@@ -7622,43 +7996,47 @@
       "original_albumIds": [
         "6pwuKxMUkNg673KETsXPUV"
       ],
-      "rank": 193
+      "rank": 202
     },
     {
-      "duration_ms": 25712177,
-      "count": 91,
-      "albumId": "1C2guFV2LqsNWdtMTKInyZ",
+      "duration_ms": 14237610,
+      "count": 92,
+      "albumId": "5mwOo1zikswhmfHvtqVSXg",
       "album": {
-        "name": "At Least For Now (Deluxe)",
+        "name": "Pink Moon",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273d9460c81ee1a3e6b28017aea",
+            "url": "https://i.scdn.co/image/ab67616d0000b273e369195caf5d169bf5e9eafc",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02d9460c81ee1a3e6b28017aea",
+            "url": "https://i.scdn.co/image/ab67616d00001e02e369195caf5d169bf5e9eafc",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851d9460c81ee1a3e6b28017aea",
+            "url": "https://i.scdn.co/image/ab67616d00004851e369195caf5d169bf5e9eafc",
             "width": 64
           }
         ]
       },
       "artist": {
-        "name": "Benjamin Clementine",
+        "name": "Nick Drake",
         "genres": [
-          "art pop"
+          "british folk",
+          "folk",
+          "melancholia",
+          "singer-songwriter"
         ]
       },
-      "consolidated_count": 1,
+      "consolidated_count": 2,
       "original_albumIds": [
-        "1C2guFV2LqsNWdtMTKInyZ"
+        "5mwOo1zikswhmfHvtqVSXg",
+        "6LoD5uGEynY4eqstWDFKhg"
       ],
-      "rank": 194
+      "rank": 203
     },
     {
       "duration_ms": 21419911,
@@ -7698,7 +8076,7 @@
       "original_albumIds": [
         "1r9QVhidokOejUj0drqLGI"
       ],
-      "rank": 195
+      "rank": 204
     },
     {
       "duration_ms": 15396760,
@@ -7740,7 +8118,7 @@
       "original_albumIds": [
         "6GphKx2QAPRoVGWE9D7ou8"
       ],
-      "rank": 196
+      "rank": 205
     },
     {
       "duration_ms": 22201556,
@@ -7782,7 +8160,7 @@
         "49qPGOSoeIjG7bLP28bBLU",
         "5oKWoolIuoWMG6AORvA9hL"
       ],
-      "rank": 197
+      "rank": 206
     },
     {
       "duration_ms": 34525971,
@@ -7820,7 +8198,7 @@
       "original_albumIds": [
         "4m2880jivSbbyEGAKfITCa"
       ],
-      "rank": 198
+      "rank": 207
     },
     {
       "duration_ms": 17292768,
@@ -7862,7 +8240,7 @@
         "2S2GkAuWtEWFuLdmITV0ev",
         "6LZpRofbNxPgc8eXvw0j1S"
       ],
-      "rank": 199
+      "rank": 208
     },
     {
       "duration_ms": 27669551,
@@ -7902,7 +8280,7 @@
       "original_albumIds": [
         "37KYBt1Lzn4eJ4KoCFZcnR"
       ],
-      "rank": 200
+      "rank": 209
     },
     {
       "duration_ms": 26874138,
@@ -7946,7 +8324,7 @@
       "original_albumIds": [
         "3AQgdwMNCiN7awXch5fAaG"
       ],
-      "rank": 201
+      "rank": 210
     },
     {
       "duration_ms": 10317490,
@@ -7988,7 +8366,7 @@
       "original_albumIds": [
         "5GiQF77nsYSCryWmMFqPlL"
       ],
-      "rank": 202
+      "rank": 211
     },
     {
       "duration_ms": 24501630,
@@ -8028,7 +8406,7 @@
       "original_albumIds": [
         "6tOe4eAF8xNhEkl9WyvsE4"
       ],
-      "rank": 203
+      "rank": 212
     },
     {
       "duration_ms": 18502297,
@@ -8064,7 +8442,7 @@
       "original_albumIds": [
         "2HDowU93etbL5ClDIRAyh8"
       ],
-      "rank": 204
+      "rank": 213
     },
     {
       "duration_ms": 28247901,
@@ -8104,7 +8482,7 @@
       "original_albumIds": [
         "43YIoHKSrEw2GJsWmhZIpu"
       ],
-      "rank": 205
+      "rank": 214
     },
     {
       "duration_ms": 8898036,
@@ -8143,7 +8521,7 @@
       "original_albumIds": [
         "6IU592n49Rn36fpEmg9LIq"
       ],
-      "rank": 206
+      "rank": 215
     },
     {
       "duration_ms": 20196710,
@@ -8181,7 +8559,7 @@
       "original_albumIds": [
         "6swV0WUnPygRIMgEKn6Ige"
       ],
-      "rank": 207
+      "rank": 216
     },
     {
       "duration_ms": 15669978,
@@ -8219,7 +8597,7 @@
       "original_albumIds": [
         "0BrcpRYg40t0Ia6XUtkVU5"
       ],
-      "rank": 208
+      "rank": 217
     },
     {
       "duration_ms": 12877312,
@@ -8256,7 +8634,7 @@
       "original_albumIds": [
         "57lgFncHBYu5E3igZnuCJK"
       ],
-      "rank": 209
+      "rank": 218
     },
     {
       "duration_ms": 8463688,
@@ -8297,7 +8675,7 @@
       "original_albumIds": [
         "66at85wgO2pu5CccvqUF6i"
       ],
-      "rank": 210
+      "rank": 219
     },
     {
       "duration_ms": 21180719,
@@ -8337,7 +8715,7 @@
       "original_albumIds": [
         "6rvoCczjq9prDGSoxQr1Xq"
       ],
-      "rank": 211
+      "rank": 220
     },
     {
       "duration_ms": 27790983,
@@ -8376,7 +8754,7 @@
       "original_albumIds": [
         "6f6tko6NWoH00cyFOl4VYQ"
       ],
-      "rank": 212
+      "rank": 221
     },
     {
       "duration_ms": 21906784,
@@ -8417,7 +8795,47 @@
         "7taAuoHvZ4LJzEaB0OzuP3",
         "5S0GDz2d3EeTS6zb5oJeKI"
       ],
-      "rank": 213
+      "rank": 222
+    },
+    {
+      "duration_ms": 14457639,
+      "count": 86,
+      "albumId": "2dtJ0evXb8etZPyzWSIU7a",
+      "album": {
+        "name": "Under Soil and Dirt",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27314e7f9b01dc426711734a168",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0214e7f9b01dc426711734a168",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485114e7f9b01dc426711734a168",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Story So Far",
+        "genres": [
+          "alternative emo",
+          "emo",
+          "pop punk"
+        ]
+      },
+      "consolidated_count": 3,
+      "original_albumIds": [
+        "2dtJ0evXb8etZPyzWSIU7a",
+        "7DU6Fws7OWUFhxev1m2DNs",
+        "6Wi8KLjJGJlNiwYp4DHe7O"
+      ],
+      "rank": 223
     },
     {
       "duration_ms": 19696585,
@@ -8456,7 +8874,7 @@
       "original_albumIds": [
         "093amtf9s8VkIdUtvd2Tap"
       ],
-      "rank": 214
+      "rank": 224
     },
     {
       "duration_ms": 13799998,
@@ -8492,7 +8910,121 @@
       "original_albumIds": [
         "7eWEeKIJddHrRg627i6eZf"
       ],
-      "rank": 215
+      "rank": 225
+    },
+    {
+      "duration_ms": 13359505,
+      "count": 85,
+      "albumId": "70zFEpALzz2iajtjcarwjy",
+      "album": {
+        "name": "Blomst",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273096ffdb462a60051426d7b54",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02096ffdb462a60051426d7b54",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851096ffdb462a60051426d7b54",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Blomst",
+        "genres": [
+          "norwegian punk rock",
+          "norwegian rock"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "70zFEpALzz2iajtjcarwjy",
+        "5vOPZCfxnV9t1LYSl5ylTN"
+      ],
+      "rank": 226
+    },
+    {
+      "duration_ms": 14863074,
+      "count": 85,
+      "albumId": "6nPsiKqsU3krjRbJHIAVJ8",
+      "album": {
+        "name": "Misanthropical House",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27381e739d133c06e2a999e2962",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0281e739d133c06e2a999e2962",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485181e739d133c06e2a999e2962",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Good The Bad and The Zugly",
+        "genres": [
+          "action rock",
+          "norwegian punk rock",
+          "norwegian rock"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "6nPsiKqsU3krjRbJHIAVJ8",
+        "2ZZerNm8N6M1juEQjWFpyG"
+      ],
+      "rank": 227
+    },
+    {
+      "duration_ms": 18044424,
+      "count": 85,
+      "albumId": "7DuJYWu66RPdcekF5TuZ7w",
+      "album": {
+        "name": "A Charlie Brown Christmas [2012 Remastered & Expanded Edition]",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27332b0f9b1e5ee30df7a91cec3",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0232b0f9b1e5ee30df7a91cec3",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485132b0f9b1e5ee30df7a91cec3",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Vince Guaraldi Trio",
+        "genres": [
+          "jazz trio"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "7DuJYWu66RPdcekF5TuZ7w",
+        "2XnNY3GEkbWHor5kyvXLu4"
+      ],
+      "rank": 228
     },
     {
       "duration_ms": 10367019,
@@ -8526,7 +9058,7 @@
       "original_albumIds": [
         "0zeGTodJoE0Ds5ACkbi0ys"
       ],
-      "rank": 216
+      "rank": 229
     },
     {
       "duration_ms": 20642046,
@@ -8566,7 +9098,133 @@
       "original_albumIds": [
         "2Wfr01LIuo5Uy5Es51Q8b5"
       ],
-      "rank": 217
+      "rank": 230
+    },
+    {
+      "duration_ms": 27708805,
+      "count": 84,
+      "albumId": "0XRQBhtdlp5QveGubuxTxY",
+      "album": {
+        "name": "Jag är inte rädd för mörkret",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273a7d374add2a27a6207155a88",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02a7d374add2a27a6207155a88",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851a7d374add2a27a6207155a88",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "kent",
+        "genres": [
+          "classic swedish pop",
+          "swedish alternative rock",
+          "swedish indie rock",
+          "swedish pop"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "0XRQBhtdlp5QveGubuxTxY",
+        "3OApHAjrkQTDjfCJPdtxgm"
+      ],
+      "rank": 231
+    },
+    {
+      "duration_ms": 15121021,
+      "count": 84,
+      "albumId": "21wERoyBas2JCRCgysPDJX",
+      "album": {
+        "name": "13 Songs",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273a4758aa77a0f99752d8d6643",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02a4758aa77a0f99752d8d6643",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851a4758aa77a0f99752d8d6643",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Fugazi",
+        "genres": [
+          "alternative rock",
+          "dc hardcore",
+          "noise pop",
+          "noise rock",
+          "post-hardcore",
+          "post-punk",
+          "punk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "21wERoyBas2JCRCgysPDJX",
+        "1FcRwT7uoNdO8L9wbYsfAY"
+      ],
+      "rank": 232
+    },
+    {
+      "duration_ms": 18862673,
+      "count": 84,
+      "albumId": "0CvU96jYCiNP4c9u8dWHoI",
+      "album": {
+        "name": "Since I Left You",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27361d0cc596658e460111a819b",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0261d0cc596658e460111a819b",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485161d0cc596658e460111a819b",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Avalanches",
+        "genres": [
+          "australian alternative rock",
+          "australian dance",
+          "collage pop",
+          "electronica",
+          "indietronica",
+          "new rave",
+          "psychedelic hip hop"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "0CvU96jYCiNP4c9u8dWHoI",
+        "7j4m8OUy87xQsuIVJQxF3J"
+      ],
+      "rank": 233
     },
     {
       "duration_ms": 18519104,
@@ -8611,7 +9269,7 @@
         "7Bev4LDhFbHGjlzveD8PQh",
         "4KeTvCYCel3Ky58FirciWp"
       ],
-      "rank": 218
+      "rank": 234
     },
     {
       "duration_ms": 16424642,
@@ -8651,7 +9309,7 @@
       "original_albumIds": [
         "0PMasrHdpaoIRuHuhHp72O"
       ],
-      "rank": 219
+      "rank": 235
     },
     {
       "duration_ms": 22488052,
@@ -8691,7 +9349,7 @@
       "original_albumIds": [
         "21dbYScNUKn2Y1Vae8lACJ"
       ],
-      "rank": 220
+      "rank": 236
     },
     {
       "duration_ms": 12114724,
@@ -8727,7 +9385,7 @@
       "original_albumIds": [
         "3FAGT3WI6oQNTYOE0zQYw6"
       ],
-      "rank": 221
+      "rank": 237
     },
     {
       "duration_ms": 14637223,
@@ -8763,7 +9421,49 @@
       "original_albumIds": [
         "7Ibi9LkeqEQCdQc0OU0Uh8"
       ],
-      "rank": 222
+      "rank": 238
+    },
+    {
+      "duration_ms": 21697944,
+      "count": 83,
+      "albumId": "3g80CKjOdmSamlsKkDoYAN",
+      "album": {
+        "name": "Whenever, If Ever",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2734c619d689ed79dad541ab6fe",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e024c619d689ed79dad541ab6fe",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048514c619d689ed79dad541ab6fe",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The World Is A Beautiful Place & I Am No Longer Afraid To Die",
+        "genres": [
+          "alternative emo",
+          "bubblegrunge",
+          "dreamo",
+          "emo",
+          "midwest emo",
+          "new england emo"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "3g80CKjOdmSamlsKkDoYAN",
+        "40C7bBDW77dS5BBbNzcdmm"
+      ],
+      "rank": 239
     },
     {
       "duration_ms": 18610654,
@@ -8801,7 +9501,7 @@
       "original_albumIds": [
         "1spVxPRfQDmvX8IIxaTq28"
       ],
-      "rank": 223
+      "rank": 240
     },
     {
       "duration_ms": 21231610,
@@ -8835,87 +9535,7 @@
       "original_albumIds": [
         "33ckNMNBG8McDU4NKqI5K9"
       ],
-      "rank": 224
-    },
-    {
-      "duration_ms": 18278122,
-      "count": 82,
-      "albumId": "5o6rAfcrvCMOE2Xdu1SHIz",
-      "album": {
-        "name": "The Rip Tide",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273764267bc39adb669faa9ff75",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02764267bc39adb669faa9ff75",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851764267bc39adb669faa9ff75",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Beirut",
-        "genres": [
-          "albuquerque indie",
-          "baroque pop",
-          "chamber pop",
-          "indie rock",
-          "indietronica",
-          "stomp and holler"
-        ]
-      },
-      "consolidated_count": 2,
-      "original_albumIds": [
-        "5o6rAfcrvCMOE2Xdu1SHIz",
-        "7HYptJX2aQJPWbxXviXLwQ"
-      ],
-      "rank": 225
-    },
-    {
-      "duration_ms": 14631376,
-      "count": 81,
-      "albumId": "1dSogW0WzPI6usIWtZbGiT",
-      "album": {
-        "name": "Vandrer på solskinn",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27323a63638ddddcfb74e12da5e",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0223a63638ddddcfb74e12da5e",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485123a63638ddddcfb74e12da5e",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "brenn.",
-        "genres": [
-          "norwegian alternative rock",
-          "norwegian indie",
-          "norwegian pop rap"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "1dSogW0WzPI6usIWtZbGiT"
-      ],
-      "rank": 226
+      "rank": 241
     },
     {
       "duration_ms": 26706322,
@@ -8952,7 +9572,7 @@
       "original_albumIds": [
         "2HEh23ogCT3wiYfag2iMxD"
       ],
-      "rank": 227
+      "rank": 242
     },
     {
       "duration_ms": 20427357,
@@ -8986,7 +9606,7 @@
       "original_albumIds": [
         "2ePv8JWOlDPcrmkjRDwizV"
       ],
-      "rank": 228
+      "rank": 243
     },
     {
       "duration_ms": 20656799,
@@ -9024,7 +9644,7 @@
       "original_albumIds": [
         "4tUxQkrduOE8sfgwJ5BI2F"
       ],
-      "rank": 229
+      "rank": 244
     },
     {
       "duration_ms": 28827713,
@@ -9061,7 +9681,7 @@
       "original_albumIds": [
         "6O254zRTJDAQ76tTIFD3ij"
       ],
-      "rank": 230
+      "rank": 245
     },
     {
       "duration_ms": 14514119,
@@ -9100,7 +9720,7 @@
       "original_albumIds": [
         "6VhDYmsjHqRxKXd0z7hmXI"
       ],
-      "rank": 231
+      "rank": 246
     },
     {
       "duration_ms": 16704183,
@@ -9139,7 +9759,7 @@
       "original_albumIds": [
         "6WCvvOVLoJQZH82bgyr9DK"
       ],
-      "rank": 232
+      "rank": 247
     },
     {
       "duration_ms": 15063709,
@@ -9180,7 +9800,47 @@
       "original_albumIds": [
         "71M94qZwSYHxlae0EFxpsy"
       ],
-      "rank": 233
+      "rank": 248
+    },
+    {
+      "duration_ms": 20664516,
+      "count": 81,
+      "albumId": "0rxKf57PZvWEoU8v3m5W2q",
+      "album": {
+        "name": "Currents",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2734ed139a5d193ec2b704cf28f",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e024ed139a5d193ec2b704cf28f",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048514ed139a5d193ec2b704cf28f",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Tame Impala",
+        "genres": [
+          "australian psych",
+          "modern rock",
+          "neo-psychedelic",
+          "rock"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "0rxKf57PZvWEoU8v3m5W2q",
+        "79dL7FLiJFOO0EoehUHQBv"
+      ],
+      "rank": 249
     },
     {
       "duration_ms": 17512256,
@@ -9217,7 +9877,7 @@
         "3c4sCQPQmIUoorCi82wtAB",
         "6jbJThDp7bbnB820QfmHmq"
       ],
-      "rank": 234
+      "rank": 250
     },
     {
       "duration_ms": 15142342,
@@ -9254,7 +9914,7 @@
       "original_albumIds": [
         "1UHxVELL8X4J7hqsxwhH99"
       ],
-      "rank": 235
+      "rank": 251
     },
     {
       "duration_ms": 12333989,
@@ -9291,7 +9951,7 @@
       "original_albumIds": [
         "2l0rdHb97fQidl9dsOxE6B"
       ],
-      "rank": 236
+      "rank": 252
     },
     {
       "duration_ms": 19658599,
@@ -9329,7 +9989,7 @@
       "original_albumIds": [
         "4e3fJnly4W3A5kL339KOuc"
       ],
-      "rank": 237
+      "rank": 253
     },
     {
       "duration_ms": 9279303,
@@ -9368,7 +10028,7 @@
       "original_albumIds": [
         "6jKpIJNGv3uBpI2LNeCrAk"
       ],
-      "rank": 238
+      "rank": 254
     },
     {
       "duration_ms": 22009524,
@@ -9408,7 +10068,49 @@
       "original_albumIds": [
         "7xl50xr9NDkd3i2kBbzsNZ"
       ],
-      "rank": 239
+      "rank": 255
+    },
+    {
+      "duration_ms": 13537946,
+      "count": 80,
+      "albumId": "1giqeJDRjRIlICkDZdnnOG",
+      "album": {
+        "name": "GB City",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27366c7ea6fafb93b1ea98176cd",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0266c7ea6fafb93b1ea98176cd",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485166c7ea6fafb93b1ea98176cd",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Bass Drum of Death",
+        "genres": [
+          "garage pop",
+          "garage rock",
+          "indie garage rock",
+          "mississippi indie",
+          "noise pop",
+          "popgaze"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "1giqeJDRjRIlICkDZdnnOG",
+        "4VFt6gflVhBmesukoQ3Lt5"
+      ],
+      "rank": 256
     },
     {
       "duration_ms": 17329220,
@@ -9451,7 +10153,7 @@
       "original_albumIds": [
         "0p8Zy0wEzDYiFDcSt07UHe"
       ],
-      "rank": 240
+      "rank": 257
     },
     {
       "duration_ms": 15204367,
@@ -9490,7 +10192,7 @@
       "original_albumIds": [
         "0uIuKeJgvBVgHvDvZn9Wyz"
       ],
-      "rank": 241
+      "rank": 258
     },
     {
       "duration_ms": 15227468,
@@ -9528,7 +10230,7 @@
       "original_albumIds": [
         "1PQDjdBpHPikAodJqjzm6a"
       ],
-      "rank": 242
+      "rank": 259
     },
     {
       "duration_ms": 19325562,
@@ -9569,7 +10271,7 @@
       "original_albumIds": [
         "1zCNrbPpz5OLSr6mSpPdKm"
       ],
-      "rank": 243
+      "rank": 260
     },
     {
       "duration_ms": 14531610,
@@ -9609,7 +10311,7 @@
       "original_albumIds": [
         "3DuiGV3J09SUhvp8gqNx8h"
       ],
-      "rank": 244
+      "rank": 261
     },
     {
       "duration_ms": 19379378,
@@ -9649,7 +10351,7 @@
       "original_albumIds": [
         "0ZXN0qG6FHl9B319gtXULF"
       ],
-      "rank": 245
+      "rank": 262
     },
     {
       "duration_ms": 26246159,
@@ -9687,7 +10389,7 @@
       "original_albumIds": [
         "26DseQO366JfXwIP7dIgQj"
       ],
-      "rank": 246
+      "rank": 263
     },
     {
       "duration_ms": 15995173,
@@ -9724,7 +10426,7 @@
       "original_albumIds": [
         "3Mj4A4nNJzIdxOyS4yzOhj"
       ],
-      "rank": 247
+      "rank": 264
     },
     {
       "duration_ms": 12772442,
@@ -9760,7 +10462,7 @@
       "original_albumIds": [
         "3a9g6ueh2eVIYGTfmSoKkb"
       ],
-      "rank": 248
+      "rank": 265
     },
     {
       "duration_ms": 16505413,
@@ -9796,7 +10498,7 @@
       "original_albumIds": [
         "4oL7pMxnb04uuRI7ReXmuh"
       ],
-      "rank": 249
+      "rank": 266
     },
     {
       "duration_ms": 14391870,
@@ -9835,7 +10537,7 @@
       "original_albumIds": [
         "5vX1q4HCPZUKBTFBvFSTsc"
       ],
-      "rank": 250
+      "rank": 267
     },
     {
       "duration_ms": 14192435,
@@ -9872,7 +10574,7 @@
       "original_albumIds": [
         "5xzCguZueCPNgl8sp2vR7t"
       ],
-      "rank": 251
+      "rank": 268
     },
     {
       "duration_ms": 18347102,
@@ -9911,7 +10613,7 @@
       "original_albumIds": [
         "6oPPKtAwNNlkW4wwHfQDfM"
       ],
-      "rank": 252
+      "rank": 269
     },
     {
       "duration_ms": 24679712,
@@ -9951,7 +10653,49 @@
       "original_albumIds": [
         "7aNclGRxTysfh6z0d8671k"
       ],
-      "rank": 253
+      "rank": 270
+    },
+    {
+      "duration_ms": 18618690,
+      "count": 78,
+      "albumId": "1IaBCF26OjgYwUCEPaIyC0",
+      "album": {
+        "name": "ATLiens",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27384be563c5931d7ef35706148",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0284be563c5931d7ef35706148",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485184be563c5931d7ef35706148",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Outkast",
+        "genres": [
+          "atl hip hop",
+          "dirty south rap",
+          "hip hop",
+          "old school atlanta hip hop",
+          "rap",
+          "southern hip hop"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "1IaBCF26OjgYwUCEPaIyC0",
+        "4UGoI0JTxpNNflkRMv7d5I"
+      ],
+      "rank": 271
     },
     {
       "duration_ms": 13426785,
@@ -9988,7 +10732,7 @@
       "original_albumIds": [
         "0qhbLNl6p4kK3wb1gG6KnZ"
       ],
-      "rank": 254
+      "rank": 272
     },
     {
       "duration_ms": 14674207,
@@ -10027,7 +10771,7 @@
       "original_albumIds": [
         "22zpCX6Nb9ppOVklalvGec"
       ],
-      "rank": 255
+      "rank": 273
     },
     {
       "duration_ms": 19990353,
@@ -10067,7 +10811,7 @@
       "original_albumIds": [
         "3wRBlpk5PRoixwOnLujTal"
       ],
-      "rank": 256
+      "rank": 274
     },
     {
       "duration_ms": 18271036,
@@ -10105,7 +10849,7 @@
       "original_albumIds": [
         "4pysD7EqnDkRx4mXG42OCo"
       ],
-      "rank": 257
+      "rank": 275
     },
     {
       "duration_ms": 17545050,
@@ -10147,7 +10891,7 @@
         "54FblbvyHNrWeAuEJqnyit",
         "2QlIw88KfFlC3P0nLcWSKs"
       ],
-      "rank": 258
+      "rank": 276
     },
     {
       "duration_ms": 15432650,
@@ -10185,7 +10929,7 @@
       "original_albumIds": [
         "287QQ922OsJYh8aFNGdJG5"
       ],
-      "rank": 259
+      "rank": 277
     },
     {
       "duration_ms": 14759652,
@@ -10225,7 +10969,7 @@
       "original_albumIds": [
         "4bp42H4RiZzuW4vTknn1TJ"
       ],
-      "rank": 260
+      "rank": 278
     },
     {
       "duration_ms": 16191623,
@@ -10265,7 +11009,51 @@
       "original_albumIds": [
         "6Jx4cGhWHewTcfKDJKguBQ"
       ],
-      "rank": 261
+      "rank": 279
+    },
+    {
+      "duration_ms": 18756495,
+      "count": 76,
+      "albumId": "0hLNDK6qqmScdwxU7kvnXn",
+      "album": {
+        "name": "Here and Nowhere Else",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2732fc665813a358b1aac36713d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e022fc665813a358b1aac36713d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048512fc665813a358b1aac36713d",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Cloud Nothings",
+        "genres": [
+          "cleveland indie",
+          "indie punk",
+          "indie rock",
+          "lo-fi",
+          "modern power pop",
+          "noise pop",
+          "noise rock",
+          "popgaze"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "0hLNDK6qqmScdwxU7kvnXn",
+        "2FEZuC8iOwitugV2BIjysp"
+      ],
+      "rank": 280
     },
     {
       "duration_ms": 16644357,
@@ -10306,7 +11094,7 @@
         "5SqbMEyAt8332ISGiLX0St",
         "3JKDzf9F11y9kjWnehKna1"
       ],
-      "rank": 262
+      "rank": 281
     },
     {
       "duration_ms": 13685858,
@@ -10348,7 +11136,7 @@
       "original_albumIds": [
         "07bIdDDe3I3hhWpxU6tuBp"
       ],
-      "rank": 263
+      "rank": 282
     },
     {
       "duration_ms": 14194889,
@@ -10384,7 +11172,7 @@
       "original_albumIds": [
         "0HEgil8bkBzQqC0usE30iG"
       ],
-      "rank": 264
+      "rank": 283
     },
     {
       "duration_ms": 12778340,
@@ -10422,44 +11210,7 @@
       "original_albumIds": [
         "2Ic7SVaZu6loRXczS4VfYP"
       ],
-      "rank": 265
-    },
-    {
-      "duration_ms": 22897359,
-      "count": 75,
-      "albumId": "2p2Z9x8UIB8BCHzG8qE1w2",
-      "album": {
-        "name": "The Hands That Thieve",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273a2339c6395d96de5ec0df9df",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02a2339c6395d96de5ec0df9df",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851a2339c6395d96de5ec0df9df",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Streetlight Manifesto",
-        "genres": [
-          "ska",
-          "ska punk"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "2p2Z9x8UIB8BCHzG8qE1w2"
-      ],
-      "rank": 266
+      "rank": 284
     },
     {
       "duration_ms": 12157730,
@@ -10502,7 +11253,7 @@
       "original_albumIds": [
         "3uFZf8rykoHo7XMIQVYW6r"
       ],
-      "rank": 267
+      "rank": 285
     },
     {
       "duration_ms": 20150318,
@@ -10539,7 +11290,7 @@
       "original_albumIds": [
         "3yfisavFdGTrjFf9Ecpbio"
       ],
-      "rank": 268
+      "rank": 286
     },
     {
       "duration_ms": 21972266,
@@ -10579,7 +11330,7 @@
       "original_albumIds": [
         "5iZ09NPBTbpDziZcMrmjzb"
       ],
-      "rank": 269
+      "rank": 287
     },
     {
       "duration_ms": 14934966,
@@ -10617,7 +11368,7 @@
       "original_albumIds": [
         "63McpWDS7P0dF06fqXQMCZ"
       ],
-      "rank": 270
+      "rank": 288
     },
     {
       "duration_ms": 15043556,
@@ -10654,7 +11405,49 @@
       "original_albumIds": [
         "7rtSlcWpaZipKa8BoVJ3g0"
       ],
-      "rank": 271
+      "rank": 289
+    },
+    {
+      "duration_ms": 15364802,
+      "count": 75,
+      "albumId": "0MhyPFZNeRRP0ian13SOTp",
+      "album": {
+        "name": "The Flying Club Cup",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27395020a88d022c23d2ded6aed",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0295020a88d022c23d2ded6aed",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485195020a88d022c23d2ded6aed",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Beirut",
+        "genres": [
+          "albuquerque indie",
+          "baroque pop",
+          "chamber pop",
+          "indie rock",
+          "indietronica",
+          "stomp and holler"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "0MhyPFZNeRRP0ian13SOTp",
+        "71udkw2yxFqNK4SNSYcCce"
+      ],
+      "rank": 290
     },
     {
       "duration_ms": 17159692,
@@ -10693,7 +11486,7 @@
       "original_albumIds": [
         "1dZZh7PvVgce1DDsDPzy8Z"
       ],
-      "rank": 272
+      "rank": 291
     },
     {
       "duration_ms": 15228008,
@@ -10733,7 +11526,7 @@
       "original_albumIds": [
         "59gl3QDzCgH4GXzXLEwe55"
       ],
-      "rank": 273
+      "rank": 292
     },
     {
       "duration_ms": 15516233,
@@ -10771,50 +11564,7 @@
       "original_albumIds": [
         "5EBGCvO6upi3GNknMVe9x9"
       ],
-      "rank": 274
-    },
-    {
-      "duration_ms": 13051004,
-      "count": 74,
-      "albumId": "7lelUe4aaCQmOMJKsQvirf",
-      "album": {
-        "name": "The Dream Is Over",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273403711acc2bca1de5e08991d",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02403711acc2bca1de5e08991d",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851403711acc2bca1de5e08991d",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "PUP",
-        "genres": [
-          "alternative emo",
-          "bubblegrunge",
-          "canadian indie",
-          "canadian pop punk",
-          "canadian punk",
-          "emo",
-          "indie punk",
-          "toronto indie"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "7lelUe4aaCQmOMJKsQvirf"
-      ],
-      "rank": 275
+      "rank": 293
     },
     {
       "duration_ms": 6848895,
@@ -10850,47 +11600,7 @@
       "original_albumIds": [
         "0Vl0e4nFeEIVUsuiG9958S"
       ],
-      "rank": 276
-    },
-    {
-      "duration_ms": 18501621,
-      "count": 73,
-      "albumId": "0hoeWFBKo9kGoKMhKOuKRY",
-      "album": {
-        "name": "Våre Demoner",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273973a6e7e31bd5623af93aa31",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02973a6e7e31bd5623af93aa31",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851973a6e7e31bd5623af93aa31",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Kaizers Orchestra",
-        "genres": [
-          "dark cabaret",
-          "norwegian alternative rock",
-          "norwegian rock",
-          "rogaland indie",
-          "rogaland musikk"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "0hoeWFBKo9kGoKMhKOuKRY"
-      ],
-      "rank": 277
+      "rank": 294
     },
     {
       "duration_ms": 13205511,
@@ -10926,7 +11636,7 @@
       "original_albumIds": [
         "0xa2MFADkJYkKXXIzJLDKa"
       ],
-      "rank": 278
+      "rank": 295
     },
     {
       "duration_ms": 18522079,
@@ -10966,7 +11676,7 @@
       "original_albumIds": [
         "3tXuKxDCfmokZIoqzTYAjN"
       ],
-      "rank": 279
+      "rank": 296
     },
     {
       "duration_ms": 12429478,
@@ -11006,45 +11716,7 @@
       "original_albumIds": [
         "1klALx0u4AavZNEvC4LrTL"
       ],
-      "rank": 280
-    },
-    {
-      "duration_ms": 27649185,
-      "count": 72,
-      "albumId": "20U1UWeGcGq7JVW0tf8yfH",
-      "album": {
-        "name": "Twin Fantasy",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273e4221d183898a2c206626b64",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02e4221d183898a2c206626b64",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851e4221d183898a2c206626b64",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Car Seat Headrest",
-        "genres": [
-          "furry",
-          "indie rock",
-          "pov: indie"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "20U1UWeGcGq7JVW0tf8yfH"
-      ],
-      "rank": 281
+      "rank": 297
     },
     {
       "duration_ms": 15709735,
@@ -11080,7 +11752,7 @@
       "original_albumIds": [
         "2P0WH0zNpFa1LdFLH1LRTx"
       ],
-      "rank": 282
+      "rank": 298
     },
     {
       "duration_ms": 20108223,
@@ -11120,7 +11792,7 @@
       "original_albumIds": [
         "2ny1rPsLOoKNFZhMLubMrs"
       ],
-      "rank": 283
+      "rank": 299
     },
     {
       "duration_ms": 15320357,
@@ -11161,45 +11833,49 @@
       "original_albumIds": [
         "2xSppFiPUTWqZ9cdF6CQnY"
       ],
-      "rank": 284
+      "rank": 300
     },
     {
-      "duration_ms": 14344806,
+      "duration_ms": 20287433,
       "count": 72,
-      "albumId": "6ID0d3Tjr93iCWzVnQGwnW",
+      "albumId": "7j8lfKDdL7vE8OAM4cA3W3",
       "album": {
-        "name": "Are You In Or Out?",
+        "name": "Illinois",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273478d2a96f1c075847d544cd4",
+            "url": "https://i.scdn.co/image/ab67616d0000b273a7054529bcdd1ea5dcb852bc",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02478d2a96f1c075847d544cd4",
+            "url": "https://i.scdn.co/image/ab67616d00001e02a7054529bcdd1ea5dcb852bc",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851478d2a96f1c075847d544cd4",
+            "url": "https://i.scdn.co/image/ab67616d00004851a7054529bcdd1ea5dcb852bc",
             "width": 64
           }
         ]
       },
       "artist": {
-        "name": "The Growlers",
+        "name": "Sufjan Stevens",
         "genres": [
-          "garage rock revival",
-          "indie garage rock",
-          "indie surf"
+          "art pop",
+          "baroque pop",
+          "chamber pop",
+          "indie pop",
+          "indie rock",
+          "singer-songwriter"
         ]
       },
-      "consolidated_count": 1,
+      "consolidated_count": 2,
       "original_albumIds": [
-        "6ID0d3Tjr93iCWzVnQGwnW"
+        "7j8lfKDdL7vE8OAM4cA3W3",
+        "1pOl0KEC1iQnA6F0XxV4To"
       ],
-      "rank": 285
+      "rank": 301
     },
     {
       "duration_ms": 14501246,
@@ -11238,7 +11914,7 @@
       "original_albumIds": [
         "0XOgxnhHomI4Cu5w4F0kxl"
       ],
-      "rank": 286
+      "rank": 302
     },
     {
       "duration_ms": 10472675,
@@ -11272,7 +11948,7 @@
       "original_albumIds": [
         "1AjJYjaknDE7BkMNPg22uX"
       ],
-      "rank": 287
+      "rank": 303
     },
     {
       "duration_ms": 22120700,
@@ -11314,7 +11990,7 @@
       "original_albumIds": [
         "1BZoqf8Zje5nGdwZhOjAtD"
       ],
-      "rank": 288
+      "rank": 304
     },
     {
       "duration_ms": 15782743,
@@ -11354,48 +12030,7 @@
       "original_albumIds": [
         "1c37li8Ag68JJafZzeEvtA"
       ],
-      "rank": 289
-    },
-    {
-      "duration_ms": 14405019,
-      "count": 71,
-      "albumId": "21m7s6qWpksbj6l08OM7Pu",
-      "album": {
-        "name": "Flume",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273758a1363ae72d75ddadf875e",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02758a1363ae72d75ddadf875e",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851758a1363ae72d75ddadf875e",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Flume",
-        "genres": [
-          "australian dance",
-          "australian electropop",
-          "australian indie",
-          "downtempo",
-          "edm",
-          "indietronica"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "21m7s6qWpksbj6l08OM7Pu"
-      ],
-      "rank": 290
+      "rank": 305
     },
     {
       "duration_ms": 15463103,
@@ -11439,7 +12074,7 @@
       "original_albumIds": [
         "4XG9zoLbhc8shGghmCb8eO"
       ],
-      "rank": 291
+      "rank": 306
     },
     {
       "duration_ms": 13656269,
@@ -11476,7 +12111,49 @@
       "original_albumIds": [
         "6bO8ArMi8JRmdXBSdb99PZ"
       ],
-      "rank": 292
+      "rank": 307
+    },
+    {
+      "duration_ms": 19588123,
+      "count": 71,
+      "albumId": "6GjwtEZcfenmOf6l18N7T7",
+      "album": {
+        "name": "Kid A",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2736c7112082b63beefffe40151",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e026c7112082b63beefffe40151",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048516c7112082b63beefffe40151",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Radiohead",
+        "genres": [
+          "alternative rock",
+          "art rock",
+          "melancholia",
+          "oxford indie",
+          "permanent wave",
+          "rock"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "6GjwtEZcfenmOf6l18N7T7",
+        "19RUXBFyM4PpmrLRdtqWbp"
+      ],
+      "rank": 308
     },
     {
       "duration_ms": 13783146,
@@ -11513,7 +12190,7 @@
       "original_albumIds": [
         "198Ci3fCoEGICZbDm21qYG"
       ],
-      "rank": 293
+      "rank": 309
     },
     {
       "duration_ms": 14052898,
@@ -11550,7 +12227,7 @@
       "original_albumIds": [
         "3BOHyC1reu2olTMX66oQ5b"
       ],
-      "rank": 294
+      "rank": 310
     },
     {
       "duration_ms": 15082935,
@@ -11590,7 +12267,7 @@
       "original_albumIds": [
         "5KxVwhPQ9d0qp4iuQcAkgR"
       ],
-      "rank": 295
+      "rank": 311
     },
     {
       "duration_ms": 9715235,
@@ -11632,7 +12309,7 @@
         "6m0qHTxZeYPs4kY18aUhAW",
         "3rhIllM3cogyohI1c2NZAT"
       ],
-      "rank": 296
+      "rank": 312
     },
     {
       "duration_ms": 9764665,
@@ -11670,7 +12347,7 @@
       "original_albumIds": [
         "0FgZKfoU2Br5sHOfvZKTI9"
       ],
-      "rank": 297
+      "rank": 313
     },
     {
       "duration_ms": 15821952,
@@ -11711,7 +12388,7 @@
       "original_albumIds": [
         "0jjNb79VYqLY21IjyWKsWe"
       ],
-      "rank": 298
+      "rank": 314
     },
     {
       "duration_ms": 15520603,
@@ -11751,7 +12428,7 @@
       "original_albumIds": [
         "4zrVrsO113smesPZMbBA8I"
       ],
-      "rank": 299
+      "rank": 315
     },
     {
       "duration_ms": 18104063,
@@ -11790,7 +12467,7 @@
       "original_albumIds": [
         "54sqbAXxR1jFfyXb1WvrHK"
       ],
-      "rank": 300
+      "rank": 316
     },
     {
       "duration_ms": 16227065,
@@ -11826,7 +12503,7 @@
       "original_albumIds": [
         "59p9HOqQVrh5DOqpR5U1ba"
       ],
-      "rank": 301
+      "rank": 317
     },
     {
       "duration_ms": 13208445,
@@ -11867,7 +12544,7 @@
       "original_albumIds": [
         "5goZqyaSBsz4xXiD9apfM8"
       ],
-      "rank": 302
+      "rank": 318
     },
     {
       "duration_ms": 18166182,
@@ -11909,7 +12586,7 @@
       "original_albumIds": [
         "6Iu8toVsvCc3I4INxYiVIy"
       ],
-      "rank": 303
+      "rank": 319
     },
     {
       "duration_ms": 14530863,
@@ -11948,7 +12625,7 @@
       "original_albumIds": [
         "6s4vWWWxNrGcKhrOFYRZzk"
       ],
-      "rank": 304
+      "rank": 320
     },
     {
       "duration_ms": 24357056,
@@ -11992,7 +12669,7 @@
       "original_albumIds": [
         "6vKZWeBFGy7phxXP727tOa"
       ],
-      "rank": 305
+      "rank": 321
     },
     {
       "duration_ms": 14320469,
@@ -12031,7 +12708,7 @@
       "original_albumIds": [
         "7q1uNF3HT1wTjxuMW0rFJn"
       ],
-      "rank": 306
+      "rank": 322
     },
     {
       "duration_ms": 12701259,
@@ -12070,7 +12747,7 @@
       "original_albumIds": [
         "10nQ1u8Y1zlOb61zwZavDk"
       ],
-      "rank": 307
+      "rank": 323
     },
     {
       "duration_ms": 14132693,
@@ -12109,7 +12786,7 @@
       "original_albumIds": [
         "322Gl8hhheihCL7dJ0vsqT"
       ],
-      "rank": 308
+      "rank": 324
     },
     {
       "duration_ms": 17693306,
@@ -12153,7 +12830,7 @@
       "original_albumIds": [
         "3iRW4cZOM90lX9Rtc2Qglh"
       ],
-      "rank": 309
+      "rank": 325
     },
     {
       "duration_ms": 12051832,
@@ -12195,7 +12872,7 @@
       "original_albumIds": [
         "5BoqmrGpNNMBor7vuhG7Hl"
       ],
-      "rank": 310
+      "rank": 326
     },
     {
       "duration_ms": 18692623,
@@ -12235,7 +12912,7 @@
       "original_albumIds": [
         "5fxvWHvIDPIALfTfRiwyB0"
       ],
-      "rank": 311
+      "rank": 327
     },
     {
       "duration_ms": 12082742,
@@ -12271,7 +12948,7 @@
       "original_albumIds": [
         "6or18qH3INbHS0kyALV2HL"
       ],
-      "rank": 312
+      "rank": 328
     },
     {
       "duration_ms": 25681002,
@@ -12309,7 +12986,7 @@
       "original_albumIds": [
         "7u6zL7kqpgLPISZYXNTgYk"
       ],
-      "rank": 313
+      "rank": 329
     },
     {
       "duration_ms": 16093893,
@@ -12349,7 +13026,7 @@
       "original_albumIds": [
         "0vypdDHTQsoVmVu8OgXEly"
       ],
-      "rank": 314
+      "rank": 330
     },
     {
       "duration_ms": 17048685,
@@ -12389,7 +13066,7 @@
       "original_albumIds": [
         "1SYDjwymTAVIIpJcu2y30K"
       ],
-      "rank": 315
+      "rank": 331
     },
     {
       "duration_ms": 17265306,
@@ -12426,7 +13103,7 @@
       "original_albumIds": [
         "2KaNXLHYNN6kHPEXCMlccT"
       ],
-      "rank": 316
+      "rank": 332
     },
     {
       "duration_ms": 17887680,
@@ -12466,7 +13143,7 @@
       "original_albumIds": [
         "30Perjew8HyGkdSmqguYyg"
       ],
-      "rank": 317
+      "rank": 333
     },
     {
       "duration_ms": 15941653,
@@ -12503,7 +13180,7 @@
       "original_albumIds": [
         "5Pq92omNLyQgGGrj2u4pur"
       ],
-      "rank": 318
+      "rank": 334
     },
     {
       "duration_ms": 14975888,
@@ -12546,46 +13223,7 @@
       "original_albumIds": [
         "5baJxk2fGaLorySaf6173S"
       ],
-      "rank": 319
-    },
-    {
-      "duration_ms": 10653950,
-      "count": 67,
-      "albumId": "5mwOo1zikswhmfHvtqVSXg",
-      "album": {
-        "name": "Pink Moon",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273e369195caf5d169bf5e9eafc",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02e369195caf5d169bf5e9eafc",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851e369195caf5d169bf5e9eafc",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Nick Drake",
-        "genres": [
-          "british folk",
-          "folk",
-          "melancholia",
-          "singer-songwriter"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "5mwOo1zikswhmfHvtqVSXg"
-      ],
-      "rank": 320
+      "rank": 335
     },
     {
       "duration_ms": 16268902,
@@ -12625,7 +13263,7 @@
       "original_albumIds": [
         "6yskFQZNlLYhkchAxELHi6"
       ],
-      "rank": 321
+      "rank": 336
     },
     {
       "duration_ms": 9786232,
@@ -12662,7 +13300,47 @@
       "original_albumIds": [
         "7GXP5OhYyPVLmcVfO9Iqin"
       ],
-      "rank": 322
+      "rank": 337
+    },
+    {
+      "duration_ms": 14459356,
+      "count": 67,
+      "albumId": "31BAsylZTmoaFFGN7mVSsh",
+      "album": {
+        "name": "Magnolia",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273ac8460291573b6fbea680822",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02ac8460291573b6fbea680822",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851ac8460291573b6fbea680822",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Turnover",
+        "genres": [
+          "alternative emo",
+          "chill dream pop",
+          "dreamo",
+          "emo"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "31BAsylZTmoaFFGN7mVSsh",
+        "7k6HpmrcWShkMoL6pZzLwm"
+      ],
+      "rank": 338
     },
     {
       "duration_ms": 9846413,
@@ -12700,7 +13378,7 @@
         "6ybzMvJY1oXoQ5sU3KjXBZ",
         "75REmsdp7BekvLYwA8ebf7"
       ],
-      "rank": 323
+      "rank": 339
     },
     {
       "duration_ms": 5488730,
@@ -12738,7 +13416,7 @@
       "original_albumIds": [
         "0mzBmoyraQ5dEGSztYZKQ9"
       ],
-      "rank": 324
+      "rank": 340
     },
     {
       "duration_ms": 15709267,
@@ -12777,7 +13455,7 @@
       "original_albumIds": [
         "2DGzTm2R2v3G0IjnxXtP3Y"
       ],
-      "rank": 325
+      "rank": 341
     },
     {
       "duration_ms": 15799799,
@@ -12817,7 +13495,7 @@
       "original_albumIds": [
         "3HZKOk1knxrUU3y5ZIOdbz"
       ],
-      "rank": 326
+      "rank": 342
     },
     {
       "duration_ms": 24829193,
@@ -12858,7 +13536,127 @@
       "original_albumIds": [
         "5U7GN7wM8nZKYeeOoYhPjC"
       ],
-      "rank": 327
+      "rank": 343
+    },
+    {
+      "duration_ms": 8406257,
+      "count": 66,
+      "albumId": "6awKz0fj9q2rJMkLa0uUXz",
+      "album": {
+        "name": "Anti World Music",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273ffa2dc84629ca6ebeb2dda6e",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02ffa2dc84629ca6ebeb2dda6e",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851ffa2dc84629ca6ebeb2dda6e",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Good The Bad and The Zugly",
+        "genres": [
+          "action rock",
+          "norwegian punk rock",
+          "norwegian rock"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "6awKz0fj9q2rJMkLa0uUXz",
+        "4ATSuG0ooSgeyHR3wrDcpo"
+      ],
+      "rank": 344
+    },
+    {
+      "duration_ms": 15188993,
+      "count": 66,
+      "albumId": "2vcUpOWWG4txJt0ptnQlWV",
+      "album": {
+        "name": "Sex, Love And Rock 'N' Roll",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273318f79d161faab650ce893d6",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02318f79d161faab650ce893d6",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851318f79d161faab650ce893d6",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Social Distortion",
+        "genres": [
+          "punk",
+          "punk 'n' roll",
+          "skate punk",
+          "socal pop punk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "2vcUpOWWG4txJt0ptnQlWV",
+        "5mk077he60PWrC7dZBhH0w"
+      ],
+      "rank": 345
+    },
+    {
+      "duration_ms": 12867812,
+      "count": 66,
+      "albumId": "6QaVfG1pHYl1z15ZxkvVDW",
+      "album": {
+        "name": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27334ef8f7d06cf2fc2146f420a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0234ef8f7d06cf2fc2146f420a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485134ef8f7d06cf2fc2146f420a",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Beatles",
+        "genres": [
+          "british invasion",
+          "classic rock",
+          "merseybeat",
+          "psychedelic rock",
+          "rock"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "6QaVfG1pHYl1z15ZxkvVDW",
+        "1PULmKbHeOqlkIwcDMNwD4"
+      ],
+      "rank": 346
     },
     {
       "duration_ms": 15154159,
@@ -12899,7 +13697,7 @@
         "0KzElSxcfAvleUIuOg0TOQ",
         "3FZ6Wq1KF6HV0BNryudbnD"
       ],
-      "rank": 328
+      "rank": 347
     },
     {
       "duration_ms": 12844337,
@@ -12935,7 +13733,7 @@
       "original_albumIds": [
         "2lw3G0wkNGiKASHDAZp2s4"
       ],
-      "rank": 329
+      "rank": 348
     },
     {
       "duration_ms": 10759293,
@@ -12972,7 +13770,7 @@
       "original_albumIds": [
         "4pqrAhrSIUu5xSd6Evv3yM"
       ],
-      "rank": 330
+      "rank": 349
     },
     {
       "duration_ms": 11512562,
@@ -13010,7 +13808,47 @@
       "original_albumIds": [
         "7e2wdDXfEISrUKbVDGV8L7"
       ],
-      "rank": 331
+      "rank": 350
+    },
+    {
+      "duration_ms": 13139836,
+      "count": 65,
+      "albumId": "7g2N0PoXp5IOROmlqQwMTe",
+      "album": {
+        "name": "A Poets Life",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2730a696e23573485fd48161e2d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e020a696e23573485fd48161e2d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048510a696e23573485fd48161e2d",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Tim Armstrong",
+        "genres": [
+          "punk",
+          "ska",
+          "ska punk",
+          "skate punk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "7g2N0PoXp5IOROmlqQwMTe",
+        "6C8mdRVlJHYOW5S7QV1s1Z"
+      ],
+      "rank": 351
     },
     {
       "duration_ms": 12161837,
@@ -13048,7 +13886,7 @@
       "original_albumIds": [
         "0LyGgFrZFXpRKpgj664Xu7"
       ],
-      "rank": 332
+      "rank": 352
     },
     {
       "duration_ms": 11989306,
@@ -13086,7 +13924,7 @@
       "original_albumIds": [
         "1Z69PSnbIBojgF9NBJbKca"
       ],
-      "rank": 333
+      "rank": 353
     },
     {
       "duration_ms": 11618046,
@@ -13125,7 +13963,7 @@
       "original_albumIds": [
         "1qnEwPuG3l4PqRu8h3ULH7"
       ],
-      "rank": 334
+      "rank": 354
     },
     {
       "duration_ms": 10242836,
@@ -13166,7 +14004,7 @@
       "original_albumIds": [
         "2Vx9FC6Um8i6kEtY7HNswB"
       ],
-      "rank": 335
+      "rank": 355
     },
     {
       "duration_ms": 15058342,
@@ -13204,7 +14042,7 @@
       "original_albumIds": [
         "3SBQfBKAPWvCr4qse1uNis"
       ],
-      "rank": 336
+      "rank": 356
     },
     {
       "duration_ms": 10079167,
@@ -13248,7 +14086,7 @@
       "original_albumIds": [
         "3l8ZyLX0WzTzjRpfqkn0vh"
       ],
-      "rank": 337
+      "rank": 357
     },
     {
       "duration_ms": 10700620,
@@ -13289,7 +14127,7 @@
       "original_albumIds": [
         "4EnNuo8fG7dMoxMefbApRY"
       ],
-      "rank": 338
+      "rank": 358
     },
     {
       "duration_ms": 15282074,
@@ -13328,7 +14166,7 @@
       "original_albumIds": [
         "4NEvCc6vHcsCPviWPCCrVg"
       ],
-      "rank": 339
+      "rank": 359
     },
     {
       "duration_ms": 12193409,
@@ -13366,7 +14204,7 @@
       "original_albumIds": [
         "4r5Jkgp2acFnBaeuHWx5Ly"
       ],
-      "rank": 340
+      "rank": 360
     },
     {
       "duration_ms": 30767270,
@@ -13408,7 +14246,7 @@
       "original_albumIds": [
         "4sb0eMpDn3upAFfyi4q2rw"
       ],
-      "rank": 341
+      "rank": 361
     },
     {
       "duration_ms": 12880399,
@@ -13451,7 +14289,7 @@
       "original_albumIds": [
         "504XSXhUJlzztcMV4YMaDV"
       ],
-      "rank": 342
+      "rank": 362
     },
     {
       "duration_ms": 18102219,
@@ -13491,7 +14329,7 @@
       "original_albumIds": [
         "6J9GbkoHKjabs0wpxbNSjf"
       ],
-      "rank": 343
+      "rank": 363
     },
     {
       "duration_ms": 14394176,
@@ -13531,46 +14369,7 @@
       "original_albumIds": [
         "6mxbG8KrOTZIxlP4gzaliM"
       ],
-      "rank": 344
-    },
-    {
-      "duration_ms": 10774845,
-      "count": 64,
-      "albumId": "2dtJ0evXb8etZPyzWSIU7a",
-      "album": {
-        "name": "Under Soil and Dirt",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27314e7f9b01dc426711734a168",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0214e7f9b01dc426711734a168",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485114e7f9b01dc426711734a168",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The Story So Far",
-        "genres": [
-          "alternative emo",
-          "emo",
-          "pop punk"
-        ]
-      },
-      "consolidated_count": 2,
-      "original_albumIds": [
-        "2dtJ0evXb8etZPyzWSIU7a",
-        "7DU6Fws7OWUFhxev1m2DNs"
-      ],
-      "rank": 345
+      "rank": 364
     },
     {
       "duration_ms": 8195143,
@@ -13608,7 +14407,7 @@
       "original_albumIds": [
         "0JjybJOVXNKD7qyD5CRU2n"
       ],
-      "rank": 346
+      "rank": 365
     },
     {
       "duration_ms": 12603692,
@@ -13645,7 +14444,7 @@
       "original_albumIds": [
         "0S0KGZnfBGSIssfF54WSJh"
       ],
-      "rank": 347
+      "rank": 366
     },
     {
       "duration_ms": 12778459,
@@ -13683,7 +14482,7 @@
       "original_albumIds": [
         "3wBabo4pmzsYjALMSKY7Iq"
       ],
-      "rank": 348
+      "rank": 367
     },
     {
       "duration_ms": 20048810,
@@ -13722,7 +14521,7 @@
       "original_albumIds": [
         "4OrbNhWLOrWi6lb40T0IHM"
       ],
-      "rank": 349
+      "rank": 368
     },
     {
       "duration_ms": 12568073,
@@ -13758,7 +14557,7 @@
       "original_albumIds": [
         "56SVSbhBRWFCjqonewE5BV"
       ],
-      "rank": 350
+      "rank": 369
     },
     {
       "duration_ms": 11151221,
@@ -13799,7 +14598,130 @@
       "original_albumIds": [
         "5oXBmKbyJeQftWMo87cQ9F"
       ],
-      "rank": 351
+      "rank": 370
+    },
+    {
+      "duration_ms": 16598255,
+      "count": 63,
+      "albumId": "0FqfrAtS4ifPOeJTdyGiN4",
+      "album": {
+        "name": "Give Up",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2739ede9a4f7eafa60782d4d425",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e029ede9a4f7eafa60782d4d425",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048519ede9a4f7eafa60782d4d425",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Postal Service",
+        "genres": [
+          "chamber pop",
+          "indie rock",
+          "indietronica",
+          "seattle indie"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "0FqfrAtS4ifPOeJTdyGiN4",
+        "19AxGebIDoa4PrkvuZ2ACZ"
+      ],
+      "rank": 371
+    },
+    {
+      "duration_ms": 20146600,
+      "count": 63,
+      "albumId": "5B4PYA7wNN4WdEXdIJu58a",
+      "album": {
+        "name": "Ten",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d400d27cba05bb0545533864",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02d400d27cba05bb0545533864",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851d400d27cba05bb0545533864",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Pearl Jam",
+        "genres": [
+          "alternative metal",
+          "alternative rock",
+          "grunge",
+          "permanent wave",
+          "rock"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "5B4PYA7wNN4WdEXdIJu58a",
+        "31G5IKmrHwpPWGJYk3X2kI"
+      ],
+      "rank": 372
+    },
+    {
+      "duration_ms": 13805020,
+      "count": 63,
+      "albumId": "7ybrct8gCd1mWsHS32ID8w",
+      "album": {
+        "name": "Ambivalence Avenue",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2730041c0e94bc40e081cec1fb7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e020041c0e94bc40e081cec1fb7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048510041c0e94bc40e081cec1fb7",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Bibio",
+        "genres": [
+          "ambient folk",
+          "chillwave",
+          "downtempo",
+          "electronica",
+          "folktronica",
+          "indietronica"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "7ybrct8gCd1mWsHS32ID8w",
+        "5J9NcB7nK8kF7JsJur1V3G"
+      ],
+      "rank": 373
     },
     {
       "duration_ms": 14798687,
@@ -13840,7 +14762,7 @@
       "original_albumIds": [
         "0TGTGuc2vXv6ZECoAf52N0"
       ],
-      "rank": 352
+      "rank": 374
     },
     {
       "duration_ms": 12284638,
@@ -13874,7 +14796,7 @@
       "original_albumIds": [
         "1QNeya5YNW3oiuUi7B54y7"
       ],
-      "rank": 353
+      "rank": 375
     },
     {
       "duration_ms": 11795968,
@@ -13914,7 +14836,7 @@
       "original_albumIds": [
         "3HFbH1loOUbqCyPsLuHLLh"
       ],
-      "rank": 354
+      "rank": 376
     },
     {
       "duration_ms": 16639597,
@@ -13955,7 +14877,7 @@
       "original_albumIds": [
         "4W6ztwnEbK92Arl8kI9c9N"
       ],
-      "rank": 355
+      "rank": 377
     },
     {
       "duration_ms": 13970359,
@@ -13995,7 +14917,7 @@
       "original_albumIds": [
         "4xwx0x7k6c5VuThz5qVqmV"
       ],
-      "rank": 356
+      "rank": 378
     },
     {
       "duration_ms": 13276073,
@@ -14032,7 +14954,7 @@
       "original_albumIds": [
         "5fkFWJ9LZizXE4yPenNGuy"
       ],
-      "rank": 357
+      "rank": 379
     },
     {
       "duration_ms": 21704002,
@@ -14071,7 +14993,7 @@
       "original_albumIds": [
         "6UOvMBrdfOWGqSvtQohiso"
       ],
-      "rank": 358
+      "rank": 380
     },
     {
       "duration_ms": 14677492,
@@ -14110,7 +15032,7 @@
       "original_albumIds": [
         "7AAJ37sNfsuD9HTKOYOVfX"
       ],
-      "rank": 359
+      "rank": 381
     },
     {
       "duration_ms": 14348463,
@@ -14156,7 +15078,7 @@
       "original_albumIds": [
         "7lAYJiypiPbCDvjKOBX1TV"
       ],
-      "rank": 360
+      "rank": 382
     },
     {
       "duration_ms": 11950916,
@@ -14196,46 +15118,87 @@
       "original_albumIds": [
         "7uSgX0fbBol4NDyqsSZJaE"
       ],
-      "rank": 361
+      "rank": 383
     },
     {
-      "duration_ms": 20252315,
-      "count": 61,
-      "albumId": "0XRQBhtdlp5QveGubuxTxY",
+      "duration_ms": 11173605,
+      "count": 62,
+      "albumId": "5xAOUFGBE95GiEhQ41C0Rr",
       "album": {
-        "name": "Jag är inte rädd för mörkret",
+        "name": "Basement Apes",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273a7d374add2a27a6207155a88",
+            "url": "https://i.scdn.co/image/ab67616d0000b2739af93bfb727e1792662ba077",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02a7d374add2a27a6207155a88",
+            "url": "https://i.scdn.co/image/ab67616d00001e029af93bfb727e1792662ba077",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851a7d374add2a27a6207155a88",
+            "url": "https://i.scdn.co/image/ab67616d000048519af93bfb727e1792662ba077",
             "width": 64
           }
         ]
       },
       "artist": {
-        "name": "kent",
+        "name": "Gluecifer",
         "genres": [
-          "classic swedish pop",
-          "swedish alternative rock",
-          "swedish indie rock",
-          "swedish pop"
+          "norwegian hardcore",
+          "norwegian punk rock",
+          "norwegian rock",
+          "punk 'n' roll"
         ]
       },
-      "consolidated_count": 1,
+      "consolidated_count": 2,
       "original_albumIds": [
-        "0XRQBhtdlp5QveGubuxTxY"
+        "5xAOUFGBE95GiEhQ41C0Rr",
+        "5pCfBpz3VnXTpEAKZlmLsH"
       ],
-      "rank": 362
+      "rank": 384
+    },
+    {
+      "duration_ms": 14505788,
+      "count": 62,
+      "albumId": "1atjqOZTCdrjxjMyCPZc2g",
+      "album": {
+        "name": "Mr. Morale & The Big Steppers",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273f30764d5fa1e439ad6a7742f",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02f30764d5fa1e439ad6a7742f",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851f30764d5fa1e439ad6a7742f",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Kendrick Lamar",
+        "genres": [
+          "conscious hip hop",
+          "hip hop",
+          "rap",
+          "west coast rap"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "1atjqOZTCdrjxjMyCPZc2g",
+        "79ONNoS4M9tfIA1mYLBYVX"
+      ],
+      "rank": 385
     },
     {
       "duration_ms": 11273930,
@@ -14274,7 +15237,7 @@
       "original_albumIds": [
         "4R3tXoorBpHji6Jdms8a4Q"
       ],
-      "rank": 363
+      "rank": 386
     },
     {
       "duration_ms": 18241724,
@@ -14318,7 +15281,7 @@
       "original_albumIds": [
         "4sLCQxMRfn3gAHrBNZtbTH"
       ],
-      "rank": 364
+      "rank": 387
     },
     {
       "duration_ms": 13976490,
@@ -14361,7 +15324,7 @@
       "original_albumIds": [
         "4w3NeXtywU398NYW4903rY"
       ],
-      "rank": 365
+      "rank": 388
     },
     {
       "duration_ms": 13557402,
@@ -14401,7 +15364,7 @@
       "original_albumIds": [
         "6YNIEeDWqC09YIWzhoSVLg"
       ],
-      "rank": 366
+      "rank": 389
     },
     {
       "duration_ms": 8683168,
@@ -14439,7 +15402,7 @@
       "original_albumIds": [
         "6Z8BYH27wINoUk4QMUx7gh"
       ],
-      "rank": 367
+      "rank": 390
     },
     {
       "duration_ms": 9489964,
@@ -14477,44 +15440,7 @@
       "original_albumIds": [
         "70hX7IYqmUGV97OXs2v848"
       ],
-      "rank": 368
-    },
-    {
-      "duration_ms": 9644309,
-      "count": 61,
-      "albumId": "70zFEpALzz2iajtjcarwjy",
-      "album": {
-        "name": "Blomst",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273096ffdb462a60051426d7b54",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02096ffdb462a60051426d7b54",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851096ffdb462a60051426d7b54",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Blomst",
-        "genres": [
-          "norwegian punk rock",
-          "norwegian rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "70zFEpALzz2iajtjcarwjy"
-      ],
-      "rank": 369
+      "rank": 391
     },
     {
       "duration_ms": 16000860,
@@ -14550,7 +15476,91 @@
       "original_albumIds": [
         "7xV2TzoaVc0ycW7fwBwAml"
       ],
-      "rank": 370
+      "rank": 392
+    },
+    {
+      "duration_ms": 9775733,
+      "count": 61,
+      "albumId": "1g0KoWXvjtnJbTQYxxmYbv",
+      "album": {
+        "name": "What You Don't See",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2739550308c4fb2b3a8b2b6e612",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e029550308c4fb2b3a8b2b6e612",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048519550308c4fb2b3a8b2b6e612",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Story So Far",
+        "genres": [
+          "alternative emo",
+          "emo",
+          "pop punk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "1g0KoWXvjtnJbTQYxxmYbv",
+        "3UlCePAMA2U2FR047kFNy9"
+      ],
+      "rank": 393
+    },
+    {
+      "duration_ms": 12847010,
+      "count": 61,
+      "albumId": "28a7IkiQxDoxGpAr8Cy0fP",
+      "album": {
+        "name": "Alvvays",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273f65e79fb99084fce2332287d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02f65e79fb99084fce2332287d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851f65e79fb99084fce2332287d",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Alvvays",
+        "genres": [
+          "art pop",
+          "chamber pop",
+          "dream pop",
+          "dreamo",
+          "indie pop",
+          "indie rock",
+          "noise pop",
+          "shoegaze",
+          "toronto indie"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "28a7IkiQxDoxGpAr8Cy0fP",
+        "1j3pIPXjLIFkp84OfVUsNT"
+      ],
+      "rank": 394
     },
     {
       "duration_ms": 12624064,
@@ -14589,7 +15599,7 @@
       "original_albumIds": [
         "0KSk0hUmhXbQXYBNJa0mnV"
       ],
-      "rank": 371
+      "rank": 395
     },
     {
       "duration_ms": 17879359,
@@ -14630,7 +15640,7 @@
       "original_albumIds": [
         "0Tg76MY2wNK4j37iCb6qyH"
       ],
-      "rank": 372
+      "rank": 396
     },
     {
       "duration_ms": 16945234,
@@ -14672,7 +15682,7 @@
       "original_albumIds": [
         "2WT1pbYjLJciAR26yMebkH"
       ],
-      "rank": 373
+      "rank": 397
     },
     {
       "duration_ms": 13564627,
@@ -14712,7 +15722,7 @@
       "original_albumIds": [
         "2bfWH730j0HtAJrNcg1LuP"
       ],
-      "rank": 374
+      "rank": 398
     },
     {
       "duration_ms": 12353853,
@@ -14755,7 +15765,7 @@
       "original_albumIds": [
         "33qkK1brpt6t8unIpeM2Oy"
       ],
-      "rank": 375
+      "rank": 399
     },
     {
       "duration_ms": 14786784,
@@ -14797,7 +15807,7 @@
       "original_albumIds": [
         "3kEtdS2pH6hKcMU9Wioob1"
       ],
-      "rank": 376
+      "rank": 400
     },
     {
       "duration_ms": 13172255,
@@ -14837,7 +15847,7 @@
       "original_albumIds": [
         "4WnkQO4xD9ljQooB3VIxCV"
       ],
-      "rank": 377
+      "rank": 401
     },
     {
       "duration_ms": 13170160,
@@ -14879,7 +15889,7 @@
       "original_albumIds": [
         "6rk4whonuRE69MPpKNZaBC"
       ],
-      "rank": 378
+      "rank": 402
     },
     {
       "duration_ms": 13289739,
@@ -14918,7 +15928,131 @@
       "original_albumIds": [
         "7GPvyPgZ8Nc4yqP4uPo3Rv"
       ],
-      "rank": 379
+      "rank": 403
+    },
+    {
+      "duration_ms": 17093152,
+      "count": 60,
+      "albumId": "78guAsers0klWl6RwzgDLd",
+      "album": {
+        "name": "Audioslave",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273a7292b6863258e889b78d787",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02a7292b6863258e889b78d787",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851a7292b6863258e889b78d787",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Audioslave",
+        "genres": [
+          "alternative metal",
+          "alternative rock",
+          "grunge",
+          "hard rock",
+          "nu metal",
+          "permanent wave",
+          "post-grunge",
+          "rock",
+          "supergroup"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "78guAsers0klWl6RwzgDLd",
+        "293aYSIVNjjmkAwupnlxRd"
+      ],
+      "rank": 404
+    },
+    {
+      "duration_ms": 15850876,
+      "count": 60,
+      "albumId": "2ZMViS2A6M15Z1kN6n6O8S",
+      "album": {
+        "name": "Skinty Fia",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273fa10fcd519ad13a7512805ca",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02fa10fcd519ad13a7512805ca",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851fa10fcd519ad13a7512805ca",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Fontaines D.C.",
+        "genres": [
+          "crank wave",
+          "irish indie rock",
+          "irish post-punk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "2ZMViS2A6M15Z1kN6n6O8S",
+        "0aVN6rMKthfuAdDXn8RTXf"
+      ],
+      "rank": 405
+    },
+    {
+      "duration_ms": 13844593,
+      "count": 60,
+      "albumId": "2c6KXMm4UwCxdNLk9EJU6A",
+      "album": {
+        "name": "Hot Cars And Spent Contraceptives",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273256bcd55f7af6317e545cc5d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02256bcd55f7af6317e545cc5d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851256bcd55f7af6317e545cc5d",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Turbonegro",
+        "genres": [
+          "glam punk",
+          "norwegian punk rock",
+          "norwegian rock",
+          "punk 'n' roll"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "2c6KXMm4UwCxdNLk9EJU6A",
+        "3SUSJUAlYLm6OibR23MVMa"
+      ],
+      "rank": 406
     },
     {
       "duration_ms": 5234916,
@@ -14958,7 +16092,7 @@
       "original_albumIds": [
         "0BK1a2154ekGwdpEBI58BP"
       ],
-      "rank": 380
+      "rank": 407
     },
     {
       "duration_ms": 9636390,
@@ -14997,7 +16131,7 @@
       "original_albumIds": [
         "1XEycvgUklYgcYEUf7vbij"
       ],
-      "rank": 381
+      "rank": 408
     },
     {
       "duration_ms": 14734288,
@@ -15036,7 +16170,7 @@
       "original_albumIds": [
         "1ZH5g1RDq3GY1OvyD0w0s2"
       ],
-      "rank": 382
+      "rank": 409
     },
     {
       "duration_ms": 12625866,
@@ -15077,7 +16211,7 @@
       "original_albumIds": [
         "1cUnNrx2TxvrpwPRtvpGwn"
       ],
-      "rank": 383
+      "rank": 410
     },
     {
       "duration_ms": 10807245,
@@ -15114,7 +16248,7 @@
       "original_albumIds": [
         "1uvVOXqaYmdc4j0HPufAmj"
       ],
-      "rank": 384
+      "rank": 411
     },
     {
       "duration_ms": 12127121,
@@ -15150,7 +16284,7 @@
       "original_albumIds": [
         "2SdtFo4v3o7xfyyEOnXlIH"
       ],
-      "rank": 385
+      "rank": 412
     },
     {
       "duration_ms": 18773757,
@@ -15190,7 +16324,7 @@
       "original_albumIds": [
         "3I3PmRvn5iFY8i6zzvEcci"
       ],
-      "rank": 386
+      "rank": 413
     },
     {
       "duration_ms": 15620112,
@@ -15233,7 +16367,7 @@
       "original_albumIds": [
         "3rPC5Y8e9S6dGGkWvRYPRD"
       ],
-      "rank": 387
+      "rank": 414
     },
     {
       "duration_ms": 14177005,
@@ -15272,7 +16406,7 @@
       "original_albumIds": [
         "3vbvhBzSe3KnqkROlMMQTq"
       ],
-      "rank": 388
+      "rank": 415
     },
     {
       "duration_ms": 16244456,
@@ -15311,7 +16445,7 @@
       "original_albumIds": [
         "46nX6hzuIb6wEia7OQ2viS"
       ],
-      "rank": 389
+      "rank": 416
     },
     {
       "duration_ms": 15734333,
@@ -15351,7 +16485,7 @@
       "original_albumIds": [
         "5dmYtZVJ1bG9RyrZBRrkOA"
       ],
-      "rank": 390
+      "rank": 417
     },
     {
       "duration_ms": 13152798,
@@ -15390,7 +16524,7 @@
       "original_albumIds": [
         "65gVUaiilEjXqZROp2ktlp"
       ],
-      "rank": 391
+      "rank": 418
     },
     {
       "duration_ms": 14565034,
@@ -15428,7 +16562,7 @@
       "original_albumIds": [
         "6iFQqMVZ6eLQESfdkIzVXO"
       ],
-      "rank": 392
+      "rank": 419
     },
     {
       "duration_ms": 12349002,
@@ -15466,7 +16600,7 @@
       "original_albumIds": [
         "7sRNEe2FCkTYhrEimChdkC"
       ],
-      "rank": 393
+      "rank": 420
     },
     {
       "duration_ms": 10559269,
@@ -15504,7 +16638,7 @@
       "original_albumIds": [
         "0Cx7IYEdG2T70z9xFknhDT"
       ],
-      "rank": 394
+      "rank": 421
     },
     {
       "duration_ms": 17064432,
@@ -15542,7 +16676,7 @@
       "original_albumIds": [
         "0jR6E4KQGrVLbnG6Fw3pe9"
       ],
-      "rank": 395
+      "rank": 422
     },
     {
       "duration_ms": 12655839,
@@ -15579,90 +16713,7 @@
       "original_albumIds": [
         "1XzvK35tB3QJyMYiCO2Ms0"
       ],
-      "rank": 396
-    },
-    {
-      "duration_ms": 10520514,
-      "count": 58,
-      "albumId": "21wERoyBas2JCRCgysPDJX",
-      "album": {
-        "name": "13 Songs",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273a4758aa77a0f99752d8d6643",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02a4758aa77a0f99752d8d6643",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851a4758aa77a0f99752d8d6643",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Fugazi",
-        "genres": [
-          "alternative rock",
-          "dc hardcore",
-          "noise pop",
-          "noise rock",
-          "post-hardcore",
-          "post-punk",
-          "punk"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "21wERoyBas2JCRCgysPDJX"
-      ],
-      "rank": 397
-    },
-    {
-      "duration_ms": 14728102,
-      "count": 58,
-      "albumId": "3g80CKjOdmSamlsKkDoYAN",
-      "album": {
-        "name": "Whenever, If Ever",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2734c619d689ed79dad541ab6fe",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e024c619d689ed79dad541ab6fe",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048514c619d689ed79dad541ab6fe",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The World Is A Beautiful Place & I Am No Longer Afraid To Die",
-        "genres": [
-          "alternative emo",
-          "bubblegrunge",
-          "dreamo",
-          "emo",
-          "midwest emo",
-          "new england emo"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "3g80CKjOdmSamlsKkDoYAN"
-      ],
-      "rank": 398
+      "rank": 423
     },
     {
       "duration_ms": 13994580,
@@ -15701,7 +16752,7 @@
       "original_albumIds": [
         "3rqqwtJE89WoWvMyPTvbZc"
       ],
-      "rank": 399
+      "rank": 424
     },
     {
       "duration_ms": 11816689,
@@ -15738,7 +16789,7 @@
       "original_albumIds": [
         "45ba6QAtNrdv6Ke4MFOKk9"
       ],
-      "rank": 400
+      "rank": 425
     },
     {
       "duration_ms": 13292352,
@@ -15777,7 +16828,7 @@
       "original_albumIds": [
         "4Mewe6A62ZpJKmVzcaOixy"
       ],
-      "rank": 401
+      "rank": 426
     },
     {
       "duration_ms": 11904707,
@@ -15815,7 +16866,7 @@
       "original_albumIds": [
         "6GR8EnywUgDFHmqUHO19RO"
       ],
-      "rank": 402
+      "rank": 427
     },
     {
       "duration_ms": 18483178,
@@ -15855,7 +16906,49 @@
       "original_albumIds": [
         "6PlQacVc09348OiGAHoEkt"
       ],
-      "rank": 403
+      "rank": 428
+    },
+    {
+      "duration_ms": 17273067,
+      "count": 58,
+      "albumId": "5iYYQwB0oH9FVyVlaOXZdr",
+      "album": {
+        "name": "Goo",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273b690940b6544fb39bf3653d2",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02b690940b6544fb39bf3653d2",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851b690940b6544fb39bf3653d2",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Sonic Youth",
+        "genres": [
+          "alternative rock",
+          "indie rock",
+          "noise pop",
+          "noise rock",
+          "rock",
+          "shoegaze"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "5iYYQwB0oH9FVyVlaOXZdr",
+        "4G1YVElmzCn3QkVFQyuxkt"
+      ],
+      "rank": 429
     },
     {
       "duration_ms": 10739570,
@@ -15893,7 +16986,7 @@
       "original_albumIds": [
         "0MOkOOxmlsOxmo3hSTfCdy"
       ],
-      "rank": 404
+      "rank": 430
     },
     {
       "duration_ms": 12356342,
@@ -15933,7 +17026,7 @@
       "original_albumIds": [
         "1ATL5GLyefJaxhQzSPVrLX"
       ],
-      "rank": 405
+      "rank": 431
     },
     {
       "duration_ms": 9343161,
@@ -15973,7 +17066,7 @@
       "original_albumIds": [
         "2QVQ9jDMP7FTYMnIhcC4gk"
       ],
-      "rank": 406
+      "rank": 432
     },
     {
       "duration_ms": 7459212,
@@ -16014,7 +17107,7 @@
       "original_albumIds": [
         "2iAI75gpccTBdfVqeLLnEp"
       ],
-      "rank": 407
+      "rank": 433
     },
     {
       "duration_ms": 13197207,
@@ -16056,7 +17149,7 @@
       "original_albumIds": [
         "3Slfl3Ui9sRXobar6rgbKs"
       ],
-      "rank": 408
+      "rank": 434
     },
     {
       "duration_ms": 12085565,
@@ -16094,7 +17187,7 @@
       "original_albumIds": [
         "4TDs45eAaIN56dI2FgZObB"
       ],
-      "rank": 409
+      "rank": 435
     },
     {
       "duration_ms": 7442265,
@@ -16131,7 +17224,7 @@
       "original_albumIds": [
         "6BFCtPdoT07blVSsAkHUw6"
       ],
-      "rank": 410
+      "rank": 436
     },
     {
       "duration_ms": 14379889,
@@ -16173,7 +17266,7 @@
       "original_albumIds": [
         "78Fgb88MY0ECc4GVMejqTg"
       ],
-      "rank": 411
+      "rank": 437
     },
     {
       "duration_ms": 8079970,
@@ -16213,7 +17306,7 @@
       "original_albumIds": [
         "3ZxDkGPmvyDQhxchmlNXA1"
       ],
-      "rank": 412
+      "rank": 438
     },
     {
       "duration_ms": 9735777,
@@ -16250,7 +17343,7 @@
       "original_albumIds": [
         "3fNRzhnl6WAtghBXEeyaub"
       ],
-      "rank": 413
+      "rank": 439
     },
     {
       "duration_ms": 10665704,
@@ -16286,7 +17379,7 @@
       "original_albumIds": [
         "4EPQtdq6vvwxuYeQTrwDVY"
       ],
-      "rank": 414
+      "rank": 440
     },
     {
       "duration_ms": 14104979,
@@ -16324,7 +17417,7 @@
       "original_albumIds": [
         "4Uv86qWpGTxf7fU7lG5X6F"
       ],
-      "rank": 415
+      "rank": 441
     },
     {
       "duration_ms": 12555266,
@@ -16360,7 +17453,7 @@
       "original_albumIds": [
         "56X6IaIoNEfqxAvGb9St58"
       ],
-      "rank": 416
+      "rank": 442
     },
     {
       "duration_ms": 11166396,
@@ -16397,7 +17490,7 @@
       "original_albumIds": [
         "5bTeIBUuF3zExCunn1ib9x"
       ],
-      "rank": 417
+      "rank": 443
     },
     {
       "duration_ms": 11091535,
@@ -16437,7 +17530,7 @@
       "original_albumIds": [
         "6cI1XoZsOhkyrCwtuI70CN"
       ],
-      "rank": 418
+      "rank": 444
     },
     {
       "duration_ms": 17168358,
@@ -16477,45 +17570,7 @@
       "original_albumIds": [
         "6k7RVZ7bSL9ryReb8RLYRI"
       ],
-      "rank": 419
-    },
-    {
-      "duration_ms": 9787436,
-      "count": 56,
-      "albumId": "6nPsiKqsU3krjRbJHIAVJ8",
-      "album": {
-        "name": "Misanthropical House",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27381e739d133c06e2a999e2962",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0281e739d133c06e2a999e2962",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485181e739d133c06e2a999e2962",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The Good The Bad and The Zugly",
-        "genres": [
-          "action rock",
-          "norwegian punk rock",
-          "norwegian rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "6nPsiKqsU3krjRbJHIAVJ8"
-      ],
-      "rank": 420
+      "rank": 445
     },
     {
       "duration_ms": 15888796,
@@ -16555,85 +17610,7 @@
       "original_albumIds": [
         "74r6JJ97ipO0CREXP9PMqZ"
       ],
-      "rank": 421
-    },
-    {
-      "duration_ms": 11786543,
-      "count": 56,
-      "albumId": "7DuJYWu66RPdcekF5TuZ7w",
-      "album": {
-        "name": "A Charlie Brown Christmas [2012 Remastered & Expanded Edition]",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27332b0f9b1e5ee30df7a91cec3",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0232b0f9b1e5ee30df7a91cec3",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485132b0f9b1e5ee30df7a91cec3",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Vince Guaraldi Trio",
-        "genres": [
-          "jazz trio"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "7DuJYWu66RPdcekF5TuZ7w"
-      ],
-      "rank": 422
-    },
-    {
-      "duration_ms": 12210684,
-      "count": 55,
-      "albumId": "0CvU96jYCiNP4c9u8dWHoI",
-      "album": {
-        "name": "Since I Left You",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27361d0cc596658e460111a819b",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0261d0cc596658e460111a819b",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485161d0cc596658e460111a819b",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The Avalanches",
-        "genres": [
-          "australian alternative rock",
-          "australian dance",
-          "collage pop",
-          "electronica",
-          "indietronica",
-          "new rave",
-          "psychedelic hip hop"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "0CvU96jYCiNP4c9u8dWHoI"
-      ],
-      "rank": 423
+      "rank": 446
     },
     {
       "duration_ms": 11622767,
@@ -16673,7 +17650,7 @@
       "original_albumIds": [
         "0KcRX7YkMZ4mwOkEiCb9zw"
       ],
-      "rank": 424
+      "rank": 447
     },
     {
       "duration_ms": 14204677,
@@ -16713,7 +17690,7 @@
       "original_albumIds": [
         "0RfwViNsdcwjUgoZExOir0"
       ],
-      "rank": 425
+      "rank": 448
     },
     {
       "duration_ms": 10495607,
@@ -16757,7 +17734,7 @@
       "original_albumIds": [
         "0nakCnFPpNa2OiaVbvlshf"
       ],
-      "rank": 426
+      "rank": 449
     },
     {
       "duration_ms": 10771080,
@@ -16795,48 +17772,7 @@
       "original_albumIds": [
         "17a7gzqcZt6SjXRQVoXN6M"
       ],
-      "rank": 427
-    },
-    {
-      "duration_ms": 9268617,
-      "count": 55,
-      "albumId": "1giqeJDRjRIlICkDZdnnOG",
-      "album": {
-        "name": "GB City",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27366c7ea6fafb93b1ea98176cd",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0266c7ea6fafb93b1ea98176cd",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485166c7ea6fafb93b1ea98176cd",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Bass Drum of Death",
-        "genres": [
-          "garage pop",
-          "garage rock",
-          "indie garage rock",
-          "mississippi indie",
-          "noise pop",
-          "popgaze"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "1giqeJDRjRIlICkDZdnnOG"
-      ],
-      "rank": 428
+      "rank": 450
     },
     {
       "duration_ms": 13191312,
@@ -16879,7 +17815,7 @@
       "original_albumIds": [
         "3FotTJZZWeBfxXb4KxqTvb"
       ],
-      "rank": 429
+      "rank": 451
     },
     {
       "duration_ms": 12907448,
@@ -16918,7 +17854,7 @@
       "original_albumIds": [
         "3GLyWjI7skSDxKOBEhAhUE"
       ],
-      "rank": 430
+      "rank": 452
     },
     {
       "duration_ms": 8537655,
@@ -16958,7 +17894,7 @@
       "original_albumIds": [
         "4gRafzu3IIo7gNzZuWJtPL"
       ],
-      "rank": 431
+      "rank": 453
     },
     {
       "duration_ms": 14900670,
@@ -16996,7 +17932,7 @@
       "original_albumIds": [
         "4iMaHsHqTg3rwOtRa5wEbm"
       ],
-      "rank": 432
+      "rank": 454
     },
     {
       "duration_ms": 13088995,
@@ -17034,7 +17970,7 @@
       "original_albumIds": [
         "4jZI8SruF5N6sKJoWItEhl"
       ],
-      "rank": 433
+      "rank": 455
     },
     {
       "duration_ms": 8045357,
@@ -17076,7 +18012,7 @@
       "original_albumIds": [
         "7GiUKzR2ImfLJK8Qxrn630"
       ],
-      "rank": 434
+      "rank": 456
     },
     {
       "duration_ms": 12936483,
@@ -17119,50 +18055,7 @@
       "original_albumIds": [
         "0cbpcdI4UySacPh5RCpDfo"
       ],
-      "rank": 435
-    },
-    {
-      "duration_ms": 13526809,
-      "count": 54,
-      "albumId": "0hLNDK6qqmScdwxU7kvnXn",
-      "album": {
-        "name": "Here and Nowhere Else",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2732fc665813a358b1aac36713d",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e022fc665813a358b1aac36713d",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048512fc665813a358b1aac36713d",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Cloud Nothings",
-        "genres": [
-          "cleveland indie",
-          "indie punk",
-          "indie rock",
-          "lo-fi",
-          "modern power pop",
-          "noise pop",
-          "noise rock",
-          "popgaze"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "0hLNDK6qqmScdwxU7kvnXn"
-      ],
-      "rank": 436
+      "rank": 457
     },
     {
       "duration_ms": 10831690,
@@ -17198,7 +18091,7 @@
       "original_albumIds": [
         "1gqFEALaePxZTSn0TG3G98"
       ],
-      "rank": 437
+      "rank": 458
     },
     {
       "duration_ms": 10717852,
@@ -17234,7 +18127,7 @@
       "original_albumIds": [
         "26BkhNDaSetFD6Xp5YXDMv"
       ],
-      "rank": 438
+      "rank": 459
     },
     {
       "duration_ms": 8100705,
@@ -17272,7 +18165,7 @@
       "original_albumIds": [
         "3DQueEd1Ft9PHWgovDzPKh"
       ],
-      "rank": 439
+      "rank": 460
     },
     {
       "duration_ms": 8100628,
@@ -17313,7 +18206,83 @@
       "original_albumIds": [
         "7quucjf0hd4ZlNR3XxdvYf"
       ],
-      "rank": 440
+      "rank": 461
+    },
+    {
+      "duration_ms": 9653305,
+      "count": 54,
+      "albumId": "4VrINRcJyLcENNLiDbCoBi",
+      "album": {
+        "name": "Sing Sing Death House",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2733dbbc58505029f061489df98",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e023dbbc58505029f061489df98",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048513dbbc58505029f061489df98",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Distillers",
+        "genres": [
+          "punk",
+          "skate punk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "4VrINRcJyLcENNLiDbCoBi",
+        "0MQhAuIfU4XA2ujWwcYJqh"
+      ],
+      "rank": 462
+    },
+    {
+      "duration_ms": 10954748,
+      "count": 54,
+      "albumId": "0c4ywEXoeJD05cfV1DwKY7",
+      "album": {
+        "name": "Kors på halsen, ti kniver i hjertet, mor og far i døden",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273ed35c3f3cb203723280949a3",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02ed35c3f3cb203723280949a3",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851ed35c3f3cb203723280949a3",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Karpe",
+        "genres": [
+          "norwegian hip hop",
+          "norwegian pop"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "0c4ywEXoeJD05cfV1DwKY7",
+        "1q4SxDrU2SjltnoJgWYaV5"
+      ],
+      "rank": 463
     },
     {
       "duration_ms": 6911889,
@@ -17353,48 +18322,7 @@
       "original_albumIds": [
         "0atZuxlHAR1UaMAksmJS5Y"
       ],
-      "rank": 441
-    },
-    {
-      "duration_ms": 13125856,
-      "count": 53,
-      "albumId": "1IaBCF26OjgYwUCEPaIyC0",
-      "album": {
-        "name": "ATLiens",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27384be563c5931d7ef35706148",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0284be563c5931d7ef35706148",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485184be563c5931d7ef35706148",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Outkast",
-        "genres": [
-          "atl hip hop",
-          "dirty south rap",
-          "hip hop",
-          "old school atlanta hip hop",
-          "rap",
-          "southern hip hop"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "1IaBCF26OjgYwUCEPaIyC0"
-      ],
-      "rank": 442
+      "rank": 464
     },
     {
       "duration_ms": 8998781,
@@ -17433,7 +18361,7 @@
       "original_albumIds": [
         "4uG8q3GPuWHQlRbswMIRS6"
       ],
-      "rank": 443
+      "rank": 465
     },
     {
       "duration_ms": 9633187,
@@ -17470,7 +18398,7 @@
       "original_albumIds": [
         "5yuG2LEkf7QA9ZGIXldCmy"
       ],
-      "rank": 444
+      "rank": 466
     },
     {
       "duration_ms": 11161442,
@@ -17510,7 +18438,7 @@
       "original_albumIds": [
         "6Y6HrfpesaqZpOOqyTfXJx"
       ],
-      "rank": 445
+      "rank": 467
     },
     {
       "duration_ms": 11552256,
@@ -17550,7 +18478,7 @@
       "original_albumIds": [
         "7buEcyw6fJF3WPgr06BomH"
       ],
-      "rank": 446
+      "rank": 468
     },
     {
       "duration_ms": 15489947,
@@ -17595,46 +18523,7 @@
       "original_albumIds": [
         "0PIR7PK8DMB4pgoxq7F9Ad"
       ],
-      "rank": 447
-    },
-    {
-      "duration_ms": 13363952,
-      "count": 52,
-      "albumId": "0rxKf57PZvWEoU8v3m5W2q",
-      "album": {
-        "name": "Currents",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2734ed139a5d193ec2b704cf28f",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e024ed139a5d193ec2b704cf28f",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048514ed139a5d193ec2b704cf28f",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Tame Impala",
-        "genres": [
-          "australian psych",
-          "modern rock",
-          "neo-psychedelic",
-          "rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "0rxKf57PZvWEoU8v3m5W2q"
-      ],
-      "rank": 448
+      "rank": 469
     },
     {
       "duration_ms": 11330123,
@@ -17678,7 +18567,7 @@
       "original_albumIds": [
         "1rfgmU0AYNwWfS88pCOlX7"
       ],
-      "rank": 449
+      "rank": 470
     },
     {
       "duration_ms": 9176927,
@@ -17714,7 +18603,7 @@
       "original_albumIds": [
         "21OWrxuiO55Xill5lSOM93"
       ],
-      "rank": 450
+      "rank": 471
     },
     {
       "duration_ms": 7162042,
@@ -17750,7 +18639,7 @@
       "original_albumIds": [
         "2CjNHKLQ6vg07YRCbCCe6b"
       ],
-      "rank": 451
+      "rank": 472
     },
     {
       "duration_ms": 12386614,
@@ -17790,7 +18679,7 @@
       "original_albumIds": [
         "2IFy3KyhGJyF5OGDlAVZms"
       ],
-      "rank": 452
+      "rank": 473
     },
     {
       "duration_ms": 12904365,
@@ -17834,7 +18723,7 @@
       "original_albumIds": [
         "5Dja2ASXd7MOM628iwYdtA"
       ],
-      "rank": 453
+      "rank": 474
     },
     {
       "duration_ms": 11300124,
@@ -17871,7 +18760,48 @@
       "original_albumIds": [
         "5XStQ2loVXJX0LS4FW0DUD"
       ],
-      "rank": 454
+      "rank": 475
+    },
+    {
+      "duration_ms": 10159607,
+      "count": 52,
+      "albumId": "1xRsnyytuSTf1rIxWV8m2r",
+      "album": {
+        "name": "Hyperview",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273eeb5fd5ce92d8a0262921a7a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02eeb5fd5ce92d8a0262921a7a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851eeb5fd5ce92d8a0262921a7a",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Title Fight",
+        "genres": [
+          "alternative emo",
+          "dreamo",
+          "emo",
+          "grungegaze",
+          "spacegrunge"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "1xRsnyytuSTf1rIxWV8m2r",
+        "1Qt8qA9vTsnfv9k2fycFsY"
+      ],
+      "rank": 476
     },
     {
       "duration_ms": 17821726,
@@ -17912,7 +18842,7 @@
       "original_albumIds": [
         "0kCdT4gjYlSxIV7ll3Yd4M"
       ],
-      "rank": 455
+      "rank": 477
     },
     {
       "duration_ms": 8301966,
@@ -17949,7 +18879,7 @@
       "original_albumIds": [
         "0uMO9LgMLMtHzLnTSONd6k"
       ],
-      "rank": 456
+      "rank": 478
     },
     {
       "duration_ms": 12609776,
@@ -17989,7 +18919,7 @@
       "original_albumIds": [
         "0x0rVyhppIuVdrHmlB15bn"
       ],
-      "rank": 457
+      "rank": 479
     },
     {
       "duration_ms": 12065207,
@@ -18029,7 +18959,7 @@
       "original_albumIds": [
         "1Ni9YFZDH0dqxU2PsBA1KS"
       ],
-      "rank": 458
+      "rank": 480
     },
     {
       "duration_ms": 13711439,
@@ -18069,7 +18999,7 @@
       "original_albumIds": [
         "1xeWhLniMnLILdvARjO6zC"
       ],
-      "rank": 459
+      "rank": 481
     },
     {
       "duration_ms": 8333465,
@@ -18111,7 +19041,7 @@
       "original_albumIds": [
         "3bzgbgiytguTDnwzflAZr2"
       ],
-      "rank": 460
+      "rank": 482
     },
     {
       "duration_ms": 15326380,
@@ -18154,7 +19084,7 @@
       "original_albumIds": [
         "4NP1rhnsPdYpnyJP0p0k0L"
       ],
-      "rank": 461
+      "rank": 483
     },
     {
       "duration_ms": 11406076,
@@ -18195,7 +19125,7 @@
       "original_albumIds": [
         "4bPT6Q8ppaSNppk1kbEbLl"
       ],
-      "rank": 462
+      "rank": 484
     },
     {
       "duration_ms": 10998690,
@@ -18232,7 +19162,7 @@
       "original_albumIds": [
         "5622zSt4RLqNSPShdqmWpj"
       ],
-      "rank": 463
+      "rank": 485
     },
     {
       "duration_ms": 9921978,
@@ -18268,7 +19198,7 @@
       "original_albumIds": [
         "56Fg4bYuTEmTRlKUDKkpS5"
       ],
-      "rank": 464
+      "rank": 486
     },
     {
       "duration_ms": 9954134,
@@ -18307,7 +19237,7 @@
       "original_albumIds": [
         "59olnuVrXXgrDH4wknpDLC"
       ],
-      "rank": 465
+      "rank": 487
     },
     {
       "duration_ms": 12163725,
@@ -18345,7 +19275,7 @@
       "original_albumIds": [
         "6NyoU5F25y1I7V9fqbKqy9"
       ],
-      "rank": 466
+      "rank": 488
     },
     {
       "duration_ms": 14916615,
@@ -18382,7 +19312,7 @@
       "original_albumIds": [
         "6hUTxk6xY5Rnay3FcSaAL9"
       ],
-      "rank": 467
+      "rank": 489
     },
     {
       "duration_ms": 13355991,
@@ -18419,7 +19349,7 @@
       "original_albumIds": [
         "76FXHQhTuT4QMIxfL09gX8"
       ],
-      "rank": 468
+      "rank": 490
     },
     {
       "duration_ms": 12891746,
@@ -18457,7 +19387,130 @@
       "original_albumIds": [
         "7mB5yhTfOUdtLdjRAsPY4t"
       ],
-      "rank": 469
+      "rank": 491
+    },
+    {
+      "duration_ms": 11114969,
+      "count": 51,
+      "albumId": "5LPWVXW6z7DKnpxNp1jzAa",
+      "album": {
+        "name": "Ignore The Ignorant",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2732d59b4333cf2f4f5fc188775",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e022d59b4333cf2f4f5fc188775",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048512d59b4333cf2f4f5fc188775",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Cribs",
+        "genres": [
+          "british indie rock",
+          "britpop",
+          "scottish rock",
+          "west yorkshire indie"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "5LPWVXW6z7DKnpxNp1jzAa",
+        "19oawG0QikeMPJQ2JVdULp"
+      ],
+      "rank": 492
+    },
+    {
+      "duration_ms": 12872814,
+      "count": 51,
+      "albumId": "2xKQuscyH4keEydugPNfMx",
+      "album": {
+        "name": "Scandinavian Leather",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2734ab6188b471f5639ef95bd30",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e024ab6188b471f5639ef95bd30",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048514ab6188b471f5639ef95bd30",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Turbonegro",
+        "genres": [
+          "glam punk",
+          "norwegian punk rock",
+          "norwegian rock",
+          "punk 'n' roll"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "2xKQuscyH4keEydugPNfMx",
+        "1qK9Xlui8xqhWkMiVPIQbP"
+      ],
+      "rank": 493
+    },
+    {
+      "duration_ms": 11205862,
+      "count": 51,
+      "albumId": "3LnVvIeiLCngvwEnbdxwCT",
+      "album": {
+        "name": "Crystal Castles",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273b01fea159227ea845c2bd72e",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02b01fea159227ea845c2bd72e",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851b01fea159227ea845c2bd72e",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Crystal Castles",
+        "genres": [
+          "alternative dance",
+          "bitpop",
+          "digital hardcore",
+          "indietronica",
+          "neo-synthpop",
+          "new rave",
+          "nintendocore"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "3LnVvIeiLCngvwEnbdxwCT",
+        "75olNPlDKi2XQhTD9IPlVC"
+      ],
+      "rank": 494
     },
     {
       "duration_ms": 13011508,
@@ -18500,7 +19553,7 @@
       "original_albumIds": [
         "0o1uFxZ1VTviqvNaYkTJek"
       ],
-      "rank": 470
+      "rank": 495
     },
     {
       "duration_ms": 10700388,
@@ -18540,7 +19593,7 @@
       "original_albumIds": [
         "1D5LJWJfWS9nVZK3E8bW0J"
       ],
-      "rank": 471
+      "rank": 496
     },
     {
       "duration_ms": 9286659,
@@ -18577,7 +19630,7 @@
       "original_albumIds": [
         "25OmeMPwVnIpNwA0KfdPPx"
       ],
-      "rank": 472
+      "rank": 497
     },
     {
       "duration_ms": 10477530,
@@ -18613,7 +19666,7 @@
       "original_albumIds": [
         "2KTJxXOxJeHFMgwotIfGwz"
       ],
-      "rank": 473
+      "rank": 498
     },
     {
       "duration_ms": 11755588,
@@ -18654,7 +19707,7 @@
       "original_albumIds": [
         "55RhFRyQFihIyGf61MgcfV"
       ],
-      "rank": 474
+      "rank": 499
     },
     {
       "duration_ms": 13557436,
@@ -18693,982 +19746,6 @@
       "consolidated_count": 1,
       "original_albumIds": [
         "5BGzOpea6At0Nd7tYtYZOP"
-      ],
-      "rank": 475
-    },
-    {
-      "duration_ms": 13761206,
-      "count": 50,
-      "albumId": "6GjwtEZcfenmOf6l18N7T7",
-      "album": {
-        "name": "Kid A",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2736c7112082b63beefffe40151",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e026c7112082b63beefffe40151",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048516c7112082b63beefffe40151",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Radiohead",
-        "genres": [
-          "alternative rock",
-          "art rock",
-          "melancholia",
-          "oxford indie",
-          "permanent wave",
-          "rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "6GjwtEZcfenmOf6l18N7T7"
-      ],
-      "rank": 476
-    },
-    {
-      "duration_ms": 8014363,
-      "count": 49,
-      "albumId": "09hDOH6485A7SIg1FmpuX2",
-      "album": {
-        "name": "Comfort To Me",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273727318aa69af60549ab3b728",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02727318aa69af60549ab3b728",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851727318aa69af60549ab3b728",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Amyl and The Sniffers",
-        "genres": [
-          "australian garage punk",
-          "melbourne punk"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "09hDOH6485A7SIg1FmpuX2"
-      ],
-      "rank": 477
-    },
-    {
-      "duration_ms": 9300562,
-      "count": 49,
-      "albumId": "0HDrblLFAsyyytu3xKtbnL",
-      "album": {
-        "name": "1992 Deluxe",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273634c636dc535f314a9341395",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02634c636dc535f314a9341395",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851634c636dc535f314a9341395",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Princess Nokia",
-        "genres": [
-          "alternative r&b",
-          "escape room",
-          "lgbtq+ hip hop",
-          "trap queen"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "0HDrblLFAsyyytu3xKtbnL"
-      ],
-      "rank": 478
-    },
-    {
-      "duration_ms": 20848336,
-      "count": 49,
-      "albumId": "0MWrKayUshRuT8maG4ZAOU",
-      "album": {
-        "name": "Station to Station (2016 Remaster)",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2738f3cdfeac0678371b16f601d",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e028f3cdfeac0678371b16f601d",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048518f3cdfeac0678371b16f601d",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "David Bowie",
-        "genres": [
-          "art rock",
-          "classic rock",
-          "glam rock",
-          "permanent wave",
-          "rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "0MWrKayUshRuT8maG4ZAOU"
-      ],
-      "rank": 479
-    },
-    {
-      "duration_ms": 6556832,
-      "count": 49,
-      "albumId": "1iU5vStg4HKNlTJuQpuz2z",
-      "album": {
-        "name": "just friends",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2735bd89536cdee4f75560fda70",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e025bd89536cdee4f75560fda70",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048515bd89536cdee4f75560fda70",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "potsu",
-        "genres": [
-          "japanese chillhop",
-          "lo-fi beats",
-          "lo-fi rap"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "1iU5vStg4HKNlTJuQpuz2z"
-      ],
-      "rank": 480
-    },
-    {
-      "duration_ms": 10659901,
-      "count": 49,
-      "albumId": "1jToVugwBEzcak8gJNZG2f",
-      "album": {
-        "name": "GINGER",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27346f07fa4f28bf824840ddacb",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0246f07fa4f28bf824840ddacb",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485146f07fa4f28bf824840ddacb",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "BROCKHAMPTON",
-        "genres": [
-          "boy band",
-          "rap"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "1jToVugwBEzcak8gJNZG2f"
-      ],
-      "rank": 481
-    },
-    {
-      "duration_ms": 9528574,
-      "count": 49,
-      "albumId": "2nXJkqkS1tIKIyhBcFMmwz",
-      "album": {
-        "name": "xx",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273055437bf35e8ba027bed0882",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02055437bf35e8ba027bed0882",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851055437bf35e8ba027bed0882",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The xx",
-        "genres": [
-          "downtempo",
-          "dream pop",
-          "indietronica"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "2nXJkqkS1tIKIyhBcFMmwz"
-      ],
-      "rank": 482
-    },
-    {
-      "duration_ms": 9328925,
-      "count": 49,
-      "albumId": "2tUq5HvQAPKOE9lrwD2jE4",
-      "album": {
-        "name": "Not. Psych!",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27316a6bda6a9c75e895ac1200b",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0216a6bda6a9c75e895ac1200b",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485116a6bda6a9c75e895ac1200b",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The Growlers",
-        "genres": [
-          "garage rock revival",
-          "indie garage rock",
-          "indie surf"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "2tUq5HvQAPKOE9lrwD2jE4"
-      ],
-      "rank": 483
-    },
-    {
-      "duration_ms": 14495028,
-      "count": 49,
-      "albumId": "3AMHMM2aNG6k3d7ybcQ5bY",
-      "album": {
-        "name": "Definitely Maybe (Deluxe Edition Remastered)",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273d86a1e021e7acc7c07c7d668",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02d86a1e021e7acc7c07c7d668",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851d86a1e021e7acc7c07c7d668",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Oasis",
-        "genres": [
-          "beatlesque",
-          "britpop",
-          "madchester",
-          "permanent wave",
-          "rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "3AMHMM2aNG6k3d7ybcQ5bY"
-      ],
-      "rank": 484
-    },
-    {
-      "duration_ms": 8245239,
-      "count": 49,
-      "albumId": "3MOxvb2hL0T1vNJp1PSGRA",
-      "album": {
-        "name": "Put Yourself Back Together",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2734900d0b19d088b1cb6eaa64e",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e024900d0b19d088b1cb6eaa64e",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048514900d0b19d088b1cb6eaa64e",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Real Friends",
-        "genres": [
-          "alternative emo",
-          "anthem emo",
-          "chicago pop punk",
-          "easycore",
-          "emo",
-          "neon pop punk",
-          "pixie",
-          "pop punk"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "3MOxvb2hL0T1vNJp1PSGRA"
-      ],
-      "rank": 485
-    },
-    {
-      "duration_ms": 9352589,
-      "count": 49,
-      "albumId": "4yvyLHH685OZBG0WNJtlpz",
-      "album": {
-        "name": "The Tallest Man On Earth",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273b886640d96d150eb117ca3c5",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02b886640d96d150eb117ca3c5",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851b886640d96d150eb117ca3c5",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The Tallest Man On Earth",
-        "genres": [
-          "chamber pop",
-          "indie folk",
-          "stomp and holler",
-          "swedish americana",
-          "swedish singer-songwriter"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "4yvyLHH685OZBG0WNJtlpz"
-      ],
-      "rank": 486
-    },
-    {
-      "duration_ms": 10899291,
-      "count": 49,
-      "albumId": "5SKnXCvB4fcGSZu32o3LRY",
-      "album": {
-        "name": "Faces",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273e4251cf5331ad74eaaeca36e",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02e4251cf5331ad74eaaeca36e",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851e4251cf5331ad74eaaeca36e",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Mac Miller",
-        "genres": [
-          "hip hop",
-          "pittsburgh rap",
-          "pop rap",
-          "rap"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "5SKnXCvB4fcGSZu32o3LRY"
-      ],
-      "rank": 487
-    },
-    {
-      "duration_ms": 9154661,
-      "count": 49,
-      "albumId": "6KiS2t3EapTmHSt9xGUqe7",
-      "album": {
-        "name": "Stage Four (Deluxe Edition)",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273b5c2e08199c1d30bce73bfbd",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02b5c2e08199c1d30bce73bfbd",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851b5c2e08199c1d30bce73bfbd",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Touché Amoré",
-        "genres": [
-          "alternative emo",
-          "chaotic hardcore",
-          "dreamo",
-          "emo",
-          "melodic hardcore",
-          "modern melodic hardcore",
-          "post-hardcore"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "6KiS2t3EapTmHSt9xGUqe7"
-      ],
-      "rank": 488
-    },
-    {
-      "duration_ms": 6841410,
-      "count": 49,
-      "albumId": "6XyaVDkZeCWf14x0eESZdl",
-      "album": {
-        "name": "1 Am. Study Session",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27380db5f1340bc1170a22d8e2c",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0280db5f1340bc1170a22d8e2c",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485180db5f1340bc1170a22d8e2c",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "HM Surf",
-        "genres": [
-          "lo-fi beats",
-          "lo-fi study"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "6XyaVDkZeCWf14x0eESZdl"
-      ],
-      "rank": 489
-    },
-    {
-      "duration_ms": 13182746,
-      "count": 49,
-      "albumId": "7GjVWG39IOj4viyWplJV4H",
-      "album": {
-        "name": "Little Dark Age",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273b47d309281c66820b7137f5d",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02b47d309281c66820b7137f5d",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851b47d309281c66820b7137f5d",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "MGMT",
-        "genres": [
-          "alternative rock",
-          "indie rock",
-          "indietronica",
-          "modern rock",
-          "rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "7GjVWG39IOj4viyWplJV4H"
-      ],
-      "rank": 490
-    },
-    {
-      "duration_ms": 10793484,
-      "count": 49,
-      "albumId": "7bvmGyFDwpHNRRRZJ0AHvn",
-      "album": {
-        "name": "Negro Swan",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27347dd2ca47ec9bf14559e17c6",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0247dd2ca47ec9bf14559e17c6",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485147dd2ca47ec9bf14559e17c6",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Blood Orange",
-        "genres": [
-          "alternative r&b",
-          "art pop",
-          "escape room",
-          "indie soul",
-          "indietronica",
-          "metropopolis"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "7bvmGyFDwpHNRRRZJ0AHvn"
-      ],
-      "rank": 491
-    },
-    {
-      "duration_ms": 9470141,
-      "count": 48,
-      "albumId": "0T6XgHhbTIWoSQ0BJz2WlB",
-      "album": {
-        "name": "Welcome To Annoying Town",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273a981023f263ccbf320b3c962",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02a981023f263ccbf320b3c962",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851a981023f263ccbf320b3c962",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Domi",
-        "genres": [
-          "norwegian punk rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "0T6XgHhbTIWoSQ0BJz2WlB"
-      ],
-      "rank": 492
-    },
-    {
-      "duration_ms": 8782779,
-      "count": 48,
-      "albumId": "0YCfpM119gohGGBYBLECfj",
-      "album": {
-        "name": "Little Green House",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273a61a54a103b61312a761f644",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02a61a54a103b61312a761f644",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851a61a54a103b61312a761f644",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Anxious",
-        "genres": [
-          "alternative emo",
-          "connecticut hardcore",
-          "dreamo",
-          "modern melodic hardcore"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "0YCfpM119gohGGBYBLECfj"
-      ],
-      "rank": 493
-    },
-    {
-      "duration_ms": 8757193,
-      "count": 48,
-      "albumId": "1SeLINrmMIeRpBFbxj40nR",
-      "album": {
-        "name": "Subliming",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2737767e318d9693439039de03c",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e027767e318d9693439039de03c",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048517767e318d9693439039de03c",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Richy Mitch & The Coal Miners",
-        "genres": [
-          "modern folk rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "1SeLINrmMIeRpBFbxj40nR"
-      ],
-      "rank": 494
-    },
-    {
-      "duration_ms": 8466786,
-      "count": 48,
-      "albumId": "2go3nVQ6oxBB5UERsGUUz0",
-      "album": {
-        "name": "Proper Dose",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273120ba5947ebc67fb4eb2e2aa",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02120ba5947ebc67fb4eb2e2aa",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851120ba5947ebc67fb4eb2e2aa",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The Story So Far",
-        "genres": [
-          "alternative emo",
-          "emo",
-          "pop punk"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "2go3nVQ6oxBB5UERsGUUz0"
-      ],
-      "rank": 495
-    },
-    {
-      "duration_ms": 6586336,
-      "count": 48,
-      "albumId": "38njU9hUDO2ruEJN8SzEvl",
-      "album": {
-        "name": "Blood Visions",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273ca3daa236315879de6bf3467",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02ca3daa236315879de6bf3467",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851ca3daa236315879de6bf3467",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Jay Reatard",
-        "genres": [
-          "action rock",
-          "garage pop",
-          "garage rock",
-          "indie garage rock",
-          "indie punk",
-          "lo-fi",
-          "memphis indie",
-          "noise pop"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "38njU9hUDO2ruEJN8SzEvl"
-      ],
-      "rank": 496
-    },
-    {
-      "duration_ms": 8669132,
-      "count": 48,
-      "albumId": "3dHOlqqW0eyOStRbM9dxyP",
-      "album": {
-        "name": "Hjertebank",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273b20537a80b31d2bc067be478",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02b20537a80b31d2bc067be478",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851b20537a80b31d2bc067be478",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Frk. Fryd",
-        "genres": [
-          "norwegian punk rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "3dHOlqqW0eyOStRbM9dxyP"
-      ],
-      "rank": 497
-    },
-    {
-      "duration_ms": 10117626,
-      "count": 48,
-      "albumId": "3mAUwWAQKkBlsMThgz3TMz",
-      "album": {
-        "name": "Casual Acquaintances",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27390818c4011f39cd3c9f241a1",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0290818c4011f39cd3c9f241a1",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485190818c4011f39cd3c9f241a1",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "The Growlers",
-        "genres": [
-          "garage rock revival",
-          "indie garage rock",
-          "indie surf"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "3mAUwWAQKkBlsMThgz3TMz"
-      ],
-      "rank": 498
-    },
-    {
-      "duration_ms": 11518158,
-      "count": 48,
-      "albumId": "4DfmPm17Nz6a60BlEpGGKU",
-      "album": {
-        "name": "Paul's Boutique",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273bfd49e490880892a59c866a2",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02bfd49e490880892a59c866a2",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851bfd49e490880892a59c866a2",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Beastie Boys",
-        "genres": [
-          "alternative rock",
-          "east coast hip hop",
-          "golden age hip hop",
-          "hip hop",
-          "old school hip hop",
-          "rap",
-          "rap rock",
-          "rock"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "4DfmPm17Nz6a60BlEpGGKU"
-      ],
-      "rank": 499
-    },
-    {
-      "duration_ms": 8695396,
-      "count": 48,
-      "albumId": "4DkXNndpQAoGUo2aFv9zAl",
-      "album": {
-        "name": "Try Not to Freak Out",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2731ebaa030859311a62619f94e",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e021ebaa030859311a62619f94e",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048511ebaa030859311a62619f94e",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Sløtface",
-        "genres": [
-          "bubblegrunge",
-          "norwegian indie"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "4DkXNndpQAoGUo2aFv9zAl"
       ],
       "rank": 500
     }
