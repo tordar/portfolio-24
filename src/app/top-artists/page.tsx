@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Search, Music, Play, Grid3X3, List, X, Users, Disc, Music2 } from 'lucide-react'
+import { Search, Play, Grid3X3, List, X, Users, Disc, Music2 } from 'lucide-react'
 import Link from 'next/link'
 
 interface ArtistImage {
