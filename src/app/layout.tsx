@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Inter, DM_Sans } from 'next/font/google'
 import './globals.css'
 import { Github, Linkedin, Mail, MapPin } from 'lucide-react'
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -17,10 +17,11 @@ const inter = Inter({
     display: 'swap'
 })
 
-const spaceGrotesk = Space_Grotesk({ 
+const dmSans = DM_Sans({ 
     subsets: ['latin'],
-    variable: '--font-space-grotesk',
-    display: 'swap'
+    variable: '--font-dm-sans',
+    display: 'swap',
+    weight: ['400', '500', '600', '700']
 })
 
 export const metadata: Metadata = {
@@ -81,10 +82,10 @@ export default function RootLayout({
             <link rel="manifest" href="/site.webmanifest" />
             <Schema />
         </head>
-        <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans`}>
+        <body className={`${inter.variable} ${dmSans.variable}`}>
         <ThemeProvider>
             <DynamicFavicon/>
-            <div className="min-h-screen font-sans flex flex-col transition-colors duration-100">
+            <div className="min-h-screen flex flex-col transition-colors duration-100">
                 <header className="py-12 text-center relative bg-muted">
                     <div className="absolute top-4 right-4">
                         <ThemeSwitcher/>
