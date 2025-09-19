@@ -163,7 +163,7 @@ export default function TopSongsPage() {
               <div className="flex border border-input rounded-md bg-background w-fit">
                 <Link
                   href="/top-albums"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground rounded-l-md"
                 >
                   <Disc className="w-4 h-4" />
                   Albums
@@ -177,7 +177,7 @@ export default function TopSongsPage() {
                 </Link>
                 <Link
                   href="/top-artists"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground rounded-r-md"
                 >
                   <Users className="w-4 h-4" />
                   Artists
@@ -188,7 +188,7 @@ export default function TopSongsPage() {
               <div className="flex border border-input rounded-md bg-background w-fit">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors ${
+                  className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors rounded-l-md ${
                     viewMode === 'grid' 
                       ? 'bg-primary text-primary-foreground' 
                       : 'text-muted-foreground hover:text-foreground'
@@ -199,7 +199,7 @@ export default function TopSongsPage() {
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors ${
+                  className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors rounded-r-md ${
                     viewMode === 'list' 
                       ? 'bg-primary text-primary-foreground' 
                       : 'text-muted-foreground hover:text-foreground'
