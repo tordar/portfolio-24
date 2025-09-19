@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import profileImage from '../../src/app/resources/img.jpeg'
 import { Button } from '@/components/ui/button'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { ChevronDown, Disc, Music2, Users } from 'lucide-react'
 
 export default function AboutMe() {
     return (
@@ -75,62 +77,62 @@ export default function AboutMe() {
                                 Photography Portfolio
                             </a>
                         </Button>
-                        <Button 
-                            asChild 
-                            variant="outline" 
-                            className="w-full bg-white hover:bg-gray-100 border-gray-300 mb-2"
-                        >
-                            <Link 
-                                href="/top-albums"
-                                className="flex items-center justify-center gap-2 !text-black hover:!text-black"
-                            >
-                                <svg 
-                                    xmlns="http://www.w3.org/2000/svg" 
-                                    width="16" 
-                                    height="16" 
-                                    viewBox="0 0 24 24" 
-                                    fill="none" 
-                                    stroke="currentColor" 
-                                    strokeWidth="2" 
-                                    strokeLinecap="round" 
-                                    strokeLinejoin="round"
-                                    className="!text-black"
+                        <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                                <Button 
+                                    variant="outline" 
+                                    className="w-full bg-white hover:bg-gray-100 border-gray-300 mb-2 flex items-center justify-center gap-2 !text-black hover:!text-black"
                                 >
-                                    <path d="M9 18V5l12-2v13" />
-                                    <circle cx="6" cy="18" r="3" />
-                                    <circle cx="18" cy="16" r="3" />
-                                </svg>
-                                Top 500 Albums
-                            </Link>
-                        </Button>
-                        <Button 
-                            asChild 
-                            variant="outline" 
-                            className="w-full bg-white hover:bg-gray-100 border-gray-300"
-                        >
-                            <Link 
-                                href="/top-songs"
-                                className="flex items-center justify-center gap-2 !text-black hover:!text-black"
-                            >
-                                <svg 
-                                    xmlns="http://www.w3.org/2000/svg" 
-                                    width="16" 
-                                    height="16" 
-                                    viewBox="0 0 24 24" 
-                                    fill="none" 
-                                    stroke="currentColor" 
-                                    strokeWidth="2" 
-                                    strokeLinecap="round" 
-                                    strokeLinejoin="round"
-                                    className="!text-black"
-                                >
-                                    <path d="M9 18V5l12-2v13" />
-                                    <circle cx="6" cy="18" r="3" />
-                                    <circle cx="18" cy="16" r="3" />
-                                </svg>
-                                Top 500 Songs
-                            </Link>
-                        </Button>
+                                    <svg 
+                                        xmlns="http://www.w3.org/2000/svg" 
+                                        width="16" 
+                                        height="16" 
+                                        viewBox="0 0 24 24" 
+                                        fill="none" 
+                                        stroke="currentColor" 
+                                        strokeWidth="2" 
+                                        strokeLinecap="round" 
+                                        strokeLinejoin="round"
+                                        className="!text-black"
+                                    >
+                                        <path d="M9 18V5l12-2v13" />
+                                        <circle cx="6" cy="18" r="3" />
+                                        <circle cx="18" cy="16" r="3" />
+                                    </svg>
+                                    Spotify Stats
+                                    <ChevronDown className="w-4 h-4 !text-black" />
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent className="w-full min-w-[200px]">
+                                <DropdownMenuItem asChild>
+                                    <Link 
+                                        href="/top-albums"
+                                        className="flex items-center gap-2 cursor-pointer"
+                                    >
+                                        <Disc className="w-4 h-4" />
+                                        Top 500 Albums
+                                    </Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                    <Link 
+                                        href="/top-songs"
+                                        className="flex items-center gap-2 cursor-pointer"
+                                    >
+                                        <Music2 className="w-4 h-4" />
+                                        Top 500 Songs
+                                    </Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                    <Link 
+                                        href="/top-artists"
+                                        className="flex items-center gap-2 cursor-pointer"
+                                    >
+                                        <Users className="w-4 h-4" />
+                                        Top 500 Artists
+                                    </Link>
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
                     </div>
                 </div>
             </div>

@@ -4,53 +4,52 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Search, Music, Play, Grid3X3, List, X, Disc, Music2, Users } from 'lucide-react'
+import { Search, Music, Play, Grid3X3, List, X, Users, Disc, Music2 } from 'lucide-react'
 import Link from 'next/link'
 
-interface AlbumImage {
+interface ArtistImage {
   height: number
   url: string
   width: number
 }
 
-interface Album {
-  name: string
-  images: AlbumImage[]
-}
-
 interface Artist {
   name: string
   genres: string[]
+  images: ArtistImage[]
 }
 
-interface AlbumData {
+interface ArtistData {
   duration_ms: number
   count: number
-  albumId: string
-  album: Album
+  differents: number
+  primaryArtistId: string
+  total_count: number
+  total_duration_ms: number
   artist: Artist
   consolidated_count: number
-  original_albumIds: string[]
+  original_artistIds: (string | null)[]
+  original_counts: number[]
   rank: number
 }
 
-interface AlbumsData {
+interface ArtistsData {
   metadata: {
-    originalTotalAlbums: number
-    consolidatedTotalAlbums: number
+    originalTotalArtists: number
+    consolidatedTotalArtists: number
     duplicatesRemoved: number
     consolidationRate: number
     timestamp: string
   }
-  albums: AlbumData[]
+  artists: ArtistData[]
 }
 
-// Lazy loading image component
-const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: Album; rank: number; size?: 'default' | 'mobile' }) => {
+// Lazy loading image component for artists
+const LazyArtistImage = ({ artist, rank, size = 'default' }: { artist: Artist; rank: number; size?: 'default' | 'mobile' }) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   
-  const imageUrl = album.images[0]?.url || ''
+  const imageUrl = artist.images[0]?.url || ''
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,7 +62,7 @@ const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: Album; rank:
       { threshold: 0.1 }
     )
     
-    const imgRef = document.getElementById(`album-${rank}-${size}`)
+    const imgRef = document.getElementById(`artist-${rank}-${size}`)
     if (imgRef) {
       observer.observe(imgRef)
     }
@@ -73,15 +72,15 @@ const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: Album; rank:
   
   return (
     <div 
-      id={`album-${rank}-${size}`}
-      className={`relative bg-muted rounded-lg overflow-hidden ${
+      id={`artist-${rank}-${size}`}
+      className={`relative bg-muted rounded-full overflow-hidden ${
         size === 'mobile' ? 'w-16 h-16' : 'aspect-square'
       }`}
     >
       {isInView && (
         <Image
           src={imageUrl}
-          alt={`${album.name} album cover`}
+          alt={`${artist.name} artist image`}
           fill
           className={`object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
@@ -92,38 +91,38 @@ const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: Album; rank:
       )}
       {!isLoaded && isInView && (
         <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">
-          <Music className={`${size === 'mobile' ? 'w-6 h-6' : 'w-8 h-8'} text-muted-foreground`} />
+          <Users className={`${size === 'mobile' ? 'w-6 h-6' : 'w-8 h-8'} text-muted-foreground`} />
         </div>
       )}
     </div>
   )
 }
 
-export default function TopAlbumsPage() {
-  const [albumsData, setAlbumsData] = useState<AlbumsData | null>(null)
+export default function TopArtistsPage() {
+  const [artistsData, setArtistsData] = useState<ArtistsData | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(true)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   
   useEffect(() => {
-    const fetchAlbums = async () => {
+    const fetchArtists = async () => {
       try {
-        const response = await fetch('/cleaned-top-albums-v1.json')
+        const response = await fetch('/cleaned-top-artists-v1.json')
         const data = await response.json()
-        setAlbumsData(data)
+        setArtistsData(data)
       } catch (error) {
-        console.error('Error fetching albums:', error)
+        console.error('Error fetching artists:', error)
       } finally {
         setLoading(false)
       }
     }
     
-    fetchAlbums()
+    fetchArtists()
   }, [])
   
-  const filteredAlbums = albumsData?.albums.filter(album => 
-    album.album.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    album.artist.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredArtists = artistsData?.artists.filter(artist => 
+    artist.artist.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    artist.artist.genres.some(genre => genre.toLowerCase().includes(searchTerm.toLowerCase()))
   ) || []
   
   if (loading) {
@@ -131,7 +130,7 @@ export default function TopAlbumsPage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading your top albums...</p>
+          <p className="text-muted-foreground">Loading your top artists...</p>
         </div>
       </div>
     )
@@ -142,9 +141,9 @@ export default function TopAlbumsPage() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">My Top Albums</h1>
+          <h1 className="text-4xl font-bold mb-2">My Top Artists</h1>
           <p className="text-muted-foreground mb-6">
-            {albumsData?.metadata.consolidatedTotalAlbums} albums from the past 15 years
+            {artistsData?.metadata.consolidatedTotalArtists} artists from the past 15 years
           </p>
           
           {/* Controls */}
@@ -155,7 +154,7 @@ export default function TopAlbumsPage() {
               <div className="flex border border-input rounded-md bg-background w-fit">
                 <Link
                   href="/top-albums"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors bg-primary text-primary-foreground"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
                 >
                   <Disc className="w-4 h-4" />
                   Albums
@@ -169,7 +168,7 @@ export default function TopAlbumsPage() {
                 </Link>
                 <Link
                   href="/top-artists"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors bg-primary text-primary-foreground"
                 >
                   <Users className="w-4 h-4" />
                   Artists
@@ -208,7 +207,7 @@ export default function TopAlbumsPage() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <input
                 type="text"
-                placeholder="Search albums or artists..."
+                placeholder="Search artists or genres..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-10 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
@@ -225,47 +224,58 @@ export default function TopAlbumsPage() {
           </div>
         </div>
         
-        {/* Albums Display */}
+        {/* Artists Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {filteredAlbums.map((album) => (
-              <Card key={album.albumId} className="group hover:shadow-lg transition-shadow duration-200">
+            {filteredArtists.map((artist) => (
+              <Card key={artist.primaryArtistId} className="group hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-3">
-                  {/* Album Image */}
+                  {/* Artist Image */}
                   <div className="mb-3">
-                    <LazyAlbumImage album={album.album} rank={album.rank} />
+                    <LazyArtistImage artist={artist.artist} rank={artist.rank} />
                   </div>
                   
-                  {/* Album Info */}
+                  {/* Artist Info */}
                   <div className="space-y-2">
                     {/* Rank Badge */}
                     <div className="flex items-center justify-between">
                       <Badge variant="secondary" className="text-xs">
-                        #{album.rank}
+                        #{artist.rank}
                       </Badge>
                       <div className="flex items-center text-xs text-muted-foreground">
                         <Play className="w-3 h-3 mr-1" />
-                        {album.count}
+                        {artist.count}
                       </div>
                     </div>
                     
-                    {/* Album Name */}
+                    {/* Artist Name */}
                     <h3 className="font-semibold text-sm leading-tight line-clamp-2 group-hover:text-primary transition-colors">
-                      {album.album.name}
+                      {artist.artist.name}
                     </h3>
                     
-                    {/* Artist Name */}
-                    <button
-                      onClick={() => setSearchTerm(album.artist.name)}
-                      className="text-xs text-muted-foreground hover:text-primary transition-colors line-clamp-1 text-left"
-                    >
-                      {album.artist.name}
-                    </button>
+                    {/* Genres */}
+                    <div className="flex flex-wrap gap-1">
+                      {artist.artist.genres.slice(0, 2).map((genre, index) => (
+                        <Badge key={index} variant="outline" className="text-xs">
+                          {genre}
+                        </Badge>
+                      ))}
+                      {artist.artist.genres.length > 2 && (
+                        <Badge variant="outline" className="text-xs">
+                          +{artist.artist.genres.length - 2}
+                        </Badge>
+                      )}
+                    </div>
+                    
+                    {/* Different Songs */}
+                    <p className="text-xs text-muted-foreground">
+                      {artist.differents} songs
+                    </p>
                     
                     {/* Duration */}
                     <p className="text-xs text-muted-foreground">
                       {(() => {
-                        const totalMinutes = Math.floor(album.duration_ms / 60000)
+                        const totalMinutes = Math.floor(artist.duration_ms / 60000)
                         const hours = Math.floor(totalMinutes / 60)
                         const minutes = totalMinutes % 60
                         return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
@@ -282,61 +292,75 @@ export default function TopAlbumsPage() {
             <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-1 text-xs font-medium text-muted-foreground border-b">
               <div className="col-span-1">Rank</div>
               <div className="col-span-1"></div>
-              <div className="col-span-4">Album</div>
               <div className="col-span-3">Artist</div>
+              <div className="col-span-3">Genres</div>
               <div className="col-span-1">Plays</div>
+              <div className="col-span-1">Songs</div>
               <div className="col-span-2">Duration</div>
             </div>
             
-            {filteredAlbums.map((album) => (
-              <Card key={album.albumId} className="group hover:shadow-lg transition-shadow duration-200">
+            {filteredArtists.map((artist) => (
+              <Card key={artist.primaryArtistId} className="group hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-3 md:p-2">
                   {/* Desktop Layout */}
                   <div className="hidden md:grid grid-cols-12 gap-4 items-center">
                     {/* Rank */}
                     <div className="col-span-1">
                       <Badge variant="secondary" className="text-xs">
-                        #{album.rank}
+                        #{artist.rank}
                       </Badge>
                     </div>
                     
-                    {/* Album Image */}
+                    {/* Artist Image */}
                     <div className="col-span-1">
                       <div className="w-12 h-12 aspect-square">
-                        <LazyAlbumImage album={album.album} rank={album.rank} />
+                        <LazyArtistImage artist={artist.artist} rank={artist.rank} />
                       </div>
-                    </div>
-                    
-                    {/* Album Name */}
-                    <div className="col-span-4">
-                      <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors">
-                        {album.album.name}
-                      </h3>
                     </div>
                     
                     {/* Artist Name */}
                     <div className="col-span-3">
-                      <button
-                        onClick={() => setSearchTerm(album.artist.name)}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
-                      >
-                        {album.artist.name}
-                      </button>
+                      <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors">
+                        {artist.artist.name}
+                      </h3>
+                    </div>
+                    
+                    {/* Genres */}
+                    <div className="col-span-3">
+                      <div className="flex flex-wrap gap-1">
+                        {artist.artist.genres.slice(0, 2).map((genre, index) => (
+                          <Badge key={index} variant="outline" className="text-xs">
+                            {genre}
+                          </Badge>
+                        ))}
+                        {artist.artist.genres.length > 2 && (
+                          <Badge variant="outline" className="text-xs">
+                            +{artist.artist.genres.length - 2}
+                          </Badge>
+                        )}
+                      </div>
                     </div>
                     
                     {/* Play Count */}
                     <div className="col-span-1">
                       <div className="flex items-center text-sm text-muted-foreground">
                         <Play className="w-3 h-3 mr-1" />
-                        {album.count}
+                        {artist.count}
                       </div>
+                    </div>
+                    
+                    {/* Different Songs */}
+                    <div className="col-span-1">
+                      <p className="text-sm text-muted-foreground">
+                        {artist.differents}
+                      </p>
                     </div>
                     
                     {/* Duration */}
                     <div className="col-span-2">
                       <p className="text-sm text-muted-foreground">
                         {(() => {
-                          const totalMinutes = Math.floor(album.duration_ms / 60000)
+                          const totalMinutes = Math.floor(artist.duration_ms / 60000)
                           const hours = Math.floor(totalMinutes / 60)
                           const minutes = totalMinutes % 60
                           return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
@@ -347,42 +371,51 @@ export default function TopAlbumsPage() {
                   
                   {/* Mobile Layout */}
                   <div className="md:hidden flex items-center gap-3">
-                    {/* Album Image */}
+                    {/* Artist Image */}
                     <div className="flex-shrink-0">
-                      <LazyAlbumImage album={album.album} rank={album.rank} size="mobile" />
+                      <LazyArtistImage artist={artist.artist} rank={artist.rank} size="mobile" />
                     </div>
                     
-                    {/* Album Info */}
+                    {/* Artist Info */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-1">
                         <Badge variant="secondary" className="text-xs">
-                          #{album.rank}
+                          #{artist.rank}
                         </Badge>
                         <div className="flex items-center text-xs text-muted-foreground">
                           <Play className="w-3 h-3 mr-1" />
-                          {album.count}
+                          {artist.count}
                         </div>
                       </div>
                       
                       <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors mb-1">
-                        {album.album.name}
+                        {artist.artist.name}
                       </h3>
                       
-                      <button
-                        onClick={() => setSearchTerm(album.artist.name)}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors text-left mb-1"
-                      >
-                        {album.artist.name}
-                      </button>
+                      <div className="flex flex-wrap gap-1 mb-1">
+                        {artist.artist.genres.slice(0, 2).map((genre, index) => (
+                          <Badge key={index} variant="outline" className="text-xs">
+                            {genre}
+                          </Badge>
+                        ))}
+                        {artist.artist.genres.length > 2 && (
+                          <Badge variant="outline" className="text-xs">
+                            +{artist.artist.genres.length - 2}
+                          </Badge>
+                        )}
+                      </div>
                       
-                      <p className="text-xs text-muted-foreground">
-                        {(() => {
-                          const totalMinutes = Math.floor(album.duration_ms / 60000)
-                          const hours = Math.floor(totalMinutes / 60)
-                          const minutes = totalMinutes % 60
-                          return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
-                        })()}
-                      </p>
+                      <div className="flex items-center justify-between text-xs text-muted-foreground">
+                        <span>{artist.differents} songs</span>
+                        <span>
+                          {(() => {
+                            const totalMinutes = Math.floor(artist.duration_ms / 60000)
+                            const hours = Math.floor(totalMinutes / 60)
+                            const minutes = totalMinutes % 60
+                            return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
+                          })()}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -391,9 +424,9 @@ export default function TopAlbumsPage() {
           </div>
         )}
         
-        {filteredAlbums.length === 0 && searchTerm && (
+        {filteredArtists.length === 0 && searchTerm && (
           <div className="text-center py-12">
-            <p className="text-muted-foreground">No albums found matching &quot;{searchTerm}&quot;</p>
+            <p className="text-muted-foreground">No artists found matching &quot;{searchTerm}&quot;</p>
           </div>
         )}
       </div>

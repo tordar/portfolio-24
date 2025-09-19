@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Search, Music, Play, Grid3X3, List, X } from 'lucide-react'
+import { Search, Music, Play, Grid3X3, List, X, Disc, Music2, Users } from 'lucide-react'
+import Link from 'next/link'
 
 interface AlbumImage {
   height: number
@@ -154,9 +155,64 @@ export default function TopSongsPage() {
             {songsData?.metadata.consolidatedTotalSongs} songs from the past 15 years
           </p>
           
-          {/* Search and View Toggle */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 max-w-md mx-auto">
-            <div className="relative flex-1">
+          {/* Controls */}
+          <div className="space-y-4">
+            {/* Navigation and View Toggle */}
+            <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
+              {/* Navigation */}
+              <div className="flex border border-input rounded-md bg-background w-fit">
+                <Link
+                  href="/top-albums"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
+                >
+                  <Disc className="w-4 h-4" />
+                  Albums
+                </Link>
+                <Link
+                  href="/top-songs"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors bg-primary text-primary-foreground"
+                >
+                  <Music2 className="w-4 h-4" />
+                  Songs
+                </Link>
+                <Link
+                  href="/top-artists"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
+                >
+                  <Users className="w-4 h-4" />
+                  Artists
+                </Link>
+              </div>
+              
+              {/* View Toggle */}
+              <div className="flex border border-input rounded-md bg-background w-fit">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors ${
+                    viewMode === 'grid' 
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <Grid3X3 className="w-4 h-4" />
+                  Grid
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors ${
+                    viewMode === 'list' 
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <List className="w-4 h-4" />
+                  List
+                </button>
+              </div>
+            </div>
+            
+            {/* Search Bar */}
+            <div className="relative max-w-md mx-auto">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <input
                 type="text"
@@ -173,32 +229,6 @@ export default function TopSongsPage() {
                   <X className="w-4 h-4" />
                 </button>
               )}
-            </div>
-            
-            {/* View Toggle */}
-            <div className="flex border border-input rounded-md bg-background">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors ${
-                  viewMode === 'grid' 
-                    ? 'bg-primary text-primary-foreground' 
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                <Grid3X3 className="w-4 h-4" />
-                Grid
-              </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors ${
-                  viewMode === 'list' 
-                    ? 'bg-primary text-primary-foreground' 
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                <List className="w-4 h-4" />
-                List
-              </button>
             </div>
           </div>
         </div>
