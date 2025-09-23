@@ -2,9 +2,9 @@
   "metadata": {
     "originalTotalAlbums": 6000,
     "consolidatedTotalAlbums": 500,
-    "duplicatesRemoved": 763,
-    "consolidationRate": 12.72,
-    "timestamp": "2025-09-23T09:12:57.457Z"
+    "duplicatesRemoved": 764,
+    "consolidationRate": 12.73,
+    "timestamp": "2025-09-23T09:18:25.420Z"
   },
   "albums": [
     {
@@ -2627,6 +2627,49 @@
       "rank": 59
     },
     {
+      "duration_ms": 45072037,
+      "count": 182,
+      "albumId": "1NRRN5RWwfuLmQdjshz0L7",
+      "album": {
+        "name": "The College Dropout",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d992045c8e6766ee46502180",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02d992045c8e6766ee46502180",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851d992045c8e6766ee46502180",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "Kanye West",
+        "genres": [
+          "chicago rap",
+          "hip hop",
+          "rap"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "1NRRN5RWwfuLmQdjshz0L7",
+        "4Uv86qWpGTxf7fU7lG5X6F"
+      ],
+      "original_counts": [
+        126,
+        56
+      ],
+      "rank": 60
+    },
+    {
       "duration_ms": 31984377,
       "count": 180,
       "albumId": "5kAZDRUWcOKCp948RaF9nO",
@@ -2664,7 +2707,7 @@
       "original_counts": [
         180
       ],
-      "rank": 60
+      "rank": 61
     },
     {
       "duration_ms": 40496417,
@@ -2715,7 +2758,7 @@
         18,
         8
       ],
-      "rank": 61
+      "rank": 62
     },
     {
       "duration_ms": 37184985,
@@ -2757,7 +2800,7 @@
         122,
         54
       ],
-      "rank": 62
+      "rank": 63
     },
     {
       "duration_ms": 22684192,
@@ -2804,7 +2847,7 @@
         107,
         69
       ],
-      "rank": 63
+      "rank": 64
     },
     {
       "duration_ms": 46753337,
@@ -2851,7 +2894,7 @@
         59,
         43
       ],
-      "rank": 64
+      "rank": 65
     },
     {
       "duration_ms": 39616757,
@@ -2895,7 +2938,7 @@
       "original_counts": [
         175
       ],
-      "rank": 65
+      "rank": 66
     },
     {
       "duration_ms": 39507524,
@@ -2935,7 +2978,7 @@
       "original_counts": [
         173
       ],
-      "rank": 66
+      "rank": 67
     },
     {
       "duration_ms": 26586460,
@@ -2981,7 +3024,7 @@
         16,
         10
       ],
-      "rank": 67
+      "rank": 68
     },
     {
       "duration_ms": 36488450,
@@ -3030,7 +3073,7 @@
         141,
         29
       ],
-      "rank": 68
+      "rank": 69
     },
     {
       "duration_ms": 56026079,
@@ -3075,7 +3118,7 @@
         137,
         32
       ],
-      "rank": 69
+      "rank": 70
     },
     {
       "duration_ms": 56282588,
@@ -3118,7 +3161,7 @@
         101,
         68
       ],
-      "rank": 70
+      "rank": 71
     },
     {
       "duration_ms": 32114860,
@@ -3164,7 +3207,7 @@
         34,
         29
       ],
-      "rank": 71
+      "rank": 72
     },
     {
       "duration_ms": 39837948,
@@ -3207,7 +3250,7 @@
       "original_counts": [
         168
       ],
-      "rank": 72
+      "rank": 73
     },
     {
       "duration_ms": 36520400,
@@ -3252,7 +3295,7 @@
         135,
         33
       ],
-      "rank": 73
+      "rank": 74
     },
     {
       "duration_ms": 22494712,
@@ -3301,7 +3344,7 @@
         18,
         5
       ],
-      "rank": 74
+      "rank": 75
     },
     {
       "duration_ms": 39027174,
@@ -3344,7 +3387,7 @@
       "original_counts": [
         166
       ],
-      "rank": 75
+      "rank": 76
     },
     {
       "duration_ms": 47238529,
@@ -3388,7 +3431,7 @@
         38,
         20
       ],
-      "rank": 76
+      "rank": 77
     },
     {
       "duration_ms": 40181331,
@@ -3436,7 +3479,7 @@
         118,
         44
       ],
-      "rank": 77
+      "rank": 78
     },
     {
       "duration_ms": 29485972,
@@ -3482,7 +3525,7 @@
         34,
         14
       ],
-      "rank": 78
+      "rank": 79
     },
     {
       "duration_ms": 26924308,
@@ -3532,7 +3575,7 @@
         46,
         36
       ],
-      "rank": 79
+      "rank": 80
     },
     {
       "duration_ms": 20803917,
@@ -3574,7 +3617,7 @@
       "original_counts": [
         160
       ],
-      "rank": 80
+      "rank": 81
     },
     {
       "duration_ms": 38571478,
@@ -3616,7 +3659,7 @@
       "original_counts": [
         160
       ],
-      "rank": 81
+      "rank": 82
     },
     {
       "duration_ms": 35154722,
@@ -3660,7 +3703,7 @@
         84,
         76
       ],
-      "rank": 82
+      "rank": 83
     },
     {
       "duration_ms": 24280098,
@@ -3705,7 +3748,7 @@
         81,
         79
       ],
-      "rank": 83
+      "rank": 84
     },
     {
       "duration_ms": 34096733,
@@ -3745,7 +3788,7 @@
       "original_counts": [
         159
       ],
-      "rank": 84
+      "rank": 85
     },
     {
       "duration_ms": 51926231,
@@ -3787,7 +3830,7 @@
       "original_counts": [
         159
       ],
-      "rank": 85
+      "rank": 86
     },
     {
       "duration_ms": 45943004,
@@ -3834,7 +3877,7 @@
         42,
         28
       ],
-      "rank": 86
+      "rank": 87
     },
     {
       "duration_ms": 35546409,
@@ -3880,7 +3923,7 @@
         40,
         21
       ],
-      "rank": 87
+      "rank": 88
     },
     {
       "duration_ms": 36567590,
@@ -3923,7 +3966,7 @@
         137,
         19
       ],
-      "rank": 88
+      "rank": 89
     },
     {
       "duration_ms": 35736370,
@@ -3966,7 +4009,7 @@
         130,
         26
       ],
-      "rank": 89
+      "rank": 90
     },
     {
       "duration_ms": 27430036,
@@ -4012,7 +4055,7 @@
         15,
         6
       ],
-      "rank": 90
+      "rank": 91
     },
     {
       "duration_ms": 29604393,
@@ -4055,7 +4098,7 @@
         135,
         19
       ],
-      "rank": 91
+      "rank": 92
     },
     {
       "duration_ms": 30056044,
@@ -4095,7 +4138,7 @@
       "original_counts": [
         153
       ],
-      "rank": 92
+      "rank": 93
     },
     {
       "duration_ms": 34731339,
@@ -4139,7 +4182,7 @@
       "original_counts": [
         153
       ],
-      "rank": 93
+      "rank": 94
     },
     {
       "duration_ms": 47362029,
@@ -4184,7 +4227,7 @@
         136,
         14
       ],
-      "rank": 94
+      "rank": 95
     },
     {
       "duration_ms": 37334363,
@@ -4228,7 +4271,7 @@
         11,
         9
       ],
-      "rank": 95
+      "rank": 96
     },
     {
       "duration_ms": 33921247,
@@ -4269,7 +4312,7 @@
       "original_counts": [
         149
       ],
-      "rank": 96
+      "rank": 97
     },
     {
       "duration_ms": 21991052,
@@ -4308,7 +4351,7 @@
       "original_counts": [
         149
       ],
-      "rank": 97
+      "rank": 98
     },
     {
       "duration_ms": 28047142,
@@ -4353,7 +4396,7 @@
       "original_counts": [
         149
       ],
-      "rank": 98
+      "rank": 99
     },
     {
       "duration_ms": 32371457,
@@ -4399,7 +4442,7 @@
         93,
         56
       ],
-      "rank": 99
+      "rank": 100
     },
     {
       "duration_ms": 23694821,
@@ -4444,7 +4487,7 @@
         40,
         19
       ],
-      "rank": 100
+      "rank": 101
     },
     {
       "duration_ms": 29058152,
@@ -4487,7 +4530,7 @@
         88,
         61
       ],
-      "rank": 101
+      "rank": 102
     },
     {
       "duration_ms": 33466395,
@@ -4531,7 +4574,7 @@
         130,
         18
       ],
-      "rank": 102
+      "rank": 103
     },
     {
       "duration_ms": 22342277,
@@ -4574,7 +4617,7 @@
         125,
         23
       ],
-      "rank": 103
+      "rank": 104
     },
     {
       "duration_ms": 34026835,
@@ -4620,7 +4663,7 @@
         97,
         51
       ],
-      "rank": 104
+      "rank": 105
     },
     {
       "duration_ms": 33599693,
@@ -4668,7 +4711,7 @@
         50,
         47
       ],
-      "rank": 105
+      "rank": 106
     },
     {
       "duration_ms": 37883808,
@@ -4711,7 +4754,7 @@
       "original_counts": [
         147
       ],
-      "rank": 106
+      "rank": 107
     },
     {
       "duration_ms": 29719417,
@@ -4752,7 +4795,7 @@
         137,
         8
       ],
-      "rank": 107
+      "rank": 108
     },
     {
       "duration_ms": 24022059,
@@ -4792,7 +4835,7 @@
       "original_counts": [
         144
       ],
-      "rank": 108
+      "rank": 109
     },
     {
       "duration_ms": 35925589,
@@ -4841,7 +4884,7 @@
         20,
         9
       ],
-      "rank": 109
+      "rank": 110
     },
     {
       "duration_ms": 21477604,
@@ -4885,7 +4928,7 @@
         116,
         27
       ],
-      "rank": 110
+      "rank": 111
     },
     {
       "duration_ms": 15820576,
@@ -4928,7 +4971,7 @@
         111,
         32
       ],
-      "rank": 111
+      "rank": 112
     },
     {
       "duration_ms": 36005912,
@@ -4974,7 +5017,7 @@
         102,
         39
       ],
-      "rank": 112
+      "rank": 113
     },
     {
       "duration_ms": 20843538,
@@ -5021,7 +5064,7 @@
         27,
         5
       ],
-      "rank": 113
+      "rank": 114
     },
     {
       "duration_ms": 21605840,
@@ -5063,7 +5106,7 @@
         119,
         17
       ],
-      "rank": 114
+      "rank": 115
     },
     {
       "duration_ms": 27349762,
@@ -5108,7 +5151,7 @@
         118,
         18
       ],
-      "rank": 115
+      "rank": 116
     },
     {
       "duration_ms": 18235076,
@@ -5148,7 +5191,7 @@
       "original_counts": [
         135
       ],
-      "rank": 116
+      "rank": 117
     },
     {
       "duration_ms": 30272145,
@@ -5190,7 +5233,7 @@
         120,
         15
       ],
-      "rank": 117
+      "rank": 118
     },
     {
       "duration_ms": 40332448,
@@ -5233,7 +5276,7 @@
         97,
         38
       ],
-      "rank": 118
+      "rank": 119
     },
     {
       "duration_ms": 38668313,
@@ -5276,7 +5319,7 @@
       "original_counts": [
         132
       ],
-      "rank": 119
+      "rank": 120
     },
     {
       "duration_ms": 25840634,
@@ -5323,7 +5366,7 @@
         19,
         17
       ],
-      "rank": 120
+      "rank": 121
     },
     {
       "duration_ms": 40180012,
@@ -5368,7 +5411,7 @@
         89,
         42
       ],
-      "rank": 121
+      "rank": 122
     },
     {
       "duration_ms": 24833629,
@@ -5413,7 +5456,7 @@
         117,
         13
       ],
-      "rank": 122
+      "rank": 123
     },
     {
       "duration_ms": 27896005,
@@ -5453,7 +5496,7 @@
       "original_counts": [
         129
       ],
-      "rank": 123
+      "rank": 124
     },
     {
       "duration_ms": 29292237,
@@ -5497,7 +5540,7 @@
       "original_counts": [
         129
       ],
-      "rank": 124
+      "rank": 125
     },
     {
       "duration_ms": 30880966,
@@ -5540,7 +5583,7 @@
         113,
         16
       ],
-      "rank": 125
+      "rank": 126
     },
     {
       "duration_ms": 18733489,
@@ -5587,7 +5630,7 @@
         45,
         15
       ],
-      "rank": 126
+      "rank": 127
     },
     {
       "duration_ms": 17607366,
@@ -5634,7 +5677,7 @@
         34,
         5
       ],
-      "rank": 127
+      "rank": 128
     },
     {
       "duration_ms": 36205207,
@@ -5681,7 +5724,7 @@
       "original_counts": [
         128
       ],
-      "rank": 128
+      "rank": 129
     },
     {
       "duration_ms": 32051389,
@@ -5724,7 +5767,7 @@
       "original_counts": [
         128
       ],
-      "rank": 129
+      "rank": 130
     },
     {
       "duration_ms": 27453702,
@@ -5766,7 +5809,7 @@
         116,
         12
       ],
-      "rank": 130
+      "rank": 131
     },
     {
       "duration_ms": 14886587,
@@ -5807,7 +5850,7 @@
       "original_counts": [
         127
       ],
-      "rank": 131
+      "rank": 132
     },
     {
       "duration_ms": 33456862,
@@ -5848,7 +5891,7 @@
       "original_counts": [
         127
       ],
-      "rank": 132
+      "rank": 133
     },
     {
       "duration_ms": 17198560,
@@ -5891,47 +5934,6 @@
       "original_counts": [
         109,
         18
-      ],
-      "rank": 133
-    },
-    {
-      "duration_ms": 30967058,
-      "count": 126,
-      "albumId": "1NRRN5RWwfuLmQdjshz0L7",
-      "album": {
-        "name": "The College Dropout (Explicit)",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273d992045c8e6766ee46502180",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02d992045c8e6766ee46502180",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851d992045c8e6766ee46502180",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Kanye West",
-        "genres": [
-          "chicago rap",
-          "hip hop",
-          "rap"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "1NRRN5RWwfuLmQdjshz0L7"
-      ],
-      "original_counts": [
-        126
       ],
       "rank": 134
     },
@@ -20763,47 +20765,6 @@
       "rank": 476
     },
     {
-      "duration_ms": 14104979,
-      "count": 56,
-      "albumId": "4Uv86qWpGTxf7fU7lG5X6F",
-      "album": {
-        "name": "The College Dropout",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27325b055377757b3cdd6f26b78",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0225b055377757b3cdd6f26b78",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485125b055377757b3cdd6f26b78",
-            "width": 64
-          }
-        ]
-      },
-      "artist": {
-        "name": "Kanye West",
-        "genres": [
-          "chicago rap",
-          "hip hop",
-          "rap"
-        ]
-      },
-      "consolidated_count": 1,
-      "original_albumIds": [
-        "4Uv86qWpGTxf7fU7lG5X6F"
-      ],
-      "original_counts": [
-        56
-      ],
-      "rank": 477
-    },
-    {
       "duration_ms": 11166396,
       "count": 56,
       "albumId": "5bTeIBUuF3zExCunn1ib9x",
@@ -20841,7 +20802,7 @@
       "original_counts": [
         56
       ],
-      "rank": 478
+      "rank": 477
     },
     {
       "duration_ms": 11091535,
@@ -20884,7 +20845,7 @@
       "original_counts": [
         56
       ],
-      "rank": 479
+      "rank": 478
     },
     {
       "duration_ms": 17168358,
@@ -20927,7 +20888,7 @@
       "original_counts": [
         56
       ],
-      "rank": 480
+      "rank": 479
     },
     {
       "duration_ms": 15888796,
@@ -20970,7 +20931,7 @@
       "original_counts": [
         56
       ],
-      "rank": 481
+      "rank": 480
     },
     {
       "duration_ms": 14109876,
@@ -21013,7 +20974,7 @@
         51,
         5
       ],
-      "rank": 482
+      "rank": 481
     },
     {
       "duration_ms": 6399342,
@@ -21058,7 +21019,7 @@
         48,
         8
       ],
-      "rank": 483
+      "rank": 482
     },
     {
       "duration_ms": 22367228,
@@ -21104,7 +21065,7 @@
         47,
         9
       ],
-      "rank": 484
+      "rank": 483
     },
     {
       "duration_ms": 11482669,
@@ -21152,7 +21113,7 @@
         12,
         7
       ],
-      "rank": 485
+      "rank": 484
     },
     {
       "duration_ms": 14071118,
@@ -21198,7 +21159,7 @@
         22,
         5
       ],
-      "rank": 486
+      "rank": 485
     },
     {
       "duration_ms": 13802496,
@@ -21244,7 +21205,7 @@
         17,
         17
       ],
-      "rank": 487
+      "rank": 486
     },
     {
       "duration_ms": 11622767,
@@ -21287,7 +21248,7 @@
       "original_counts": [
         55
       ],
-      "rank": 488
+      "rank": 487
     },
     {
       "duration_ms": 14204677,
@@ -21330,7 +21291,7 @@
       "original_counts": [
         55
       ],
-      "rank": 489
+      "rank": 488
     },
     {
       "duration_ms": 10771080,
@@ -21371,7 +21332,7 @@
       "original_counts": [
         55
       ],
-      "rank": 490
+      "rank": 489
     },
     {
       "duration_ms": 12907448,
@@ -21413,7 +21374,7 @@
       "original_counts": [
         55
       ],
-      "rank": 491
+      "rank": 490
     },
     {
       "duration_ms": 14900670,
@@ -21454,7 +21415,7 @@
       "original_counts": [
         55
       ],
-      "rank": 492
+      "rank": 491
     },
     {
       "duration_ms": 13088995,
@@ -21495,7 +21456,7 @@
       "original_counts": [
         55
       ],
-      "rank": 493
+      "rank": 492
     },
     {
       "duration_ms": 8984063,
@@ -21544,7 +21505,7 @@
         35,
         20
       ],
-      "rank": 494
+      "rank": 493
     },
     {
       "duration_ms": 6844695,
@@ -21587,7 +21548,7 @@
         18,
         7
       ],
-      "rank": 495
+      "rank": 494
     },
     {
       "duration_ms": 10831690,
@@ -21626,7 +21587,7 @@
       "original_counts": [
         54
       ],
-      "rank": 496
+      "rank": 495
     },
     {
       "duration_ms": 10717852,
@@ -21665,7 +21626,7 @@
       "original_counts": [
         54
       ],
-      "rank": 497
+      "rank": 496
     },
     {
       "duration_ms": 8100705,
@@ -21706,7 +21667,7 @@
       "original_counts": [
         54
       ],
-      "rank": 498
+      "rank": 497
     },
     {
       "duration_ms": 15069863,
@@ -21750,7 +21711,7 @@
         43,
         11
       ],
-      "rank": 499
+      "rank": 498
     },
     {
       "duration_ms": 11818148,
@@ -21793,6 +21754,48 @@
       "original_counts": [
         38,
         16
+      ],
+      "rank": 499
+    },
+    {
+      "duration_ms": 9653305,
+      "count": 54,
+      "albumId": "4VrINRcJyLcENNLiDbCoBi",
+      "album": {
+        "name": "Sing Sing Death House",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2733dbbc58505029f061489df98",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e023dbbc58505029f061489df98",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048513dbbc58505029f061489df98",
+            "width": 64
+          }
+        ]
+      },
+      "artist": {
+        "name": "The Distillers",
+        "genres": [
+          "punk",
+          "skate punk"
+        ]
+      },
+      "consolidated_count": 2,
+      "original_albumIds": [
+        "4VrINRcJyLcENNLiDbCoBi",
+        "0MQhAuIfU4XA2ujWwcYJqh"
+      ],
+      "original_counts": [
+        33,
+        21
       ],
       "rank": 500
     }
