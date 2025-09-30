@@ -3,8 +3,7 @@
 import { useEffect } from 'react'
 import TagManager from '@sooro-io/react-gtm-module'
 
-export default function GoogleTagManager({
-}: any) {
+export default function GoogleTagManager() {
     useEffect(() => {
         const gtmId = 'GTM-K3P4J2FL'
 
