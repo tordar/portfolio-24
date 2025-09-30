@@ -108,7 +108,7 @@ export default function TopAlbumsPage() {
   useEffect(() => {
     const fetchAlbums = async () => {
       try {
-        const response = await fetch('/cleaned-top-albums-v3.json')
+        const response = await fetch('/cleaned-top-albums-v4.json')
         const data = await response.json()
         setAlbumsData(data)
       } catch (error) {
