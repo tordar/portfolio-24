@@ -10,6 +10,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import { TagManagerEvent } from "@/src/lib/tag-manager-events"
 
 interface SongInfo {
     name: string;
@@ -25,6 +26,7 @@ export function SongRecommendationButton() {
 
     const fetchRandomSong = async () => {
         setLoading(true)
+        
         try {
             const response = await fetch('https://api.tordar.no/api/random-song')
             if (!response.ok) {
@@ -33,6 +35,13 @@ export function SongRecommendationButton() {
             const data = await response.json()
             setSong(data)
             setOpen(true)
+            
+            // Track successful song recommendation with details
+            TagManagerEvent({
+                event: 'song recommendation',
+                songName: data.name,
+                artistName: data.artist
+            })
         } catch (error) {
             console.error('Error fetching song:', error)
         } finally {

@@ -4,6 +4,8 @@ import TagManager from '@sooro-io/react-gtm-module'
 type TagManagerEventType =
     // Event pushed to data layer when user changes theme
     | { event: 'theme changed'; theme: string; previousTheme?: string }
+    // Event pushed to data layer when user requests song recommendation
+    | { event: 'song recommendation'; songName?: string; artistName?: string }
 
 
 export function TagManagerEvent(event: TagManagerEventType): void {
