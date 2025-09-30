@@ -10,6 +10,7 @@ import { ThemeSwitcher } from "../components/ThemeSwitcher"
 import { TimeSlider } from "../components/TimeSlider"
 import { DynamicFavicon } from "../components/DynamicFavicon"
 import Schema from './Schema'
+import GoogleTagManager from '../lib/google-tag-manager'
 
 const inter = Inter({ 
     subsets: ['latin'],
@@ -83,6 +84,7 @@ export default function RootLayout({
             <Schema />
         </head>
         <body className={`${inter.variable} ${dmSans.variable}`}>
+        <GoogleTagManager />
         <ThemeProvider>
             <DynamicFavicon/>
             <div className="min-h-screen flex flex-col transition-colors duration-100">

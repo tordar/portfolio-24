@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { Moon, Sun, Sunrise } from 'lucide-react'
-import { useTheme } from "./theme-provider"
+import { useTheme, type Theme } from "./theme-provider"
 import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
@@ -10,11 +10,23 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { TagManagerEvent } from "@/src/lib/tag-manager-events"
 
 export function ThemeSwitcher() {
     const { theme, setTheme } = useTheme()
 
     const skyGradient = "bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500"
+
+    const handleThemeChange = (newTheme: string) => {
+        const previousTheme = theme
+        setTheme(newTheme as Theme)
+        
+        TagManagerEvent({
+            event: 'theme changed',
+            theme: newTheme,
+            previousTheme: previousTheme
+        })
+    }
 
     return (
         <DropdownMenu>
@@ -37,15 +49,15 @@ export function ThemeSwitcher() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme("light")}>
+                <DropdownMenuItem onClick={() => handleThemeChange("light")}>
                     <Sun className="mr-2 h-4 w-4" />
                     <span>Light</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                <DropdownMenuItem onClick={() => handleThemeChange("dark")}>
                     <Moon className="mr-2 h-4 w-4" />
                     <span>Dark</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("sky")}>
+                <DropdownMenuItem onClick={() => handleThemeChange("sky")}>
                     <Sunrise className="mr-2 h-4 w-4" />
                     <span>Sky</span>
                 </DropdownMenuItem>
