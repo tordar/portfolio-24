@@ -115,7 +115,7 @@ export default function TopSongsPage() {
   useEffect(() => {
     const fetchSongs = async () => {
       try {
-        const response = await fetch('/cleaned-top-songs-v1.json')
+        const response = await fetch('/cleaned-top-songs-v2.json')
         const data = await response.json()
         setSongsData(data)
       } catch (error) {
