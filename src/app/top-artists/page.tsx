@@ -20,13 +20,23 @@ interface Artist {
 }
 
 interface ArtistData {
+  id: string
+  name: string
+  genres: string[]
+  popularity: number
+  followers: {
+    total: number
+  }
+  images: ArtistImage[]
+  external_urls: {
+    spotify: string
+  }
   duration_ms: number
   count: number
   differents: number
   primaryArtistId: string
   total_count: number
   total_duration_ms: number
-  artist: Artist
   consolidated_count: number
   original_artistIds: (string | null)[]
   original_counts: number[]
@@ -45,7 +55,7 @@ interface ArtistsData {
 }
 
 // Lazy loading image component for artists
-const LazyArtistImage = ({ artist, rank, size = 'default' }: { artist: Artist; rank: number; size?: 'default' | 'mobile' }) => {
+const LazyArtistImage = ({ artist, rank, size = 'default' }: { artist: ArtistData; rank: number; size?: 'default' | 'mobile' }) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   
@@ -107,7 +117,7 @@ export default function TopArtistsPage() {
   useEffect(() => {
     const fetchArtists = async () => {
       try {
-        const response = await fetch('/cleaned-top-artists-v1.json')
+        const response = await fetch('/cleaned-top-artists-v2.json')
         const data = await response.json()
         setArtistsData(data)
       } catch (error) {
@@ -121,8 +131,8 @@ export default function TopArtistsPage() {
   }, [])
   
   const filteredArtists = artistsData?.artists.filter(artist => 
-    artist.artist.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    artist.artist.genres.some(genre => genre.toLowerCase().includes(searchTerm.toLowerCase()))
+    artist.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    artist.genres?.some(genre => genre.toLowerCase().includes(searchTerm.toLowerCase()))
   ) || []
   
   if (loading) {
@@ -232,7 +242,7 @@ export default function TopArtistsPage() {
                 <CardContent className="p-3">
                   {/* Artist Image */}
                   <div className="mb-3">
-                    <LazyArtistImage artist={artist.artist} rank={artist.rank} />
+                    <LazyArtistImage artist={artist} rank={artist.rank} />
                   </div>
                   
                   {/* Artist Info */}
@@ -250,19 +260,19 @@ export default function TopArtistsPage() {
                     
                     {/* Artist Name */}
                     <h3 className="font-semibold text-sm leading-tight line-clamp-2 group-hover:text-primary transition-colors">
-                      {artist.artist.name}
+                      {artist.name}
                     </h3>
                     
                     {/* Genres */}
                     <div className="flex flex-wrap gap-1">
-                      {artist.artist.genres.slice(0, 2).map((genre, index) => (
+                      {artist.genres.slice(0, 2).map((genre, index) => (
                         <Badge key={index} variant="outline" className="text-xs">
                           {genre}
                         </Badge>
                       ))}
-                      {artist.artist.genres.length > 2 && (
+                      {artist.genres.length > 2 && (
                         <Badge variant="outline" className="text-xs">
-                          +{artist.artist.genres.length - 2}
+                          +{artist.genres.length - 2}
                         </Badge>
                       )}
                     </div>
@@ -314,28 +324,28 @@ export default function TopArtistsPage() {
                     {/* Artist Image */}
                     <div className="col-span-1">
                       <div className="w-12 h-12 aspect-square">
-                        <LazyArtistImage artist={artist.artist} rank={artist.rank} />
+                        <LazyArtistImage artist={artist} rank={artist.rank} />
                       </div>
                     </div>
                     
                     {/* Artist Name */}
                     <div className="col-span-3">
                       <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors">
-                        {artist.artist.name}
+                        {artist.name}
                       </h3>
                     </div>
                     
                     {/* Genres */}
                     <div className="col-span-3">
                       <div className="flex flex-wrap gap-1">
-                        {artist.artist.genres.slice(0, 2).map((genre, index) => (
+                        {artist.genres.slice(0, 2).map((genre, index) => (
                           <Badge key={index} variant="outline" className="text-xs">
                             {genre}
                           </Badge>
                         ))}
-                        {artist.artist.genres.length > 2 && (
+                        {artist.genres.length > 2 && (
                           <Badge variant="outline" className="text-xs">
-                            +{artist.artist.genres.length - 2}
+                            +{artist.genres.length - 2}
                           </Badge>
                         )}
                       </div>
@@ -373,7 +383,7 @@ export default function TopArtistsPage() {
                   <div className="md:hidden flex items-center gap-3">
                     {/* Artist Image */}
                     <div className="flex-shrink-0">
-                      <LazyArtistImage artist={artist.artist} rank={artist.rank} size="mobile" />
+                      <LazyArtistImage artist={artist} rank={artist.rank} size="mobile" />
                     </div>
                     
                     {/* Artist Info */}
@@ -389,18 +399,18 @@ export default function TopArtistsPage() {
                       </div>
                       
                       <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors mb-1">
-                        {artist.artist.name}
+                        {artist.name}
                       </h3>
                       
                       <div className="flex flex-wrap gap-1 mb-1">
-                        {artist.artist.genres.slice(0, 2).map((genre, index) => (
+                        {artist.genres.slice(0, 2).map((genre, index) => (
                           <Badge key={index} variant="outline" className="text-xs">
                             {genre}
                           </Badge>
                         ))}
-                        {artist.artist.genres.length > 2 && (
+                        {artist.genres.length > 2 && (
                           <Badge variant="outline" className="text-xs">
-                            +{artist.artist.genres.length - 2}
+                            +{artist.genres.length - 2}
                           </Badge>
                         )}
                       </div>

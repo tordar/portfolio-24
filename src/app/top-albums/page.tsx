@@ -24,14 +24,25 @@ interface Artist {
 }
 
 interface AlbumData {
-  duration_ms: number
+  id: string
+  name: string
+  album_type: string
+  artists: string[]
+  release_date: string
+  release_date_precision: string
+  popularity: number
+  images: AlbumImage[]
+  external_urls: {
+    spotify: string
+  }
+  genres: string[]
   count: number
-  albumId: string
-  album: Album
-  artist: Artist
   consolidated_count: number
   original_albumIds: string[]
+  original_counts: number[]
   rank: number
+  duration_ms: number
+  album: Album
 }
 
 interface AlbumsData {
@@ -46,11 +57,24 @@ interface AlbumsData {
 }
 
 // Lazy loading image component
-const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: Album; rank: number; size?: 'default' | 'mobile' }) => {
+const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: AlbumData; rank: number; size?: 'default' | 'mobile' }) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   
-  const imageUrl = album.images[0]?.url || ''
+  // Guard clause to prevent errors with invalid album data
+  if (!album) {
+    return (
+      <div className={`relative bg-muted rounded-lg overflow-hidden ${
+        size === 'mobile' ? 'w-16 h-16' : 'aspect-square'
+      }`}>
+        <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">
+          <Disc className={`${size === 'mobile' ? 'w-6 h-6' : 'w-8 h-8'} text-muted-foreground`} />
+        </div>
+      </div>
+    )
+  }
+  
+  const imageUrl = album.images?.[0]?.url || ''
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -108,7 +132,7 @@ export default function TopAlbumsPage() {
   useEffect(() => {
     const fetchAlbums = async () => {
       try {
-        const response = await fetch('/cleaned-top-albums-v4.json')
+        const response = await fetch('/cleaned-top-albums-v5.json')
         const data = await response.json()
         setAlbumsData(data)
       } catch (error) {
@@ -122,8 +146,8 @@ export default function TopAlbumsPage() {
   }, [])
   
   const filteredAlbums = albumsData?.albums.filter(album => 
-    album.album.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    album.artist.name.toLowerCase().includes(searchTerm.toLowerCase())
+    album.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    album.artists?.some(artist => artist.toLowerCase().includes(searchTerm.toLowerCase()))
   ) || []
   
   if (loading) {
@@ -229,11 +253,11 @@ export default function TopAlbumsPage() {
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
             {filteredAlbums.map((album) => (
-              <Card key={album.albumId} className="group hover:shadow-lg transition-shadow duration-200">
+              <Card key={album.id} className="group hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-3">
                   {/* Album Image */}
                   <div className="mb-3">
-                    <LazyAlbumImage album={album.album} rank={album.rank} />
+                    <LazyAlbumImage album={album} rank={album.rank} />
                   </div>
                   
                   {/* Album Info */}
@@ -251,21 +275,22 @@ export default function TopAlbumsPage() {
                     
                     {/* Album Name */}
                     <h3 className="font-semibold text-sm leading-tight line-clamp-2 group-hover:text-primary transition-colors">
-                      {album.album.name}
+                      {album.name}
                     </h3>
                     
                     {/* Artist Name */}
                     <button
-                      onClick={() => setSearchTerm(album.artist.name)}
+                      onClick={() => setSearchTerm(album.artists[0])}
                       className="text-xs text-muted-foreground hover:text-primary transition-colors line-clamp-1 text-left"
                     >
-                      {album.artist.name}
+                      {album.artists[0]}
                     </button>
                     
                     {/* Duration */}
                     <p className="text-xs text-muted-foreground">
                       {(() => {
-                        const totalMinutes = Math.floor(album.duration_ms / 60000)
+                        const duration = album.duration_ms || 0
+                        const totalMinutes = Math.floor(duration / 60000)
                         const hours = Math.floor(totalMinutes / 60)
                         const minutes = totalMinutes % 60
                         return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
@@ -289,7 +314,7 @@ export default function TopAlbumsPage() {
             </div>
             
             {filteredAlbums.map((album) => (
-              <Card key={album.albumId} className="group hover:shadow-lg transition-shadow duration-200">
+              <Card key={album.id} className="group hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-3 md:p-2">
                   {/* Desktop Layout */}
                   <div className="hidden md:grid grid-cols-12 gap-4 items-center">
@@ -303,24 +328,24 @@ export default function TopAlbumsPage() {
                     {/* Album Image */}
                     <div className="col-span-1">
                       <div className="w-12 h-12 aspect-square">
-                        <LazyAlbumImage album={album.album} rank={album.rank} />
+                        <LazyAlbumImage album={album} rank={album.rank} />
                       </div>
                     </div>
                     
                     {/* Album Name */}
                     <div className="col-span-4">
                       <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors">
-                        {album.album.name}
+                        {album.name}
                       </h3>
                     </div>
                     
                     {/* Artist Name */}
                     <div className="col-span-3">
                       <button
-                        onClick={() => setSearchTerm(album.artist.name)}
+                        onClick={() => setSearchTerm(album.artists[0])}
                         className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
                       >
-                        {album.artist.name}
+                        {album.artists[0]}
                       </button>
                     </div>
                     
@@ -349,7 +374,7 @@ export default function TopAlbumsPage() {
                   <div className="md:hidden flex items-center gap-3">
                     {/* Album Image */}
                     <div className="flex-shrink-0">
-                      <LazyAlbumImage album={album.album} rank={album.rank} size="mobile" />
+                      <LazyAlbumImage album={album} rank={album.rank} size="mobile" />
                     </div>
                     
                     {/* Album Info */}
@@ -365,14 +390,14 @@ export default function TopAlbumsPage() {
                       </div>
                       
                       <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors mb-1">
-                        {album.album.name}
+                        {album.name}
                       </h3>
                       
                       <button
-                        onClick={() => setSearchTerm(album.artist.name)}
+                        onClick={() => setSearchTerm(album.artists[0])}
                         className="text-sm text-muted-foreground hover:text-primary transition-colors text-left mb-1"
                       >
-                        {album.artist.name}
+                        {album.artists[0]}
                       </button>
                       
                       <p className="text-xs text-muted-foreground">
