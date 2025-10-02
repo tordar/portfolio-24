@@ -177,10 +177,17 @@ export default function TopSongsPage() {
                 </Link>
                 <Link
                   href="/top-artists"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground rounded-r-md"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
                 >
                   <Users className="w-4 h-4" />
                   Artists
+                </Link>
+                <Link
+                  href="/top-albums-with-details"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground rounded-r-md"
+                >
+                  <Disc className="w-4 h-4" />
+                  Detailed
                 </Link>
               </div>
               

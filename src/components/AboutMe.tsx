@@ -131,6 +131,15 @@ export default function AboutMe() {
                                         Top 500 Artists
                                     </Link>
                                 </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                    <Link 
+                                        href="/top-albums-with-details"
+                                        className="flex items-center gap-2 cursor-pointer"
+                                    >
+                                        <Users className="w-4 h-4" />
+                                        Top 100 Albums (Detailed)
+                                    </Link>
+                                </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </div>
