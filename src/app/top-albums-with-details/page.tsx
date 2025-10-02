@@ -178,6 +178,28 @@ export default function TopAlbumsWithDetailsPage() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [expandedAlbums, setExpandedAlbums] = useState<Set<string>>(new Set())
   
+  // Add CSS keyframes for animation
+  useEffect(() => {
+    const style = document.createElement('style')
+    style.textContent = `
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `
+    document.head.appendChild(style)
+    
+    return () => {
+      document.head.removeChild(style)
+    }
+  }, [])
+  
   useEffect(() => {
     const fetchAlbums = async () => {
       try {
@@ -327,16 +349,16 @@ export default function TopAlbumsWithDetailsPage() {
               <Card key={album.albumId} className="group hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-4">
                   {/* Album Header */}
-                  <div className="flex items-center gap-4 mb-4">
+                  <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
                     {/* Album Image */}
-                    <div className="flex-shrink-0">
+                    <div className="flex-shrink-0 flex justify-center md:justify-start">
                       <LazyAlbumImage album={album} rank={rank} />
                     </div>
                     
                     {/* Album Info */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center gap-2">
+                    <div className="flex-1 min-w-0 text-center md:text-left">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-2">
+                        <div className="flex items-center justify-center md:justify-start gap-2">
                           <Badge variant="secondary" className="text-xs">
                             #{rank}
                           </Badge>
@@ -346,7 +368,7 @@ export default function TopAlbumsWithDetailsPage() {
                         </div>
                         <button
                           onClick={() => toggleAlbumExpansion(album.albumId)}
-                          className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                          className="flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
                         >
                           {isExpanded ? (
                             <>
@@ -362,7 +384,7 @@ export default function TopAlbumsWithDetailsPage() {
                         </button>
                       </div>
                       
-                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-2">
+                      <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-muted-foreground mb-2">
                         <span>{album.artists[0]}</span>
                         <span>•</span>
                         <span>{album.release_date}</span>
@@ -370,7 +392,7 @@ export default function TopAlbumsWithDetailsPage() {
                         <span>{album.total_songs} songs</span>
                       </div>
                       
-                      <div className="flex flex-wrap gap-4 text-sm">
+                      <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
                         <div className="flex items-center gap-1">
                           <Play className="w-3 h-3" />
                           <span>{album.total_play_count} plays</span>
@@ -388,14 +410,23 @@ export default function TopAlbumsWithDetailsPage() {
                   </div>
                   
                   {/* Expanded Songs List */}
-                  {isExpanded && (
+                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
                     <div className="border-t pt-4">
                       <h4 className="font-medium text-sm text-muted-foreground mb-3">Songs ({album.songs.length})</h4>
                       <div className="space-y-2">
                         {album.songs
                           .sort((a, b) => b.play_count - a.play_count)
                           .map((song, songIndex) => (
-                            <div key={song.songId} className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors">
+                            <div 
+                              key={song.songId} 
+                              className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors"
+                              style={{
+                                animationDelay: `${songIndex * 50}ms`,
+                                animation: isExpanded ? 'fadeInUp 0.3s ease-out forwards' : 'none'
+                              }}
+                            >
                               <div className="flex-shrink-0 w-6 text-xs text-muted-foreground text-center">
                                 {songIndex + 1}
                               </div>
@@ -428,7 +459,7 @@ export default function TopAlbumsWithDetailsPage() {
                           ))}
                       </div>
                     </div>
-                  )}
+                  </div>
                 </CardContent>
               </Card>
             )
