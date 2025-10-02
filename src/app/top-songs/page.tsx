@@ -115,7 +115,7 @@ export default function TopSongsPage() {
   useEffect(() => {
     const fetchSongs = async () => {
       try {
-        const response = await fetch('/cleaned-top-songs-v3.json')
+        const response = await fetch('/cleaned-top-songs-v4.json')
         const data = await response.json()
         setSongsData(data)
       } catch (error) {
@@ -278,7 +278,8 @@ export default function TopSongsPage() {
                     {/* Duration */}
                     <p className="text-xs text-muted-foreground">
                       {(() => {
-                        const totalMinutes = Math.floor(song.duration_ms / 60000)
+                        const duration = song.duration_ms || 0
+                        const totalMinutes = Math.floor(duration / 60000)
                         const hours = Math.floor(totalMinutes / 60)
                         const minutes = totalMinutes % 60
                         return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`

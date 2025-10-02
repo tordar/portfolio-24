@@ -16,13 +16,6 @@ interface ArtistImage {
 interface Artist {
   name: string
   genres: string[]
-  images: ArtistImage[]
-}
-
-interface ArtistData {
-  id: string
-  name: string
-  genres: string[]
   popularity: number
   followers: {
     total: number
@@ -31,12 +24,16 @@ interface ArtistData {
   external_urls: {
     spotify: string
   }
+}
+
+interface ArtistData {
   duration_ms: number
   count: number
   differents: number
   primaryArtistId: string
   total_count: number
   total_duration_ms: number
+  artist: Artist
   consolidated_count: number
   original_artistIds: (string | null)[]
   original_counts: number[]
@@ -55,7 +52,7 @@ interface ArtistsData {
 }
 
 // Lazy loading image component for artists
-const LazyArtistImage = ({ artist, rank, size = 'default' }: { artist: ArtistData; rank: number; size?: 'default' | 'mobile' }) => {
+const LazyArtistImage = ({ artist, rank, size = 'default' }: { artist: Artist; rank: number; size?: 'default' | 'mobile' }) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   
@@ -117,7 +114,7 @@ export default function TopArtistsPage() {
   useEffect(() => {
     const fetchArtists = async () => {
       try {
-        const response = await fetch('/cleaned-top-artists-v2.json')
+        const response = await fetch('/cleaned-top-artists-v3.json')
         const data = await response.json()
         setArtistsData(data)
       } catch (error) {
@@ -131,8 +128,8 @@ export default function TopArtistsPage() {
   }, [])
   
   const filteredArtists = artistsData?.artists.filter(artist => 
-    artist.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    artist.genres?.some(genre => genre.toLowerCase().includes(searchTerm.toLowerCase()))
+    artist.artist.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    artist.artist.genres?.some(genre => genre.toLowerCase().includes(searchTerm.toLowerCase()))
   ) || []
   
   if (loading) {
@@ -242,7 +239,7 @@ export default function TopArtistsPage() {
                 <CardContent className="p-3">
                   {/* Artist Image */}
                   <div className="mb-3">
-                    <LazyArtistImage artist={artist} rank={artist.rank} />
+                    <LazyArtistImage artist={artist.artist} rank={artist.rank} />
                   </div>
                   
                   {/* Artist Info */}
@@ -260,19 +257,19 @@ export default function TopArtistsPage() {
                     
                     {/* Artist Name */}
                     <h3 className="font-semibold text-sm leading-tight line-clamp-2 group-hover:text-primary transition-colors">
-                      {artist.name}
+                      {artist.artist.name}
                     </h3>
                     
                     {/* Genres */}
                     <div className="flex flex-wrap gap-1">
-                      {artist.genres.slice(0, 2).map((genre, index) => (
+                      {artist.artist.genres.slice(0, 2).map((genre, index) => (
                         <Badge key={index} variant="outline" className="text-xs">
                           {genre}
                         </Badge>
                       ))}
-                      {artist.genres.length > 2 && (
+                      {artist.artist.genres.length > 2 && (
                         <Badge variant="outline" className="text-xs">
-                          +{artist.genres.length - 2}
+                          +{artist.artist.genres.length - 2}
                         </Badge>
                       )}
                     </div>
@@ -285,7 +282,8 @@ export default function TopArtistsPage() {
                     {/* Duration */}
                     <p className="text-xs text-muted-foreground">
                       {(() => {
-                        const totalMinutes = Math.floor(artist.duration_ms / 60000)
+                        const duration = artist.duration_ms || 0
+                        const totalMinutes = Math.floor(duration / 60000)
                         const hours = Math.floor(totalMinutes / 60)
                         const minutes = totalMinutes % 60
                         return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
@@ -324,28 +322,28 @@ export default function TopArtistsPage() {
                     {/* Artist Image */}
                     <div className="col-span-1">
                       <div className="w-12 h-12 aspect-square">
-                        <LazyArtistImage artist={artist} rank={artist.rank} />
+                        <LazyArtistImage artist={artist.artist} rank={artist.rank} />
                       </div>
                     </div>
                     
                     {/* Artist Name */}
                     <div className="col-span-3">
                       <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors">
-                        {artist.name}
+                        {artist.artist.name}
                       </h3>
                     </div>
                     
                     {/* Genres */}
                     <div className="col-span-3">
                       <div className="flex flex-wrap gap-1">
-                        {artist.genres.slice(0, 2).map((genre, index) => (
+                        {artist.artist.genres.slice(0, 2).map((genre, index) => (
                           <Badge key={index} variant="outline" className="text-xs">
                             {genre}
                           </Badge>
                         ))}
-                        {artist.genres.length > 2 && (
+                        {artist.artist.genres.length > 2 && (
                           <Badge variant="outline" className="text-xs">
-                            +{artist.genres.length - 2}
+                            +{artist.artist.genres.length - 2}
                           </Badge>
                         )}
                       </div>
@@ -383,7 +381,7 @@ export default function TopArtistsPage() {
                   <div className="md:hidden flex items-center gap-3">
                     {/* Artist Image */}
                     <div className="flex-shrink-0">
-                      <LazyArtistImage artist={artist} rank={artist.rank} size="mobile" />
+                      <LazyArtistImage artist={artist.artist} rank={artist.rank} size="mobile" />
                     </div>
                     
                     {/* Artist Info */}
@@ -399,18 +397,18 @@ export default function TopArtistsPage() {
                       </div>
                       
                       <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors mb-1">
-                        {artist.name}
+                        {artist.artist.name}
                       </h3>
                       
                       <div className="flex flex-wrap gap-1 mb-1">
-                        {artist.genres.slice(0, 2).map((genre, index) => (
+                        {artist.artist.genres.slice(0, 2).map((genre, index) => (
                           <Badge key={index} variant="outline" className="text-xs">
                             {genre}
                           </Badge>
                         ))}
-                        {artist.genres.length > 2 && (
+                        {artist.artist.genres.length > 2 && (
                           <Badge variant="outline" className="text-xs">
-                            +{artist.genres.length - 2}
+                            +{artist.artist.genres.length - 2}
                           </Badge>
                         )}
                       </div>
