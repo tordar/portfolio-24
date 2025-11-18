@@ -203,7 +203,14 @@ export default function TopAlbumsWithDetailsPage() {
   useEffect(() => {
     const fetchAlbums = async () => {
       try {
-        const response = await fetch('/cleaned-albums-with-songs-1759395199672.json')
+        const baseUrl = process.env.NEXT_PUBLIC_BLOB_STORAGE_URL || 'https://qcdjhj2hg6vos6cu.public.blob.vercel-storage.com'
+        const blobUrl = `${baseUrl}/cleaned-albums-with-songs.json`
+        const response = await fetch(blobUrl, {
+          cache: 'force-cache' // Use browser cache
+        })
+        if (!response.ok) {
+          throw new Error(`Failed to fetch: ${response.statusText}`)
+        }
         const data = await response.json()
         setAlbumsData(data)
       } catch (error) {
