@@ -9,6 +9,7 @@ import { ThemeProvider } from "../components/theme-provider"
 import { ThemeSwitcher } from "../components/ThemeSwitcher"
 import { TimeSlider } from "../components/TimeSlider"
 import { DynamicFavicon } from "../components/DynamicFavicon"
+import { HeaderTitle } from "../components/HeaderTitle"
 import Schema from './Schema'
 import GoogleTagManager from '../lib/google-tag-manager'
 
@@ -68,7 +69,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en" suppressHydrationWarning className="dark">
         <head>
             <meta name="description" content={metadata.description as string}/>
             <meta httpEquiv="Cache-Control" content="max-age=86400, public" />
@@ -92,7 +93,7 @@ export default function RootLayout({
                     <div className="absolute top-4 right-4">
                         <ThemeSwitcher/>
                     </div>
-                    <h1 className="text-4xl font-bold mb-2">Tordar Tømmervik</h1>
+                    <HeaderTitle />
                     <p className="text-xl">Full-stack developer</p>
                     <p className="flex items-center justify-center mt-2 mb-4 opacity-80">
                         <MapPin className="w-4 h-4 mr-1"/>
