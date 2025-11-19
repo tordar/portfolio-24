@@ -117,7 +117,7 @@ export default function TopArtistsPage() {
         const baseUrl = process.env.NEXT_PUBLIC_BLOB_STORAGE_URL || 'https://qcdjhj2hg6vos6cu.public.blob.vercel-storage.com'
         const blobUrl = `${baseUrl}/cleaned-artists.json`
         const response = await fetch(blobUrl, {
-          cache: 'force-cache' // Use browser cache
+          cache: 'no-cache' // Validate with server but allow short-term caching
         })
         if (!response.ok) {
           throw new Error(`Failed to fetch: ${response.statusText}`)

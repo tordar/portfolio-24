@@ -203,8 +203,10 @@ export default function TopAlbumsWithDetailsPage() {
       try {
         const baseUrl = process.env.NEXT_PUBLIC_BLOB_STORAGE_URL || 'https://qcdjhj2hg6vos6cu.public.blob.vercel-storage.com'
         const blobUrl = `${baseUrl}/cleaned-albums-with-songs.json`
+        // Use 'no-cache' to validate with server, but allow short-term caching
+        // This will check with server if data is fresh, but use cache if still valid
         const response = await fetch(blobUrl, {
-          cache: 'force-cache' // Use browser cache
+          cache: 'no-cache' // Validates with server but allows short-term caching
         })
         if (!response.ok) {
           throw new Error(`Failed to fetch: ${response.statusText}`)
