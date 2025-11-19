@@ -29,8 +29,7 @@ interface Song {
   artists: string[]
 }
 
-interface Album {
-  albumId: string
+interface AlbumInfo {
   name: string
   album_type: string
   artists: string[]
@@ -42,8 +41,19 @@ interface Album {
     spotify: string
   }
   genres: string[]
-  total_play_count: number
-  total_listening_time_ms: number
+}
+
+interface Album {
+  rank: number
+  duration_ms: number
+  count: number
+  differents: number
+  primaryAlbumId: string
+  total_count: number
+  total_duration_ms: number
+  album: AlbumInfo
+  consolidated_count: number
+  original_albumIds: string[]
   total_songs: number
   played_songs: number
   unplayed_songs: number
@@ -64,7 +74,7 @@ interface AlbumsData {
 }
 
 // Lazy loading image component
-const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: Album; rank: number; size?: 'default' | 'mobile' }) => {
+const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: AlbumInfo; rank: number; size?: 'default' | 'mobile' }) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   
@@ -102,16 +112,6 @@ const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: Album; rank:
   
   const imageUrl = album.images?.[0]?.url || ''
   
-  // Debug logging
-  if (rank <= 3) {
-    console.log(`Album ${rank} (${album.name}):`, {
-      hasImages: !!album.images,
-      imagesLength: album.images?.length,
-      imageUrl,
-      albumImages: album.images
-    })
-  }
-  
   return (
     <div 
       id={`album-${rank}-${size}`}
@@ -129,11 +129,9 @@ const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: Album; rank:
               isLoaded ? 'opacity-100' : 'opacity-0'
             }`}
             onLoad={() => {
-              console.log(`Image loaded for ${album.name}`)
               setIsLoaded(true)
             }}
-            onError={(e) => {
-              console.log(`Image failed to load for ${album.name}:`, e)
+            onError={() => {
               setIsLoaded(false)
             }}
             sizes={size === 'mobile' ? '64px' : "(max-width: 768px) 80px, (max-width: 1024px) 80px, 80px"}
@@ -223,21 +221,20 @@ export default function TopAlbumsWithDetailsPage() {
     fetchAlbums()
   }, [])
 
-  console.log(albumsData)
   
   const filteredAlbums = albumsData?.albums.filter(album => 
-    album.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    album.artists?.some(artist => artist.toLowerCase().includes(searchTerm.toLowerCase()))
+    album.album.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    album.album.artists?.some(artist => artist.toLowerCase().includes(searchTerm.toLowerCase()))
   ) || []
 
   
-  const toggleAlbumExpansion = (albumId: string) => {
+  const toggleAlbumExpansion = (primaryAlbumId: string) => {
     setExpandedAlbums(prev => {
       const newSet = new Set(prev)
-      if (newSet.has(albumId)) {
-        newSet.delete(albumId)
+      if (newSet.has(primaryAlbumId)) {
+        newSet.delete(primaryAlbumId)
       } else {
-        newSet.add(albumId)
+        newSet.add(primaryAlbumId)
       }
       return newSet
     })
@@ -351,18 +348,17 @@ export default function TopAlbumsWithDetailsPage() {
         
         {/* Albums Display */}
         <div className="space-y-4">
-          {filteredAlbums.map((album, index) => {
-            const isExpanded = expandedAlbums.has(album.albumId)
-            const rank = index + 1
+          {filteredAlbums.map((album) => {
+            const isExpanded = expandedAlbums.has(album.primaryAlbumId)
             
             return (
-              <Card key={album.albumId} className="group hover:shadow-lg transition-shadow duration-200">
+              <Card key={album.primaryAlbumId} className="group hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-4">
                   {/* Album Header */}
                   <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
                     {/* Album Image */}
                     <div className="flex-shrink-0 flex justify-center md:justify-start">
-                      <LazyAlbumImage album={album} rank={rank} />
+                      <LazyAlbumImage album={album.album} rank={album.rank} />
                     </div>
                     
                     {/* Album Info */}
@@ -370,14 +366,14 @@ export default function TopAlbumsWithDetailsPage() {
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-2">
                         <div className="flex items-center justify-center md:justify-start gap-2">
                           <Badge variant="secondary" className="text-xs">
-                            #{rank}
+                            #{album.rank}
                           </Badge>
                           <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
-                            {album.name}
+                            {album.album.name}
                           </h3>
                         </div>
                         <button
-                          onClick={() => toggleAlbumExpansion(album.albumId)}
+                          onClick={() => toggleAlbumExpansion(album.primaryAlbumId)}
                           className="flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
                         >
                           {isExpanded ? (
@@ -395,9 +391,9 @@ export default function TopAlbumsWithDetailsPage() {
                       </div>
                       
                       <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-muted-foreground mb-2">
-                        <span>{album.artists[0]}</span>
+                        <span>{album.album.artists[0]}</span>
                         <span>•</span>
-                        <span>{album.release_date}</span>
+                        <span>{album.album.release_date}</span>
                         <span>•</span>
                         <span>{album.total_songs} songs</span>
                       </div>
@@ -405,11 +401,11 @@ export default function TopAlbumsWithDetailsPage() {
                       <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
                         <div className="flex items-center gap-1">
                           <Play className="w-3 h-3" />
-                          <span>{album.total_play_count} plays</span>
+                          <span>{album.total_count} plays</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <Clock className="w-3 h-3" />
-                          <span>{formatDuration(album.total_listening_time_ms)}</span>
+                          <span>{formatDuration(album.total_duration_ms)}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <Music className="w-3 h-3" />
@@ -451,7 +447,7 @@ export default function TopAlbumsWithDetailsPage() {
                                   )}
                                 </div>
                                 <div className="text-xs text-muted-foreground">
-                                  Track {song.track_number} • {formatSongDuration(song.duration_ms)}
+                                  Track {song.track_number}{song.duration_ms > 0 ? ` • ${formatSongDuration(song.duration_ms)}` : ''}
                                 </div>
                               </div>
                               
