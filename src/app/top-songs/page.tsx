@@ -159,7 +159,7 @@ export default function TopSongsPage() {
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-2">My Top Songs</h1>
           <p className="text-muted-foreground mb-6">
-            {songsData?.metadata.consolidatedTotalSongs} songs from the past 15 years
+            From {songsData?.metadata.consolidatedTotalSongs} different songs from the past 15 years
           </p>
           
           {/* Controls */}

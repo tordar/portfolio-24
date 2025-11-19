@@ -222,11 +222,14 @@ export default function TopAlbumsWithDetailsPage() {
     
     fetchAlbums()
   }, [])
+
+  console.log(albumsData)
   
   const filteredAlbums = albumsData?.albums.filter(album => 
     album.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     album.artists?.some(artist => artist.toLowerCase().includes(searchTerm.toLowerCase()))
   ) || []
+
   
   const toggleAlbumExpansion = (albumId: string) => {
     setExpandedAlbums(prev => {

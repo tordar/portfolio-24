@@ -171,7 +171,7 @@ export default function TopAlbumsPage() {
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-2">My Top Albums</h1>
           <p className="text-muted-foreground mb-6">
-            {albumsData?.metadata.consolidatedTotalAlbums} albums from the past 15 years
+            From {albumsData?.metadata.consolidatedTotalAlbums} different albums from the past 15 years
           </p>
           
           {/* Controls */}
@@ -299,7 +299,7 @@ export default function TopAlbumsPage() {
                     {/* Duration */}
                     <p className="text-xs text-muted-foreground">
                       {(() => {
-                        const duration = album.duration_ms || 0
+                        const duration = album.total_duration_ms || 0
                         const totalMinutes = Math.floor(duration / 60000)
                         const hours = Math.floor(totalMinutes / 60)
                         const minutes = totalMinutes % 60
@@ -371,7 +371,7 @@ export default function TopAlbumsPage() {
                     <div className="col-span-2">
                       <p className="text-sm text-muted-foreground">
                         {(() => {
-                          const totalMinutes = Math.floor(album.duration_ms / 60000)
+                          const totalMinutes = Math.floor(album.total_duration_ms / 60000)
                           const hours = Math.floor(totalMinutes / 60)
                           const minutes = totalMinutes % 60
                           return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
@@ -412,7 +412,7 @@ export default function TopAlbumsPage() {
                       
                       <p className="text-xs text-muted-foreground">
                         {(() => {
-                          const totalMinutes = Math.floor(album.duration_ms / 60000)
+                          const totalMinutes = Math.floor(album.total_duration_ms / 60000)
                           const hours = Math.floor(totalMinutes / 60)
                           const minutes = totalMinutes % 60
                           return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`

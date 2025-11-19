@@ -157,7 +157,7 @@ export default function TopArtistsPage() {
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-2">My Top Artists</h1>
           <p className="text-muted-foreground mb-6">
-            {artistsData?.metadata.consolidatedTotalArtists} artists from the past 15 years
+            From {artistsData?.metadata.consolidatedTotalArtists} different artists from the past 15 years
           </p>
           
           {/* Controls */}
@@ -296,7 +296,7 @@ export default function TopArtistsPage() {
                     {/* Duration */}
                     <p className="text-xs text-muted-foreground">
                       {(() => {
-                        const duration = artist.duration_ms || 0
+                        const duration = artist.total_duration_ms || 0
                         const totalMinutes = Math.floor(duration / 60000)
                         const hours = Math.floor(totalMinutes / 60)
                         const minutes = totalMinutes % 60
@@ -382,7 +382,7 @@ export default function TopArtistsPage() {
                     <div className="col-span-2">
                       <p className="text-sm text-muted-foreground">
                         {(() => {
-                          const totalMinutes = Math.floor(artist.duration_ms / 60000)
+                          const totalMinutes = Math.floor(artist.total_duration_ms / 60000)
                           const hours = Math.floor(totalMinutes / 60)
                           const minutes = totalMinutes % 60
                           return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
@@ -431,7 +431,7 @@ export default function TopArtistsPage() {
                         <span>{artist.differents} songs</span>
                         <span>
                           {(() => {
-                            const totalMinutes = Math.floor(artist.duration_ms / 60000)
+                            const totalMinutes = Math.floor(artist.total_duration_ms / 60000)
                             const hours = Math.floor(totalMinutes / 60)
                             const minutes = totalMinutes % 60
                             return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
