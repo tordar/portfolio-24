@@ -15,6 +15,23 @@ interface YearlyListeningTime {
   playCount: number
 }
 
+interface YearlyTopItems {
+  year: string
+  topSongs: Array<{
+    songId: string
+    name: string
+    artist: string
+    playCount: number
+    totalListeningTimeMs: number
+  }>
+  topArtists: Array<{
+    artistName: string
+    playCount: number
+    totalListeningTimeMs: number
+    uniqueSongs: number
+  }>
+}
+
 interface StatsData {
   metadata?: {
     timestamp: string
@@ -22,7 +39,7 @@ interface StatsData {
   }
   stats: {
     yearlyListeningTime: YearlyListeningTime[]
-    yearlyTopItems: any[]
+    yearlyTopItems: YearlyTopItems[]
     totalListeningHours: number
     totalListeningDays: number
   }
@@ -34,17 +51,6 @@ const getCSSVariable = (variable: string): string => {
   return getComputedStyle(document.documentElement)
     .getPropertyValue(variable)
     .trim()
-}
-
-// Helper function to convert RGB space-separated values to hex
-const rgbToHex = (rgb: string): string => {
-  if (!rgb) return '#4f46e5' // fallback to primary color
-  const values = rgb.split(' ').map(v => parseInt(v))
-  if (values.length !== 3) return '#4f46e5'
-  return `#${values.map(v => {
-    const hex = v.toString(16)
-    return hex.length === 1 ? '0' + hex : hex
-  }).join('')}`
 }
 
 export default function StatsPage() {
