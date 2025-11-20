@@ -72,99 +72,99 @@ export default function Projects() {
                 <h2 className="text-3xl font-semibold mb-4 text-card-foreground">My Projects</h2>
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <p className="text-muted-foreground mb-6">A selection of various personal projects I'm working on</p>
-                
-                {/* Mobile view - horizontal scrolling with wider cards */}
-                <div className="md:hidden w-full overflow-x-auto pb-6">
-                    <div className="flex space-x-4 px-2 min-w-max snap-x snap-mandatory">
-                        {projects.map((project, index) => (
-                            <div key={index} className="w-[90vw] max-w-[400px] flex-shrink-0 snap-center first:ml-2 last:mr-2">
-                                <HoverCard className="h-full flex flex-col overflow-hidden rounded-lg bg-card text-card-foreground shadow">
-                                    <div className="relative w-full h-44 overflow-hidden group">
-                                        <Image
-                                            src={project.image}
-                                            alt={`${project.title} preview`}
-                                            fill
-                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                            sizes="320px"
-                                        />
-                                        <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:opacity-0" />
+            
+            {/* Mobile view - horizontal scrolling with wider cards */}
+            <div className="md:hidden w-full overflow-x-auto pb-6">
+                <div className="flex space-x-4 px-2 min-w-max snap-x snap-mandatory">
+                    {projects.map((project, index) => (
+                        <div key={index} className="w-[90vw] max-w-[400px] flex-shrink-0 snap-center first:ml-2 last:mr-2">
+                            <HoverCard className="h-full flex flex-col overflow-hidden rounded-lg bg-card text-card-foreground shadow">
+                                <div className="relative w-full h-44 overflow-hidden group">
+                                    <Image
+                                        src={project.image}
+                                        alt={`${project.title} preview`}
+                                        fill
+                                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                        sizes="320px"
+                                    />
+                                    <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:opacity-0" />
+                                </div>
+                                <CardHeader className="p-4 pb-2">
+                                    <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
+                                    <CardDescription className="line-clamp-3 text-sm">{project.description}</CardDescription>
+                                </CardHeader>
+                                <CardContent className="p-4 pt-0 pb-2">
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {project.tags.map((tag, tagIndex) => (
+                                            <Badge key={tagIndex} variant="secondary">{tag}</Badge>
+                                        ))}
                                     </div>
-                                    <CardHeader className="p-4 pb-2">
-                                        <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
-                                        <CardDescription className="line-clamp-3 text-sm">{project.description}</CardDescription>
-                                    </CardHeader>
-                                    <CardContent className="p-4 pt-0 pb-2">
-                                        <div className="flex flex-wrap gap-1.5">
-                                            {project.tags.map((tag, tagIndex) => (
-                                                <Badge key={tagIndex} variant="secondary">{tag}</Badge>
-                                            ))}
-                                        </div>
-                                    </CardContent>
-                                    <CardFooter className="p-4 pt-0 mt-auto">
-                                        <div className="flex gap-2 w-full">
-                                            {project.live && (
-                                                <Button asChild className="w-full">
-                                                    <a href={project.live} target="_blank" rel="noopener noreferrer">
-                                                        Website
-                                                    </a>
-                                                </Button>
-                                            )}
-                                            <Button asChild variant="secondary" className="w-full">
-                                                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                                    Source Code
+                                </CardContent>
+                                <CardFooter className="p-4 pt-0 mt-auto">
+                                    <div className="flex gap-2 w-full">
+                                        {project.live && (
+                                            <Button asChild className="w-full">
+                                                <a href={project.live} target="_blank" rel="noopener noreferrer">
+                                                    Website
                                                 </a>
                                             </Button>
-                                        </div>
-                                    </CardFooter>
-                                </HoverCard>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                
-                {/* Desktop view - grid layout */}
-                <div className="hidden md:grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {projects.map((project, index) => (
-                        <HoverCard key={index} className="flex flex-col overflow-hidden rounded-lg bg-card text-card-foreground shadow">
-                            <div className="relative w-full h-48 overflow-hidden group">
-                                <Image
-                                    src={project.image}
-                                    alt={`${project.title} preview`}
-                                    fill
-                                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                />
-                                <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-0" />
-                            </div>
-                            <CardHeader>
-                                <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
-                                <CardDescription>{project.description}</CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tags.map((tag, tagIndex) => (
-                                        <Badge key={tagIndex} variant="secondary">{tag}</Badge>
-                                    ))}
-                                </div>
-                            </CardContent>
-                            <CardFooter className="mt-auto">
-                                <div className="flex flex-col sm:flex-row gap-2 w-full">
-                                    {project.live && (
-                                        <Button asChild className="w-full sm:w-auto">
-                                            <a href={project.live} target="_blank" rel="noopener noreferrer">
-                                                Website
+                                        )}
+                                        <Button asChild variant="secondary" className="w-full">
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                                Source Code
                                             </a>
                                         </Button>
-                                    )}
-                                    <Button asChild variant="secondary" className="w-full sm:w-auto">
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                            Source Code
+                                    </div>
+                                </CardFooter>
+                            </HoverCard>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            
+            {/* Desktop view - grid layout */}
+            <div className="hidden md:grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {projects.map((project, index) => (
+                    <HoverCard key={index} className="flex flex-col overflow-hidden rounded-lg bg-card text-card-foreground shadow">
+                        <div className="relative w-full h-48 overflow-hidden group">
+                            <Image
+                                src={project.image}
+                                alt={`${project.title} preview`}
+                                fill
+                                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
+                            <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-0" />
+                        </div>
+                        <CardHeader>
+                            <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
+                            <CardDescription>{project.description}</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="flex flex-wrap gap-2">
+                                {project.tags.map((tag, tagIndex) => (
+                                    <Badge key={tagIndex} variant="secondary">{tag}</Badge>
+                                ))}
+                            </div>
+                        </CardContent>
+                        <CardFooter className="mt-auto">
+                            <div className="flex flex-col sm:flex-row gap-2 w-full">
+                                {project.live && (
+                                    <Button asChild className="w-full sm:w-auto">
+                                        <a href={project.live} target="_blank" rel="noopener noreferrer">
+                                            Website
                                         </a>
                                     </Button>
-                                </div>
-                            </CardFooter>
-                        </HoverCard>
-                    ))}
+                                )}
+                                <Button asChild variant="secondary" className="w-full sm:w-auto">
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                        Source Code
+                                    </a>
+                                </Button>
+                            </div>
+                        </CardFooter>
+                    </HoverCard>
+                ))}
                 </div>
             </div>
         </section>

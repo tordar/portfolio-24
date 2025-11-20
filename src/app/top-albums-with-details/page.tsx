@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Search, Music, Play, Grid3X3, List, X, Disc, Music2, Users, ChevronDown, ChevronRight, Clock } from 'lucide-react'
+import { Search, Music, Play, Grid3X3, List, X, Disc, Music2, Users, ChevronDown, ChevronRight, Clock, BarChart3 } from 'lucide-react'
 import Link from 'next/link'
 
 interface AlbumImage {
@@ -292,10 +292,17 @@ export default function TopAlbumsWithDetailsPage() {
                 </Link>
                 <Link
                   href="/top-albums-with-details"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors bg-primary text-primary-foreground rounded-r-md"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors bg-primary text-primary-foreground"
                 >
                   <Disc className="w-4 h-4" />
                   Detailed
+                </Link>
+                <Link
+                  href="/stats"
+                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground rounded-r-md"
+                >
+                  <BarChart3 className="w-4 h-4" />
+                  Stats
                 </Link>
               </div>
               

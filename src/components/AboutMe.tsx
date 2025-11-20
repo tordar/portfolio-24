@@ -3,7 +3,7 @@ import Link from 'next/link'
 import profileImage from '../../src/app/resources/img.jpeg'
 import { Button } from '@/components/ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
-import { ChevronDown, Disc, Music2, Users } from 'lucide-react'
+import { ChevronDown, Disc, Music2, Users, BarChart3 } from 'lucide-react'
 
 export default function AboutMe() {
     return (
@@ -138,6 +138,15 @@ export default function AboutMe() {
                                     >
                                         <Users className="w-4 h-4" />
                                         Top 100 Albums (Detailed)
+                                    </Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                    <Link 
+                                        href="/stats"
+                                        className="flex items-center gap-2 cursor-pointer"
+                                    >
+                                        <BarChart3 className="w-4 h-4" />
+                                        Stats
                                     </Link>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>

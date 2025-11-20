@@ -3084,6 +3084,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"highcharts-react-official@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "highcharts-react-official@npm:3.2.3"
+  peerDependencies:
+    highcharts: ">=6.0.0"
+    react: ">=16.8.0"
+  checksum: 10c0/e9762a7fc3cb375492f928fa0badb9cc6bd4ff3db68bc82b3e996f01891aed38d4a28af7537bf30c04650a7aac00a7a52ce0451cc3324b094c27dba0e3acf2ff
+  languageName: node
+  linkType: hard
+
+"highcharts@npm:^12.4.0":
+  version: 12.4.0
+  resolution: "highcharts@npm:12.4.0"
+  checksum: 10c0/c91ad97f41f6af16001c72edc55c632034403a18e5648142d765e60f5832e52c261937b6c5d488d660f508bcc647a7a3a5f5d718e6b71a9ac2a9c8ecf24271c2
+  languageName: node
+  linkType: hard
+
 "http-cache-semantics@npm:^4.1.1":
   version: 4.1.1
   resolution: "http-cache-semantics@npm:4.1.1"
@@ -4252,6 +4269,8 @@ __metadata:
     clsx: "npm:^2.1.1"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.2.14"
+    highcharts: "npm:^12.4.0"
+    highcharts-react-official: "npm:^3.2.3"
     lucide-react: "npm:^0.447.0"
     next: "npm:^14.0.4"
     next-themes: "npm:^0.4.3"
