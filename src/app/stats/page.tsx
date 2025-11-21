@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import SpotifyStatsLayout from '@/src/components/SpotifyStatsLayout'
@@ -16,6 +17,12 @@ interface YearlyListeningTime {
   playCount: number
 }
 
+interface ImageData {
+  url: string
+  height: number
+  width: number
+}
+
 interface YearlyTopItems {
   year: string
   topSongs: Array<{
@@ -24,12 +31,14 @@ interface YearlyTopItems {
     artist: string
     playCount: number
     totalListeningTimeMs: number
+    images: ImageData[]
   }>
   topArtists: Array<{
     artistName: string
     playCount: number
     totalListeningTimeMs: number
     uniqueSongs: number
+    images: ImageData[]
   }>
 }
 
@@ -135,13 +144,12 @@ export default function StatsPage() {
         height: 500,
         style: {
           fontFamily: 'inherit'
-        }
+        },
+        spacingLeft: 0,
+        spacingRight: 0
       },
       title: {
-        text: 'Total Listening Hours by Year',
-        style: {
-          color: foregroundColor
-        }
+        text: ''
       },
       xAxis: {
         categories: categories,
@@ -157,7 +165,9 @@ export default function StatsPage() {
           }
         },
         lineColor: borderColor,
-        tickColor: borderColor
+        tickColor: borderColor,
+        minPadding: 0,
+        maxPadding: 0
       },
       yAxis: {
         title: {
@@ -248,8 +258,8 @@ export default function StatsPage() {
                   <CardHeader>
                     <CardTitle>Yearly Listening Hours</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <div className="w-full">
+                  <CardContent className="px-2 sm:px-6">
+                    <div className="w-full -mx-2 sm:mx-0">
                       {mounted && (
                         <HighchartsReact
                           highcharts={Highcharts}
@@ -337,20 +347,45 @@ export default function StatsPage() {
                           <h3 className="font-semibold text-lg">Top Songs</h3>
                         </div>
                         <div className="space-y-2">
-                          {selectedYearData.topSongs.map((song, index) => (
-                            <div
-                              key={song.songId}
-                              className="p-2 rounded-md hover:bg-muted/50 transition-colors"
-                            >
-                              <div className="flex items-start gap-3">
-                                <Badge variant="secondary" className="text-xs w-8 flex-shrink-0 justify-center mt-0.5">
-                                  {index + 1}
-                                </Badge>
-                                <div className="flex-1 min-w-0">
-                                  <p className="font-medium text-sm break-words">{song.name}</p>
-                                  <p className="text-xs text-muted-foreground break-words">{song.artist}</p>
-                                  {/* Mobile: Show stats below */}
-                                  <div className="flex items-center gap-3 text-xs text-muted-foreground mt-2 md:hidden">
+                          {selectedYearData.topSongs.map((song, index) => {
+                            const songImage = song.images?.[0]?.url
+                            return (
+                              <div
+                                key={song.songId}
+                                className="p-2 rounded-md hover:bg-muted/50 transition-colors"
+                              >
+                                <div className="flex items-start gap-3">
+                                  <Badge variant="secondary" className="text-xs w-8 flex-shrink-0 justify-center mt-0.5">
+                                    {index + 1}
+                                  </Badge>
+                                  {songImage && (
+                                    <div className="relative w-12 h-12 flex-shrink-0 rounded-md overflow-hidden bg-muted">
+                                      <Image
+                                        src={songImage}
+                                        alt={`${song.name} album cover`}
+                                        fill
+                                        className="object-cover"
+                                        sizes="48px"
+                                      />
+                                    </div>
+                                  )}
+                                  <div className="flex-1 min-w-0">
+                                    <p className="font-medium text-sm break-words">{song.name}</p>
+                                    <p className="text-xs text-muted-foreground break-words">{song.artist}</p>
+                                    {/* Mobile: Show stats below */}
+                                    <div className="flex items-center gap-3 text-xs text-muted-foreground mt-2 md:hidden">
+                                      <div className="flex items-center gap-1">
+                                        <Play className="w-3 h-3" />
+                                        <span>{song.playCount}</span>
+                                      </div>
+                                      <div className="flex items-center gap-1">
+                                        <Clock className="w-3 h-3" />
+                                        <span>{formatDuration(song.totalListeningTimeMs)}</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Desktop: Show stats to the right */}
+                                  <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
                                     <div className="flex items-center gap-1">
                                       <Play className="w-3 h-3" />
                                       <span>{song.playCount}</span>
@@ -361,20 +396,9 @@ export default function StatsPage() {
                                     </div>
                                   </div>
                                 </div>
-                                {/* Desktop: Show stats to the right */}
-                                <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
-                                  <div className="flex items-center gap-1">
-                                    <Play className="w-3 h-3" />
-                                    <span>{song.playCount}</span>
-                                  </div>
-                                  <div className="flex items-center gap-1">
-                                    <Clock className="w-3 h-3" />
-                                    <span>{formatDuration(song.totalListeningTimeMs)}</span>
-                                  </div>
-                                </div>
                               </div>
-                            </div>
-                          ))}
+                            )
+                          })}
                         </div>
                       </div>
 
@@ -385,20 +409,45 @@ export default function StatsPage() {
                           <h3 className="font-semibold text-lg">Top Artists</h3>
                         </div>
                         <div className="space-y-2">
-                          {selectedYearData.topArtists.map((artist, index) => (
-                            <div
-                              key={artist.artistName}
-                              className="p-2 rounded-md hover:bg-muted/50 transition-colors"
-                            >
-                              <div className="flex items-start gap-3">
-                                <Badge variant="secondary" className="text-xs w-8 flex-shrink-0 justify-center mt-0.5">
-                                  {index + 1}
-                                </Badge>
-                                <div className="flex-1 min-w-0">
-                                  <p className="font-medium text-sm break-words">{artist.artistName}</p>
-                                  <p className="text-xs text-muted-foreground">{artist.uniqueSongs} songs</p>
-                                  {/* Mobile: Show stats below */}
-                                  <div className="flex items-center gap-3 text-xs text-muted-foreground mt-2 md:hidden">
+                          {selectedYearData.topArtists.map((artist, index) => {
+                            const artistImage = artist.images?.[0]?.url
+                            return (
+                              <div
+                                key={artist.artistName}
+                                className="p-2 rounded-md hover:bg-muted/50 transition-colors"
+                              >
+                                <div className="flex items-start gap-3">
+                                  <Badge variant="secondary" className="text-xs w-8 flex-shrink-0 justify-center mt-0.5">
+                                    {index + 1}
+                                  </Badge>
+                                  {artistImage && (
+                                    <div className="relative w-12 h-12 flex-shrink-0 rounded-full overflow-hidden bg-muted">
+                                      <Image
+                                        src={artistImage}
+                                        alt={`${artist.artistName} artist image`}
+                                        fill
+                                        className="object-cover"
+                                        sizes="48px"
+                                      />
+                                    </div>
+                                  )}
+                                  <div className="flex-1 min-w-0">
+                                    <p className="font-medium text-sm break-words">{artist.artistName}</p>
+                                    <p className="text-xs text-muted-foreground">{artist.uniqueSongs} songs</p>
+                                    {/* Mobile: Show stats below */}
+                                    <div className="flex items-center gap-3 text-xs text-muted-foreground mt-2 md:hidden">
+                                      <div className="flex items-center gap-1">
+                                        <Play className="w-3 h-3" />
+                                        <span>{artist.playCount}</span>
+                                      </div>
+                                      <div className="flex items-center gap-1">
+                                        <Clock className="w-3 h-3" />
+                                        <span>{formatDuration(artist.totalListeningTimeMs)}</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Desktop: Show stats to the right */}
+                                  <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
                                     <div className="flex items-center gap-1">
                                       <Play className="w-3 h-3" />
                                       <span>{artist.playCount}</span>
@@ -409,20 +458,9 @@ export default function StatsPage() {
                                     </div>
                                   </div>
                                 </div>
-                                {/* Desktop: Show stats to the right */}
-                                <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
-                                  <div className="flex items-center gap-1">
-                                    <Play className="w-3 h-3" />
-                                    <span>{artist.playCount}</span>
-                                  </div>
-                                  <div className="flex items-center gap-1">
-                                    <Clock className="w-3 h-3" />
-                                    <span>{formatDuration(artist.totalListeningTimeMs)}</span>
-                                  </div>
-                                </div>
                               </div>
-                            </div>
-                          ))}
+                            )
+                          })}
                         </div>
                       </div>
                     </div>
