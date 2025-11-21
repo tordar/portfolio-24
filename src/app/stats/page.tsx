@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { BarChart3, Disc, Music2, Users } from 'lucide-react'
-import Link from 'next/link'
+import SpotifyStatsLayout from '@/src/components/SpotifyStatsLayout'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import { useTheme } from '../../components/theme-provider'
@@ -201,70 +200,22 @@ export default function StatsPage() {
     }
   }
   
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading stats...</p>
-        </div>
-      </div>
-    )
-  }
-  
   return (
-    <div className="min-h-screen py-8">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">Spotify Statistics</h1>
-          <p className="text-muted-foreground mb-6">
-            Detailed insights into your listening habits
-          </p>
-          
-          {/* Navigation */}
-          <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
-            <div className="flex border border-input rounded-md bg-background w-fit">
-              <Link
-                href="/top-albums"
-                className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground rounded-l-md"
-              >
-                <Disc className="w-4 h-4" />
-                Albums
-              </Link>
-              <Link
-                href="/top-songs"
-                className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
-              >
-                <Music2 className="w-4 h-4" />
-                Songs
-              </Link>
-              <Link
-                href="/top-artists"
-                className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
-              >
-                <Users className="w-4 h-4" />
-                Artists
-              </Link>
-              <Link
-                href="/top-albums-with-details"
-                className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
-              >
-                <Disc className="w-4 h-4" />
-                Detailed
-              </Link>
-              <Link
-                href="/stats"
-                className="flex items-center gap-2 px-3 py-2 text-sm transition-colors bg-primary text-primary-foreground rounded-r-md"
-              >
-                <BarChart3 className="w-4 h-4" />
-                Stats
-              </Link>
-            </div>
+    <SpotifyStatsLayout
+      title="Spotify Statistics"
+      description="Detailed insights into your listening habits"
+      currentPage="stats"
+    >
+      {loading ? (
+        <div className="flex items-center justify-center py-20">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading stats...</p>
           </div>
         </div>
-        
-        {/* Stats Display */}
+      ) : (
+        <>
+          {/* Stats Display */}
         <div className="space-y-6">
           {statsData ? (
             <>
@@ -340,8 +291,9 @@ export default function StatsPage() {
             </div>
           ) : null}
         </div>
-      </div>
-    </div>
+        </>
+      )}
+    </SpotifyStatsLayout>
   )
 }
 

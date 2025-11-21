@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Search, Play, Grid3X3, List, X, Users, Disc, Music2, BarChart3 } from 'lucide-react'
-import Link from 'next/link'
+import { Search, Play, X, Users } from 'lucide-react'
+import SpotifyStatsLayout from '@/src/components/SpotifyStatsLayout'
+import ViewToggle from '@/src/components/ViewToggle'
 
 interface ArtistImage {
   height: number
@@ -139,120 +140,43 @@ export default function TopArtistsPage() {
     artist.artist.genres?.some(genre => genre.toLowerCase().includes(searchTerm.toLowerCase()))
   ) || []
   
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading your top artists...</p>
-        </div>
-      </div>
-    )
-  }
-  
   return (
-    <div className="min-h-screen py-8">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">My Top Artists</h1>
-          <p className="text-muted-foreground mb-6">
-            From {artistsData?.metadata.consolidatedTotalArtists} different artists from the past 15 years
-          </p>
-          
-          {/* Controls */}
-          <div className="space-y-4">
-            {/* Navigation and View Toggle */}
-            <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
-              {/* Navigation */}
-              <div className="flex border border-input rounded-md bg-background w-fit">
-                <Link
-                  href="/top-albums"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground rounded-l-md"
-                >
-                  <Disc className="w-4 h-4" />
-                  Albums
-                </Link>
-                <Link
-                  href="/top-songs"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
-                >
-                  <Music2 className="w-4 h-4" />
-                  Songs
-                </Link>
-                <Link
-                  href="/top-artists"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors bg-primary text-primary-foreground"
-                >
-                  <Users className="w-4 h-4" />
-                  Artists
-                </Link>
-                <Link
-                  href="/top-albums-with-details"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground"
-                >
-                  <Disc className="w-4 h-4" />
-                  Detailed
-                </Link>
-                <Link
-                  href="/stats"
-                  className="flex items-center gap-2 px-3 py-2 text-sm transition-colors text-muted-foreground hover:text-foreground rounded-r-md"
-                >
-                  <BarChart3 className="w-4 h-4" />
-                  Stats
-                </Link>
-              </div>
-              
-              {/* View Toggle */}
-              <div className="flex border border-input rounded-md bg-background w-fit">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors rounded-l-md ${
-                    viewMode === 'grid' 
-                      ? 'bg-primary text-primary-foreground' 
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                >
-                  <Grid3X3 className="w-4 h-4" />
-                  Grid
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`flex items-center gap-2 px-3 py-2 text-sm transition-colors rounded-r-md ${
-                    viewMode === 'list' 
-                      ? 'bg-primary text-primary-foreground' 
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                >
-                  <List className="w-4 h-4" />
-                  List
-                </button>
-              </div>
-            </div>
-            
-            {/* Search Bar */}
-            <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-              <input
-                type="text"
-                placeholder="Search artists or genres..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-10 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-              />
-              {searchTerm && (
-                <button
-                  onClick={() => setSearchTerm('')}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              )}
-            </div>
+    <SpotifyStatsLayout
+      title="My Top Artists"
+      description={loading ? 'Loading...' : `From ${artistsData?.metadata.consolidatedTotalArtists} different artists from the past 15 years`}
+      currentPage="artists"
+      additionalControls={<ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />}
+    >
+      {loading ? (
+        <div className="flex items-center justify-center py-20">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading your top artists...</p>
           </div>
         </div>
-        
-        {/* Artists Display */}
+      ) : (
+        <>
+          {/* Search Bar */}
+          <div className="relative max-w-md mx-auto mb-8">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+            <input
+              type="text"
+              placeholder="Search artists or genres..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-10 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            />
+            {searchTerm && (
+              <button
+                onClick={() => setSearchTerm('')}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
+          
+          {/* Artists Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
             {filteredArtists.map((artist) => (
@@ -453,12 +377,13 @@ export default function TopArtistsPage() {
           </div>
         )}
         
-        {filteredArtists.length === 0 && searchTerm && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">No artists found matching &quot;{searchTerm}&quot;</p>
-          </div>
-        )}
-      </div>
-    </div>
+          {filteredArtists.length === 0 && searchTerm && (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground">No artists found matching &quot;{searchTerm}&quot;</p>
+            </div>
+          )}
+        </>
+      )}
+    </SpotifyStatsLayout>
   )
 }
