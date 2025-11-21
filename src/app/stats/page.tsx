@@ -193,7 +193,11 @@ export default function StatsPage() {
           color: foregroundColor
         },
         formatter: function() {
-          return `<b>${this.x}</b><br/>${this.y?.toFixed(2)} hours`
+          // Access the category (year) from the categories array
+          // this.x should be the category when using categories, but we'll use the index as fallback
+          const pointIndex = typeof this.x === 'number' ? this.x : ((this as any).index ?? 0)
+          const year = categories[pointIndex] || String(this.x)
+          return `<b>${year}</b><br/>${this.y?.toFixed(2)} hours`
         }
       },
       plotOptions: {
@@ -201,13 +205,10 @@ export default function StatsPage() {
           color: primaryColor,
           borderRadius: 4,
           dataLabels: {
-            enabled: true,
-            format: '{y:.0f}h',
-            style: {
-              color: foregroundColor,
-              textOutline: 'none'
-            }
-          }
+            enabled: false
+          },
+          pointPadding: 0.05,
+          groupPadding: 0.1
         }
       },
       series: [{
