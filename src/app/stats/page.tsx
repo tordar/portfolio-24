@@ -17,6 +17,13 @@ interface YearlyListeningTime {
   playCount: number
 }
 
+interface HourlyListeningDistribution {
+  hour: number
+  totalListeningTimeMs: number
+  totalListeningHours: number
+  playCount: number
+}
+
 interface ImageData {
   url: string
   height: number
@@ -52,6 +59,7 @@ interface StatsData {
     yearlyTopItems: YearlyTopItems[]
     totalListeningHours: number
     totalListeningDays: number
+    hourlyListeningDistribution?: HourlyListeningDistribution[]
   }
 }
 
@@ -69,6 +77,7 @@ export default function StatsPage() {
   const [mounted, setMounted] = useState(false)
   const [selectedYear, setSelectedYear] = useState<string | null>(null)
   const chartComponentRef = useRef<HighchartsReact.RefObject>(null)
+  const hourlyChartComponentRef = useRef<HighchartsReact.RefObject>(null)
   const { theme } = useTheme()
   
   useEffect(() => {
@@ -221,6 +230,126 @@ export default function StatsPage() {
       }
     }
   }
+
+  // Prepare chart options for hourly listening distribution
+  const getHourlyChartOptions = (): Highcharts.Options => {
+    if (!statsData?.stats?.hourlyListeningDistribution || statsData.stats.hourlyListeningDistribution.length === 0) {
+      return {
+        chart: {
+          type: 'column',
+          height: 400
+        },
+        title: {
+          text: 'No data available'
+        }
+      }
+    }
+
+    // Sort by hour to ensure correct order (0-23)
+    const sortedData = [...statsData.stats.hourlyListeningDistribution].sort((a, b) => a.hour - b.hour)
+    const categories = sortedData.map(item => {
+      // Format hour in 24-hour format (00-23)
+      return `${item.hour.toString().padStart(2, '0')}`
+    })
+    const data = sortedData.map(item => item.totalListeningHours)
+
+    // Get theme colors
+    const foreground = getCSSVariable('--foreground')
+    const mutedForeground = getCSSVariable('--muted-foreground')
+    const card = getCSSVariable('--card')
+    const border = getCSSVariable('--border')
+    const primary = getCSSVariable('--primary')
+    
+    const foregroundColor = foreground ? `rgb(${foreground})` : (theme === 'dark' ? '#f3f4f6' : '#1f2937')
+    const mutedColor = mutedForeground ? `rgb(${mutedForeground})` : (theme === 'dark' ? '#9ca3af' : '#6b7280')
+    const cardColor = card ? `rgb(${card})` : (theme === 'dark' ? '#374151' : '#ffffff')
+    const borderColor = border ? `rgb(${border})` : (theme === 'dark' ? '#4b5563' : '#e5e7eb')
+    const primaryColor = primary ? `rgb(${primary})` : '#4f46e5'
+
+    return {
+      chart: {
+        type: 'column',
+        backgroundColor: 'transparent',
+        height: 500,
+        style: {
+          fontFamily: 'inherit'
+        },
+        spacingLeft: 0,
+        spacingRight: 0
+      },
+      title: {
+        text: ''
+      },
+      xAxis: {
+        categories: categories,
+        title: {
+          text: 'Hour of Day',
+          style: {
+            color: mutedColor
+          }
+        },
+        labels: {
+          style: {
+            color: mutedColor
+          },
+          rotation: -45
+        },
+        lineColor: borderColor,
+        tickColor: borderColor,
+        minPadding: 0,
+        maxPadding: 0
+      },
+      yAxis: {
+        title: {
+          text: 'Hours',
+          style: {
+            color: mutedColor
+          }
+        },
+        labels: {
+          style: {
+            color: mutedColor
+          }
+        },
+        gridLineColor: borderColor
+      },
+      legend: {
+        enabled: false
+      },
+      tooltip: {
+        backgroundColor: cardColor,
+        borderColor: borderColor,
+        style: {
+          color: foregroundColor
+        },
+        formatter: function(this: Highcharts.Point) {
+          const pointIndex = typeof this.x === 'number' ? this.x : (this.index ?? 0)
+          const hourData = sortedData[pointIndex]
+          const hourLabel = categories[pointIndex] || `${hourData.hour.toString().padStart(2, '0')}:00`
+          return `<b>${hourLabel}</b><br/>${this.y?.toFixed(2)} hours<br/>${hourData.playCount} plays`
+        }
+      },
+      plotOptions: {
+        column: {
+          color: primaryColor,
+          borderRadius: 4,
+          dataLabels: {
+            enabled: false
+          },
+          pointPadding: 0.05,
+          groupPadding: 0.1
+        }
+      },
+      series: [{
+        name: 'Listening Hours',
+        data: data,
+        type: 'column'
+      }],
+      credits: {
+        enabled: false
+      }
+    }
+  }
   
   // Get selected year data
   const selectedYearData = statsData?.stats?.yearlyTopItems?.find(item => item.year === selectedYear)
@@ -283,6 +412,26 @@ export default function StatsPage() {
                   </CardContent>
                 </Card>
               )}
+
+              {/* Hourly Listening Distribution Chart */}
+              {statsData.stats?.hourlyListeningDistribution && statsData.stats.hourlyListeningDistribution.length > 0 ? (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Hourly Listening Distribution</CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-2 sm:px-6">
+                    <div className="w-full -mx-2 sm:mx-0">
+                      {mounted && (
+                        <HighchartsReact
+                          highcharts={Highcharts}
+                          options={getHourlyChartOptions()}
+                          ref={hourlyChartComponentRef}
+                        />
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ) : null}
 
               {/* Summary Stats */}
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

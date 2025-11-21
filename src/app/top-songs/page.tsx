@@ -216,9 +216,12 @@ export default function TopSongsPage() {
                     </button>
                     
                     {/* Album Name */}
-                    <p className="text-xs text-muted-foreground line-clamp-1">
+                    <button
+                      onClick={() => setSearchTerm(song.album.name)}
+                      className="text-xs text-muted-foreground hover:text-primary transition-colors line-clamp-1 text-left"
+                    >
                       {song.album.name}
-                    </p>
+                    </button>
                     
                     {/* Duration */}
                     <p className="text-xs text-muted-foreground">
@@ -286,9 +289,12 @@ export default function TopSongsPage() {
                     
                     {/* Album Name */}
                     <div className="col-span-3">
-                      <p className="text-sm text-muted-foreground line-clamp-1">
+                      <button
+                        onClick={() => setSearchTerm(song.album.name)}
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors line-clamp-1 text-left"
+                      >
                         {song.album.name}
-                      </p>
+                      </button>
                     </div>
                     
                     {/* Play Count */}
@@ -342,9 +348,12 @@ export default function TopSongsPage() {
                         {song.artist.name}
                       </button>
                       
-                      <p className="text-xs text-muted-foreground mb-1 line-clamp-1">
+                      <button
+                        onClick={() => setSearchTerm(song.album.name)}
+                        className="text-xs text-muted-foreground hover:text-primary transition-colors mb-1 line-clamp-1 text-left"
+                      >
                         {song.album.name}
-                      </p>
+                      </button>
                       
                       <p className="text-xs text-muted-foreground">
                         {(() => {
