@@ -294,17 +294,17 @@ export default function TopAlbumsWithDetailsPage() {
                     {/* Album Info */}
                     <div className="flex-1 min-w-0 text-center md:text-left">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-2">
-                        <div className="flex items-center justify-center md:justify-start gap-2">
-                          <Badge variant="secondary" className="text-xs">
+                        <div className="flex items-center justify-center md:justify-start gap-2 flex-1 min-w-0">
+                          <Badge variant="secondary" className="text-xs flex-shrink-0">
                             #{album.rank}
                           </Badge>
-                          <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
+                          <h3 className="font-semibold text-lg group-hover:text-primary transition-colors break-words">
                             {album.album.name}
                           </h3>
                         </div>
                         <button
                           onClick={() => toggleAlbumExpansion(album.primaryAlbumId)}
-                          className="flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                          className="flex items-center justify-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors flex-shrink-0 whitespace-nowrap"
                         >
                           {isExpanded ? (
                             <>

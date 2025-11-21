@@ -192,10 +192,10 @@ export default function StatsPage() {
         style: {
           color: foregroundColor
         },
-        formatter: function() {
+        formatter: function(this: Highcharts.Point) {
           // Access the category (year) from the categories array
           // this.x should be the category when using categories, but we'll use the index as fallback
-          const pointIndex = typeof this.x === 'number' ? this.x : ((this as any).index ?? 0)
+          const pointIndex = typeof this.x === 'number' ? this.x : (this.index ?? 0)
           const year = categories[pointIndex] || String(this.x)
           return `<b>${year}</b><br/>${this.y?.toFixed(2)} hours`
         }
