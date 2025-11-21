@@ -2,10 +2,12 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 import SpotifyStatsLayout from '@/src/components/SpotifyStatsLayout'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import { useTheme } from '../../components/theme-provider'
+import { Music2, Users, Play, Clock } from 'lucide-react'
 
 interface YearlyListeningTime {
   year: string
@@ -56,12 +58,21 @@ export default function StatsPage() {
   const [statsData, setStatsData] = useState<StatsData | null>(null)
   const [loading, setLoading] = useState(true)
   const [mounted, setMounted] = useState(false)
+  const [selectedYear, setSelectedYear] = useState<string | null>(null)
   const chartComponentRef = useRef<HighchartsReact.RefObject>(null)
   const { theme } = useTheme()
   
   useEffect(() => {
     setMounted(true)
   }, [])
+  
+  // Set default selected year to most recent year with data
+  useEffect(() => {
+    if (statsData?.stats?.yearlyTopItems && statsData.stats.yearlyTopItems.length > 0 && !selectedYear) {
+      const years = statsData.stats.yearlyTopItems.map(item => item.year).sort((a, b) => parseInt(b) - parseInt(a))
+      setSelectedYear(years[0])
+    }
+  }, [statsData, selectedYear])
   
   useEffect(() => {
     const fetchStats = async () => {
@@ -200,6 +211,18 @@ export default function StatsPage() {
     }
   }
   
+  // Get selected year data
+  const selectedYearData = statsData?.stats?.yearlyTopItems?.find(item => item.year === selectedYear)
+  const availableYears = statsData?.stats?.yearlyTopItems?.map(item => item.year).sort((a, b) => parseInt(b) - parseInt(a)) || []
+  
+  // Format duration helper
+  const formatDuration = (durationMs: number) => {
+    const totalMinutes = Math.floor(durationMs / 60000)
+    const hours = Math.floor(totalMinutes / 60)
+    const minutes = totalMinutes % 60
+    return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
+  }
+  
   return (
     <SpotifyStatsLayout
       title="Spotify Statistics"
@@ -281,6 +304,131 @@ export default function StatsPage() {
                   </Card>
                 )}
               </div>
+
+              {/* Yearly Top Items */}
+              {statsData.stats?.yearlyTopItems && statsData.stats.yearlyTopItems.length > 0 && selectedYearData && (
+                <Card>
+                  <CardHeader>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                      <CardTitle>Top Songs & Artists by Year</CardTitle>
+                      <div className="flex flex-wrap gap-2">
+                        {availableYears.map((year) => (
+                          <button
+                            key={year}
+                            onClick={() => setSelectedYear(year)}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                              selectedYear === year
+                                ? 'bg-primary text-primary-foreground'
+                                : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                            }`}
+                          >
+                            {year}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid gap-8 md:grid-cols-2">
+                      {/* Top Songs */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-4">
+                          <Music2 className="w-5 h-5 text-muted-foreground" />
+                          <h3 className="font-semibold text-lg">Top Songs</h3>
+                        </div>
+                        <div className="space-y-2">
+                          {selectedYearData.topSongs.map((song, index) => (
+                            <div
+                              key={song.songId}
+                              className="p-2 rounded-md hover:bg-muted/50 transition-colors"
+                            >
+                              <div className="flex items-start gap-3">
+                                <Badge variant="secondary" className="text-xs w-8 flex-shrink-0 justify-center mt-0.5">
+                                  {index + 1}
+                                </Badge>
+                                <div className="flex-1 min-w-0">
+                                  <p className="font-medium text-sm break-words">{song.name}</p>
+                                  <p className="text-xs text-muted-foreground break-words">{song.artist}</p>
+                                  {/* Mobile: Show stats below */}
+                                  <div className="flex items-center gap-3 text-xs text-muted-foreground mt-2 md:hidden">
+                                    <div className="flex items-center gap-1">
+                                      <Play className="w-3 h-3" />
+                                      <span>{song.playCount}</span>
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                      <Clock className="w-3 h-3" />
+                                      <span>{formatDuration(song.totalListeningTimeMs)}</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Desktop: Show stats to the right */}
+                                <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
+                                  <div className="flex items-center gap-1">
+                                    <Play className="w-3 h-3" />
+                                    <span>{song.playCount}</span>
+                                  </div>
+                                  <div className="flex items-center gap-1">
+                                    <Clock className="w-3 h-3" />
+                                    <span>{formatDuration(song.totalListeningTimeMs)}</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Top Artists */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-4">
+                          <Users className="w-5 h-5 text-muted-foreground" />
+                          <h3 className="font-semibold text-lg">Top Artists</h3>
+                        </div>
+                        <div className="space-y-2">
+                          {selectedYearData.topArtists.map((artist, index) => (
+                            <div
+                              key={artist.artistName}
+                              className="p-2 rounded-md hover:bg-muted/50 transition-colors"
+                            >
+                              <div className="flex items-start gap-3">
+                                <Badge variant="secondary" className="text-xs w-8 flex-shrink-0 justify-center mt-0.5">
+                                  {index + 1}
+                                </Badge>
+                                <div className="flex-1 min-w-0">
+                                  <p className="font-medium text-sm break-words">{artist.artistName}</p>
+                                  <p className="text-xs text-muted-foreground">{artist.uniqueSongs} songs</p>
+                                  {/* Mobile: Show stats below */}
+                                  <div className="flex items-center gap-3 text-xs text-muted-foreground mt-2 md:hidden">
+                                    <div className="flex items-center gap-1">
+                                      <Play className="w-3 h-3" />
+                                      <span>{artist.playCount}</span>
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                      <Clock className="w-3 h-3" />
+                                      <span>{formatDuration(artist.totalListeningTimeMs)}</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Desktop: Show stats to the right */}
+                                <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
+                                  <div className="flex items-center gap-1">
+                                    <Play className="w-3 h-3" />
+                                    <span>{artist.playCount}</span>
+                                  </div>
+                                  <div className="flex items-center gap-1">
+                                    <Clock className="w-3 h-3" />
+                                    <span>{formatDuration(artist.totalListeningTimeMs)}</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
             </>
           ) : !loading ? (
             <div className="text-center py-12">

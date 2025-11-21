@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Search, Music, Play, Grid3X3, List, X, ChevronDown, ChevronRight, Clock, Disc } from 'lucide-react'
+import { Search, Music, Play, X, ChevronDown, ChevronRight, Clock, Disc } from 'lucide-react'
 import SpotifyStatsLayout from '@/src/components/SpotifyStatsLayout'
 
 interface AlbumImage {
@@ -173,7 +173,6 @@ export default function TopAlbumsWithDetailsPage() {
   const [albumsData, setAlbumsData] = useState<AlbumsData | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(true)
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [expandedAlbums, setExpandedAlbums] = useState<Set<string>>(new Set())
   
   // Add CSS keyframes for animation
