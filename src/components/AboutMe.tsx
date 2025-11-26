@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import profileImage from '../../src/app/resources/img.jpeg'
 import { Button } from '@/components/ui/button'
 import { Music } from 'lucide-react'
@@ -81,13 +80,15 @@ export default function AboutMe() {
                             variant="outline" 
                             className="w-full bg-white hover:bg-gray-100 border-gray-300 mb-2"
                         >
-                            <Link 
-                                href="/stats"
+                            <a 
+                                href="https://your-spotify-consolidator.vercel.app/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 !text-black hover:!text-black"
                             >
                                 <Music className="w-4 h-4 !text-black" />
                                 Spotify Stats
-                            </Link>
+                            </a>
                         </Button>
                     </div>
                 </div>
