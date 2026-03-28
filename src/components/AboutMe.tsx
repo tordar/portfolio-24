@@ -142,7 +142,7 @@ export default function AboutMe() {
                 {/* Photo — small round avatar on mobile */}
                 <div className="flex justify-center mb-5">
                     <div
-                        className="relative w-40 h-40 rounded-full overflow-hidden transition-all duration-500 ease-out"
+                        className="relative w-48 h-48 rounded-full overflow-hidden transition-all duration-500 ease-out"
                         style={{
                             boxShadow: activeInterest
                                 ? '0 12px 30px -8px rgba(99,102,241,0.4)'
@@ -153,8 +153,8 @@ export default function AboutMe() {
                             src={profileImage}
                             alt="Tordar Tømmervik"
                             fill
-                            className="object-cover object-top"
-                            sizes="128px"
+                            className="object-cover object-[center_30%]"
+                            sizes="160px"
                             priority
                         />
                         {Object.entries(interestImages).map(([interest, src]) => (
@@ -163,7 +163,7 @@ export default function AboutMe() {
                                 src={src}
                                 alt={`Tordar — ${interest}`}
                                 fill
-                                className="object-cover object-top transition-all duration-500 ease-out"
+                                className="object-cover object-[center_45%] transition-all duration-500 ease-out"
                                 sizes="128px"
                                 style={{
                                     opacity: activeInterest === interest ? 1 : 0,
