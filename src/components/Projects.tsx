@@ -1,171 +1,263 @@
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { HoverCard } from '@/components/ui/hover-card'
-import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import React from "react";
-import Image from "next/image";
+'use client'
+
+import { useState } from 'react'
+import Image from 'next/image'
+import { ArrowUpRight, Github } from 'lucide-react'
+
+type Category = 'personal' | 'professional' | 'open-source'
 
 interface Project {
-    title: string;
-    description: string;
-    github: string;
-    live?: string;
-    tags: string[];
-    image: string;
+    title: string
+    description: string
+    github: string
+    live?: string
+    tags: string[]
+    image: string
+    category: Category
 }
 
+const tabs: { label: string; value: Category }[] = [
+    { label: 'Personal', value: 'personal' },
+    { label: 'Professional', value: 'professional' },
+    { label: 'Open Source', value: 'open-source' },
+]
 
 const projects: Project[] = [
-        {
-            title: "Meal Planner",
-            description: "A project made for personal tracking of meal recipes and ideas. Connected to a MongoDB database, with user authentication via Google.",
-            github: "https://github.com/tordar/food-bank",
-            live: "https://mealplanner.tordar.no",
-            tags: ["React", "MongoDB", "Next.js", "OAuth 2.0"],
-            image: "/MealPlanner.png"
-        },
-        {
-            title: "Strava-Visualiser",
-            description: "A project made to visualise various Strava data. Connects to a personal account and fetches data from the Strava API",
-            github: "https://github.com/tordar/shadcn-strava-visualiser",
-            live: "https://strava.tordar.no/",
-            tags: ["React", "Strava API", "Data Visualization", "Next.js"],
-            image: "/StravaDashboard.png"
-        },
-        {
-            title: "Snapchat Memories Downloader",
-            description: "A project made to download all memories from Snapchat in bulk. Uses a simple HTML interface to visualise and help download memories.",
-            github: "https://github.com/tordar/Download-Snapchat-Memories",
-            tags: ["Python", "Snapchat API"],
-            image: "/SnapchatDownloader.png"
-        },
-        {
-            title: "Sats Map",
-            description: "A project where I attempted to extract all the visits I had to Sats and visualised them on a Leaflet map.",
-            github: "https://github.com/tordar/sats-visualiser",
-            live: "https://sats-visualiser.vercel.app/",
-            tags: ["React", "Leaflet", "Data Visualization"],
-            image: "/SatsMap.png"
-        },
-        {
-            title: "Event Newsletter",
-            description: "A newsletter service built on top of the Broadcast API. Allows the user to subscribe to new events in Oslo, based on their preferences.",
-            github: "https://github.com/tordar/events-bot",
-            live: "https://concerts.tordar.no/",
-            tags: ["Python", "SendGrid"],
-            image: "/EventSubscription.png"
-        },
-        {
-            title: "Loxodonta Function API",
-            description: "A simple API for personal use. Built with Vercel serverless functions and integrates with external APIs to fetch data. Together with Swagger UI inspired interactive documentation",
-            github: "https://github.com/tordar/loxodonta-function-api",
-            live: "https://api.tordar.no/",
-            tags: ["React", "Vercel"],
-            image: "/LoxodontaAPI.png"
-        }
-    ]
+    {
+        title: "Pulse",
+        description: "Dashboard to visualise historical listening data from Spotify, integrated with several listening sources. Continously updated with new listening history.",
+        github: "https://github.com/tordar/spotify-pulse-data",
+        live: "https://pulse.tordar.no/",
+        tags: ["Next.js", "Data Viz"],
+        image: "/PulseScreenshot.png",
+        category: "personal"
+    },
+    {
+        title: "Strava Visualiser",
+        description: "Visualises personal Strava data pulled from the Strava API.",
+        github: "https://github.com/tordar/shadcn-strava-visualiser",
+        live: "https://strava.tordar.no/",
+        tags: ["Next.js", "Strava API", "Data Viz"],
+        image: "/StravaDashboard.png",
+        category: "personal"
+    },
+    {
+        title: "Photography Portfolio",
+        description: "Personal photography gallery showcasing travel, nature and street photography.",
+        github: "https://github.com/tordar/gallery",
+        live: "https://gallery.tordar.no/",
+        tags: ["Next.js", "Vercel"],
+        image: "/GalleryScreenshot.png",
+        category: "personal"
+    },
+    {
+        title: "Meal Planner",
+        description: "Personal recipe tracker with Google authentication and MongoDB.",
+        github: "https://github.com/tordar/food-bank",
+        live: "https://mealplanner.tordar.no",
+        tags: ["Next.js", "MongoDB", "OAuth 2.0"],
+        image: "/MealPlanner.png",
+        category: "personal"
+    },
+    {
+        title: "Event Newsletter",
+        description: "Subscribe to new Oslo events by preference, powered by Broadcast API.",
+        github: "https://github.com/tordar/events-bot",
+        live: "https://concerts.tordar.no/",
+        tags: ["Python", "SendGrid"],
+        image: "/EventSubscription.png",
+        category: "personal"
+    },
+    {
+        title: "Nyss",
+        description: "Real-time disease surveillance platform for Norwegian Red Cross / IFRC. Built and maintained the web application used across multiple countries. Deployed and set up in countries in Africa, Sentral-Asia and the Pacific.",
+        github: "https://github.com/nyss-platform-norcross/nyss",
+        live: "https://cbs.ifrc.org/what-nyss",
+        tags: ["React", "Azure", "C#", ".NET"],
+        image: "/NyssScreenshot.png",
+        category: "professional"
+    },
+    {
+        title: "Snapchat Memories Downloader",
+        description: "Bulk downloader for Snapchat memories with a simple HTML interface.",
+        github: "https://github.com/tordar/Download-Snapchat-Memories",
+        tags: ["Python", "Snapchat API"],
+        image: "/SnapchatDownloader.png",
+        category: "open-source"
+    },
+    {
+        title: "Loxodonta Function API",
+        description: "Personal API with Vercel serverless functions and interactive Swagger UI docs.",
+        github: "https://github.com/tordar/loxodonta-function-api",
+        live: "https://api.tordar.no/",
+        tags: ["React", "Vercel", "Serverless"],
+        image: "/LoxodontaAPI.png",
+        category: "open-source"
+    }
+]
 
 export default function Projects() {
-    return(
-        <section>
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-                <h2 className="text-3xl font-semibold mb-4 text-card-foreground">My Projects</h2>
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                <p className="text-muted-foreground mb-6">A selection of various personal projects I'm working on</p>
-            
-            {/* Mobile view - horizontal scrolling with wider cards */}
-            <div className="md:hidden w-full overflow-x-auto pb-6">
-                <div className="flex space-x-4 px-2 min-w-max snap-x snap-mandatory">
-                    {projects.map((project, index) => (
-                        <div key={index} className="w-[90vw] max-w-[400px] flex-shrink-0 snap-center first:ml-2 last:mr-2">
-                            <HoverCard className="h-full flex flex-col overflow-hidden rounded-lg bg-card text-card-foreground shadow">
-                                <div className="relative w-full h-44 overflow-hidden group">
-                                    <Image
-                                        src={project.image}
-                                        alt={`${project.title} preview`}
-                                        fill
-                                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                        sizes="320px"
-                                    />
-                                    <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:opacity-0" />
-                                </div>
-                                <CardHeader className="p-4 pb-2">
-                                    <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
-                                    <CardDescription className="line-clamp-3 text-sm">{project.description}</CardDescription>
-                                </CardHeader>
-                                <CardContent className="p-4 pt-0 pb-2">
-                                    <div className="flex flex-wrap gap-1.5">
-                                        {project.tags.map((tag, tagIndex) => (
-                                            <Badge key={tagIndex} variant="secondary">{tag}</Badge>
-                                        ))}
-                                    </div>
-                                </CardContent>
-                                <CardFooter className="p-4 pt-0 mt-auto">
-                                    <div className="flex gap-2 w-full">
-                                        {project.live && (
-                                            <Button asChild className="w-full">
-                                                <a href={project.live} target="_blank" rel="noopener noreferrer">
-                                                    Website
-                                                </a>
-                                            </Button>
-                                        )}
-                                        <Button asChild variant="secondary" className="w-full">
-                                            <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                                Source Code
-                                            </a>
-                                        </Button>
-                                    </div>
-                                </CardFooter>
-                            </HoverCard>
-                        </div>
-                    ))}
-                </div>
+    const [activeTab, setActiveTab] = useState<Category>('personal')
+    const [activeIndex, setActiveIndex] = useState(0)
+
+    const filtered = projects.filter(p => p.category === activeTab)
+    const active = filtered[activeIndex] ?? null
+
+    const handleTabChange = (tab: Category) => {
+        setActiveTab(tab)
+        setActiveIndex(0)
+    }
+
+    return (
+        <section className="mb-16">
+            <div className="flex items-baseline justify-between mb-8">
+                <h2 className="text-3xl font-semibold">My Projects</h2>
             </div>
-            
-            {/* Desktop view - grid layout */}
-            <div className="hidden md:grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {projects.map((project, index) => (
-                    <HoverCard key={index} className="flex flex-col overflow-hidden rounded-lg bg-card text-card-foreground shadow">
-                        <div className="relative w-full h-48 overflow-hidden group">
-                            <Image
-                                src={project.image}
-                                alt={`${project.title} preview`}
-                                fill
-                                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            />
-                            <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-0" />
-                        </div>
-                        <CardHeader>
-                            <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
-                            <CardDescription>{project.description}</CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="flex flex-wrap gap-2">
-                                {project.tags.map((tag, tagIndex) => (
-                                    <Badge key={tagIndex} variant="secondary">{tag}</Badge>
+
+            {/* Tabs */}
+            <div className="flex gap-0 border-b border-border mb-0">
+                {tabs.map((tab) => (
+                    <button
+                        key={tab.value}
+                        onClick={() => handleTabChange(tab.value)}
+                        className={`px-4 py-2.5 text-sm font-medium transition-colors duration-150 border-b-2 -mb-px cursor-pointer ${
+                            activeTab === tab.value
+                                ? 'border-foreground text-foreground'
+                                : 'border-transparent text-muted-foreground hover:text-foreground'
+                        }`}
+                    >
+                        {tab.label}
+                        <span className={`ml-2 text-xs tabular-nums ${activeTab === tab.value ? 'text-muted-foreground' : 'text-muted-foreground/50'}`}>
+                            {projects.filter(p => p.category === tab.value).length}
+                        </span>
+                    </button>
+                ))}
+            </div>
+
+            {/* Desktop: split list + image */}
+            <div className="hidden md:flex gap-8 items-start pt-0">
+
+                {/* List */}
+                <div className="flex-1 min-w-0">
+                    {filtered.map((project, index) => (
+                        <a
+                            key={project.title}
+                            href={project.live ?? project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`group flex items-center justify-between border-t border-border py-5 gap-4 transition-all duration-150 cursor-pointer ${
+                                activeIndex === index ? 'opacity-100' : 'opacity-50 hover:opacity-80'
+                            }`}
+                            onMouseEnter={() => setActiveIndex(index)}
+                        >
+                            <div className="flex items-center gap-5 min-w-0">
+                                <div className="min-w-0">
+                                    <span className="text-base font-medium">{project.title}</span>
+                                    <p className="text-sm text-muted-foreground mt-0.5 line-clamp-1">
+                                        {project.description}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-4 flex-shrink-0">
+                                <div className="hidden lg:flex gap-3">
+                                    {project.tags.map((tag) => (
+                                        <span key={tag} className="text-xs text-muted-foreground">{tag}</span>
+                                    ))}
+                                </div>
+                                <div className="flex items-center gap-1.5">
+                                    <span
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            e.stopPropagation()
+                                            window.open(project.github, '_blank', 'noopener,noreferrer')
+                                        }}
+                                        className="text-muted-foreground hover:text-foreground transition-colors p-1"
+                                        aria-label="Source code"
+                                    >
+                                        <Github className="w-3.5 h-3.5" />
+                                    </span>
+                                    <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-foreground transition-colors" />
+                                </div>
+                            </div>
+                        </a>
+                    ))}
+                    <div className="border-t border-border" />
+                </div>
+
+                {/* Sticky image panel */}
+                {active && (
+                    <div className="w-72 xl:w-80 flex-shrink-0 sticky top-8">
+                        <div className="group relative w-full aspect-video rounded-xl overflow-visible border border-border cursor-default">
+                            <div className="relative w-full h-full rounded-xl overflow-hidden transition-all duration-300 ease-out origin-top-right group-hover:scale-[1.6] group-hover:shadow-2xl group-hover:z-50 group-hover:rounded-xl">
+                                {filtered.map((project, index) => (
+                                    <div
+                                        key={project.title}
+                                        className="absolute inset-0 transition-opacity duration-300"
+                                        style={{ opacity: activeIndex === index ? 1 : 0 }}
+                                    >
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="object-cover rounded-xl"
+                                            sizes="520px"
+                                        />
+                                    </div>
                                 ))}
                             </div>
-                        </CardContent>
-                        <CardFooter className="mt-auto">
-                            <div className="flex flex-col sm:flex-row gap-2 w-full">
-                                {project.live && (
-                                    <Button asChild className="w-full sm:w-auto">
-                                        <a href={project.live} target="_blank" rel="noopener noreferrer">
-                                            Website
-                                        </a>
-                                    </Button>
-                                )}
-                                <Button asChild variant="secondary" className="w-full sm:w-auto">
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                        Source Code
-                                    </a>
-                                </Button>
+                        </div>
+                        <div className="mt-3 px-0.5">
+                            <p className="text-sm font-medium">{active.title}</p>
+                            <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{active.description}</p>
+                            {active.live && (
+                                <a
+                                    href={active.live}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 text-xs text-primary mt-2 hover:underline"
+                                >
+                                    Visit site <ArrowUpRight className="w-3 h-3" />
+                                </a>
+                            )}
+                        </div>
+                    </div>
+                )}
+            </div>
+
+            {/* Mobile: card list with thumbnails */}
+            <div className="md:hidden grid grid-cols-1 gap-3 pt-4">
+                {filtered.map((project) => (
+                    <a
+                        key={project.title}
+                        href={project.live ?? project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-4 border border-border rounded-xl p-4 hover:border-primary/40 transition-colors duration-200"
+                    >
+                        <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+                            <Image
+                                src={project.image}
+                                alt={project.title}
+                                fill
+                                className="object-cover"
+                                sizes="64px"
+                            />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                            <div className="flex items-center justify-between gap-2">
+                                <span className="font-medium text-sm">{project.title}</span>
+                                <ArrowUpRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
                             </div>
-                        </CardFooter>
-                    </HoverCard>
+                            <p className="text-xs text-muted-foreground mt-0.5 line-clamp-2">{project.description}</p>
+                            <div className="flex gap-2 mt-1.5 flex-wrap">
+                                {project.tags.slice(0, 2).map((tag) => (
+                                    <span key={tag} className="text-xs text-muted-foreground">{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </a>
                 ))}
-                </div>
             </div>
         </section>
     )

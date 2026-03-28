@@ -19,7 +19,7 @@ const config: Config = {
 		extend: {
 			fontFamily: {
 				sans: ['var(--font-space-grotesk)', 'Space Grotesk', 'system-ui', '-apple-system', 'sans-serif'],
-				heading: ['var(--font-inter)', 'system-ui', '-apple-system', 'sans-serif'],
+				heading: ['var(--font-archivo)', 'Archivo', 'system-ui', '-apple-system', 'sans-serif'],
 				mono: ['JetBrains Mono', 'Fira Code', 'Monaco', 'Cascadia Code', 'monospace'],
 			},
 			colors: {

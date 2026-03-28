@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, DM_Sans } from 'next/font/google'
+import { Archivo, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { Github, Linkedin, Mail, MapPin } from 'lucide-react'
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -13,17 +13,18 @@ import { HeaderTitle } from "../components/HeaderTitle"
 import Schema from './Schema'
 import GoogleTagManager from '../lib/google-tag-manager'
 
-const inter = Inter({ 
+const archivo = Archivo({
     subsets: ['latin'],
-    variable: '--font-inter',
-    display: 'swap'
+    variable: '--font-archivo',
+    display: 'swap',
+    weight: ['300', '400', '500', '600', '700']
 })
 
-const dmSans = DM_Sans({ 
+const spaceGrotesk = Space_Grotesk({
     subsets: ['latin'],
-    variable: '--font-dm-sans',
+    variable: '--font-space-grotesk',
     display: 'swap',
-    weight: ['400', '500', '600', '700']
+    weight: ['300', '400', '500', '600', '700']
 })
 
 export const metadata: Metadata = {
@@ -84,19 +85,19 @@ export default function RootLayout({
             <link rel="manifest" href="/site.webmanifest" />
             <Schema />
         </head>
-        <body className={`${inter.variable} ${dmSans.variable}`}>
+        <body className={`${archivo.variable} ${spaceGrotesk.variable}`}>
         <GoogleTagManager />
         <ThemeProvider>
             <DynamicFavicon/>
             <div className="min-h-screen flex flex-col transition-colors duration-100">
-                <header className="py-12 text-center relative bg-muted">
+                <header className="py-16 text-center relative border-b border-border">
                     <div className="absolute top-4 right-4">
                         <ThemeSwitcher/>
                     </div>
                     <HeaderTitle />
-                    <p className="text-xl">Full-stack developer</p>
-                    <p className="flex items-center justify-center mt-2 mb-4 opacity-80">
-                        <MapPin className="w-4 h-4 mr-1"/>
+                    <p className="text-lg text-muted-foreground mt-2 tracking-wide">Full-stack developer</p>
+                    <p className="flex items-center justify-center mt-2 mb-0 text-sm text-muted-foreground">
+                        <MapPin className="w-3.5 h-3.5 mr-1.5"/>
                         Oslo, Norway
                     </p>
                     <div className="absolute bottom-0 left-0 right-0">
@@ -106,20 +107,20 @@ export default function RootLayout({
                 <main className="flex-grow container mx-auto px-4 max-w-5xl py-8">
                     {children}
                 </main>
-                <footer className="bg-muted py-6 mt-12">
-                    <div className="container mx-auto px-4 flex justify-center space-x-4">
-                        <a href="https://github.com/tordar" target="_blank" rel="noopener noreferrer">
-                            <Github className="h-6 w-6"/>
+                <footer className="border-t border-border py-8 mt-16">
+                    <div className="container mx-auto px-4 flex justify-center space-x-6">
+                        <a href="https://github.com/tordar" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                            <Github className="h-5 w-5"/>
                         </a>
-                        <a href="https://linkedin.com/in/tordar" target="_blank" rel="noopener noreferrer">
-                            <Linkedin className="h-6 w-6"/>
+                        <a href="https://linkedin.com/in/tordar" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                            <Linkedin className="h-5 w-5"/>
                         </a>
-                        <a href="mailto:tordar.tommervik@gmail.com">
-                            <Mail className="h-6 w-6"/>
+                        <a href="mailto:tordar.tommervik@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                            <Mail className="h-5 w-5"/>
                         </a>
-                        <a href="https://www.strava.com/athletes/29745314" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.strava.com/athletes/29745314" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                 className="w-6 h-6 fill-current">
+                                 className="w-5 h-5 fill-current">
                                 <path
                                     d="M158.4 0L7 292h89.2l62.2-116.1L220.1 292h88.5zm150.2 292l-43.9 88.2-44.6-88.2h-67.6l112.2 220 111.5-220z"/>
                             </svg>
