@@ -9,10 +9,10 @@ type Category = 'personal' | 'professional' | 'open-source'
 interface Project {
     title: string
     description: string
-    github: string
+    github?: string
     live?: string
     tags: string[]
-    image: string
+    image?: string
     category: Category
 }
 
@@ -35,7 +35,7 @@ const projects: Project[] = [
     {
         title: "Strava Visualiser",
         description: "Visualises personal Strava data pulled from the Strava API.",
-        github: "https://github.com/tordar/shadcn-strava-visualiser",
+        github: "https://github.com/tordar/strava-visualiser-v2",
         live: "https://strava.tordar.no/",
         tags: ["Next.js", "Strava API", "Data Viz"],
         image: "/StravaDashboard.png",
@@ -44,7 +44,7 @@ const projects: Project[] = [
     {
         title: "Photography Portfolio",
         description: "Personal photography gallery showcasing travel, nature and street photography.",
-        github: "https://github.com/tordar/gallery",
+        github: "https://github.com/tordar/photography-portfolio",
         live: "https://gallery.tordar.no/",
         tags: ["Next.js", "Vercel"],
         image: "/GalleryScreenshot.png",
@@ -53,20 +53,27 @@ const projects: Project[] = [
     {
         title: "Meal Planner",
         description: "Personal recipe tracker with Google authentication and MongoDB.",
-        github: "https://github.com/tordar/food-bank",
+        github: "https://github.com/tordar/meal-planner",
         live: "https://mealplanner.tordar.no",
         tags: ["Next.js", "MongoDB", "OAuth 2.0"],
         image: "/MealPlanner.png",
         category: "personal"
     },
     {
-        title: "Event Newsletter",
-        description: "Subscribe to new Oslo events by preference, powered by Broadcast API.",
-        github: "https://github.com/tordar/events-bot",
-        live: "https://concerts.tordar.no/",
-        tags: ["Python", "SendGrid"],
-        image: "/EventSubscription.png",
+        title: "Personal Portfolio",
+        description: "My longest running project. Always updating.",
+        github: "https://github.com/tordar/portfolio-24",
+        live: "https://tordar.no",
+        tags: ["Next.js", "TypeScript", "Tailwind CSS"],
         category: "personal"
+    },
+    {
+        title: "Fidem",
+        description: "Worked on creating platforms for an American credit card company. Including the acquisition, servicing and backoffice admin web application.",
+        live: "https://apply.financeyourway.com/syw/apply/verify",
+        tags: ["Next.js", "TypeScript", "PostgreSQL"],
+        image: "/FidemScreenshot.png",
+        category: "professional"
     },
     {
         title: "Nyss",
@@ -140,12 +147,9 @@ export default function Projects() {
                 {/* List */}
                 <div className="flex-1 min-w-0">
                     {filtered.map((project, index) => (
-                        <a
+                        <div
                             key={project.title}
-                            href={project.live ?? project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`group flex items-center justify-between border-t border-border py-5 gap-4 transition-all duration-150 cursor-pointer ${
+                            className={`group flex items-center justify-between border-t border-border py-5 gap-4 transition-all duration-150 ${
                                 activeIndex === index ? 'opacity-100' : 'opacity-50 hover:opacity-80'
                             }`}
                             onMouseEnter={() => setActiveIndex(index)}
@@ -166,21 +170,31 @@ export default function Projects() {
                                     ))}
                                 </div>
                                 <div className="flex items-center gap-1.5">
-                                    <span
-                                        onClick={(e) => {
-                                            e.preventDefault()
-                                            e.stopPropagation()
-                                            window.open(project.github, '_blank', 'noopener,noreferrer')
-                                        }}
-                                        className="text-muted-foreground hover:text-foreground transition-colors p-1"
-                                        aria-label="Source code"
-                                    >
-                                        <Github className="w-3.5 h-3.5" />
-                                    </span>
-                                    <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-foreground transition-colors" />
+                                    {project.github && (
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-muted-foreground hover:text-foreground transition-colors p-1"
+                                            aria-label="Source code"
+                                        >
+                                            <Github className="w-3.5 h-3.5" />
+                                        </a>
+                                    )}
+                                    {project.live && (
+                                        <a
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-muted-foreground hover:text-foreground transition-colors p-1"
+                                            aria-label="Live site"
+                                        >
+                                            <ArrowUpRight className="w-3.5 h-3.5" />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     ))}
                     <div className="border-t border-border" />
                 </div>
@@ -188,6 +202,7 @@ export default function Projects() {
                 {/* Sticky image panel */}
                 {active && (
                     <div className="w-72 xl:w-80 flex-shrink-0 sticky top-8">
+                        {active.image && (
                         <div className="group relative w-full aspect-video rounded-xl overflow-visible border border-border cursor-default">
                             <div className="relative w-full h-full rounded-xl overflow-hidden transition-all duration-300 ease-out origin-top-right group-hover:scale-[1.6] group-hover:shadow-2xl group-hover:z-50 group-hover:rounded-xl">
                                 {filtered.map((project, index) => (
@@ -196,17 +211,20 @@ export default function Projects() {
                                         className="absolute inset-0 transition-opacity duration-300"
                                         style={{ opacity: activeIndex === index ? 1 : 0 }}
                                     >
-                                        <Image
-                                            src={project.image}
-                                            alt={project.title}
-                                            fill
-                                            className="object-cover rounded-xl"
-                                            sizes="520px"
-                                        />
+                                        {project.image && (
+                                            <Image
+                                                src={project.image}
+                                                alt={project.title}
+                                                fill
+                                                className="object-cover object-top rounded-xl"
+                                                sizes="520px"
+                                            />
+                                        )}
                                     </div>
                                 ))}
                             </div>
                         </div>
+                        )}
                         <div className="mt-3 px-0.5">
                             <p className="text-sm font-medium">{active.title}</p>
                             <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{active.description}</p>
@@ -230,20 +248,22 @@ export default function Projects() {
                 {filtered.map((project) => (
                     <a
                         key={project.title}
-                        href={project.live ?? project.github}
+                        href={project.live ?? project.github ?? '#'}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group border border-border rounded-xl overflow-hidden hover:border-primary/40 transition-colors duration-200"
                     >
-                        <div className="relative w-full aspect-video">
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                fill
-                                className="object-cover"
-                                sizes="100vw"
-                            />
-                        </div>
+                        {project.image && (
+                            <div className="relative w-full aspect-video">
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover object-top"
+                                    sizes="100vw"
+                                />
+                            </div>
+                        )}
                         <div className="p-4">
                             <div className="flex items-center justify-between gap-2">
                                 <span className="font-medium text-sm">{project.title}</span>
