@@ -225,36 +225,31 @@ export default function Projects() {
                 )}
             </div>
 
-            {/* Mobile: card list with thumbnails */}
-            <div className="md:hidden grid grid-cols-1 gap-3 pt-4">
+            {/* Mobile: stacked cards with large screenshots */}
+            <div className="md:hidden grid grid-cols-1 gap-4 pt-4">
                 {filtered.map((project) => (
                     <a
                         key={project.title}
                         href={project.live ?? project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center gap-4 border border-border rounded-xl p-4 hover:border-primary/40 transition-colors duration-200"
+                        className="group border border-border rounded-xl overflow-hidden hover:border-primary/40 transition-colors duration-200"
                     >
-                        <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-muted">
+                        <div className="relative w-full aspect-video">
                             <Image
                                 src={project.image}
                                 alt={project.title}
                                 fill
                                 className="object-cover"
-                                sizes="64px"
+                                sizes="100vw"
                             />
                         </div>
-                        <div className="min-w-0 flex-1">
+                        <div className="p-4">
                             <div className="flex items-center justify-between gap-2">
                                 <span className="font-medium text-sm">{project.title}</span>
                                 <ArrowUpRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
                             </div>
-                            <p className="text-xs text-muted-foreground mt-0.5 line-clamp-2">{project.description}</p>
-                            <div className="flex gap-2 mt-1.5 flex-wrap">
-                                {project.tags.slice(0, 2).map((tag) => (
-                                    <span key={tag} className="text-xs text-muted-foreground">{tag}</span>
-                                ))}
-                            </div>
+                            <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{project.description}</p>
                         </div>
                     </a>
                 ))}

@@ -139,41 +139,40 @@ export default function AboutMe() {
 
             {/* Mobile layout */}
             <div className="md:hidden">
-                {/* Photo */}
-                <div
-                    className="rounded-2xl overflow-hidden bg-muted mb-5 relative transition-all duration-500 ease-out"
-                    style={{
-                        transform: activeInterest ? 'scale(1.02)' : 'scale(1)',
-                        boxShadow: activeInterest
-                            ? '0 20px 50px -12px rgba(99,102,241,0.4), 0 8px 20px -8px rgba(99,102,241,0.2)'
-                            : '0 8px 30px -8px rgba(99,102,241,0.15)',
-                    }}
-                >
-                    <Image
-                        src={profileImage}
-                        alt="Tordar Tømmervik"
-                        width={1312}
-                        height={1965}
-                        className="w-full h-auto rounded-2xl"
-                        sizes="100vw"
-                        priority
-                    />
-                    {Object.entries(interestImages).map(([interest, src]) => (
+                {/* Photo — small round avatar on mobile */}
+                <div className="flex justify-center mb-5">
+                    <div
+                        className="relative w-40 h-40 rounded-full overflow-hidden transition-all duration-500 ease-out"
+                        style={{
+                            boxShadow: activeInterest
+                                ? '0 12px 30px -8px rgba(99,102,241,0.4)'
+                                : '0 4px 20px -6px rgba(99,102,241,0.15)',
+                        }}
+                    >
                         <Image
-                            key={interest}
-                            src={src}
-                            alt={`Tordar — ${interest}`}
-                            width={1312}
-                            height={1965}
-                            className="absolute inset-0 w-full h-full object-cover rounded-2xl transition-all duration-500 ease-out"
-                            sizes="100vw"
-                            style={{
-                                opacity: activeInterest === interest ? 1 : 0,
-                                transform: activeInterest === interest ? 'scale(1)' : 'scale(1.08)',
-                                filter: activeInterest === interest ? 'blur(0px)' : 'blur(8px)',
-                            }}
+                            src={profileImage}
+                            alt="Tordar Tømmervik"
+                            fill
+                            className="object-cover object-top"
+                            sizes="128px"
+                            priority
                         />
-                    ))}
+                        {Object.entries(interestImages).map(([interest, src]) => (
+                            <Image
+                                key={interest}
+                                src={src}
+                                alt={`Tordar — ${interest}`}
+                                fill
+                                className="object-cover object-top transition-all duration-500 ease-out"
+                                sizes="128px"
+                                style={{
+                                    opacity: activeInterest === interest ? 1 : 0,
+                                    transform: activeInterest === interest ? 'scale(1)' : 'scale(1.08)',
+                                    filter: activeInterest === interest ? 'blur(0px)' : 'blur(8px)',
+                                }}
+                            />
+                        ))}
+                    </div>
                 </div>
 
                 {/* Bio */}
