@@ -180,11 +180,17 @@ export default function AboutMe() {
                     <span className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5" /> Oslo, Norway</span>
                     <span className="flex items-center gap-1.5"><Briefcase className="w-3.5 h-3.5" /> Full-stack developer</span>
                 </div>
-                <p className="text-muted-foreground leading-relaxed text-sm mb-4">
+                <p className="text-muted-foreground leading-relaxed text-sm mb-3">
                     I&apos;m a full-stack developer with experience in React, Next.js, and modern web technologies.
-                    Self-taught, starting with Python during the pandemic. Worked for Norwegian Red Cross on their
-                    disease tracking application Nyss, and now at digital product consultancy Umain. I enjoy
-                    side-projects, learning new technologies, and I&apos;m excited about AI development.
+                    I&apos;m largely self-taught, starting with Python during the pandemic to complement my degree
+                    in international relations. I then went on to work for Norwegian Red Cross, maintaining their
+                    disease tracking application Nyss. From there, I started working for digital product consultancy
+                    Umain, where I&apos;m currently working on several very exciting projects.
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm mb-4">
+                    I enjoy working on side-projects (of which I have too many), learning new technologies, and
+                    keeping up with new developments. I try to be forward-leaning when it comes to AI development
+                    and I&apos;m generally excited about how fast technology is moving.
                 </p>
 
                 {/* Interests */}
