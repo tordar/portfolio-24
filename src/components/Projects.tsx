@@ -60,6 +60,15 @@ const projects: Project[] = [
         category: "personal"
     },
     {
+        title: "EV Curator",
+        description: "Intelligence report dashboard for electric vehicle test data from YouTuber Tesla Bjørn. Compares EVs across range, acceleration, braking, noise and more.",
+        github: "https://github.com/tordar/tb-data",
+        live: "https://tb-data-xi.vercel.app",
+        tags: ["Next.js", "Data Viz"],
+        image: "/EVCuratorScreenshot.png",
+        category: "personal"
+    },
+    {
         title: "Personal Portfolio",
         description: "My longest running project. Always updating.",
         github: "https://github.com/tordar/portfolio-24",
