@@ -94,20 +94,19 @@ const projects: Project[] = [
         category: "professional"
     },
     {
+        title: "ezBookkeeping",
+        description: "Forked version of popular open source and self hosted finance tracker where I integrated with Enable Banking for direct Norwegian bank integrations, together with iOS shortcut to automate Apple Pay transactions and a web app for manual transactions.",
+        github: "https://github.com/tordar/ezbookkeeping",
+        tags: ["Go", "Vue"],
+        image: "/EzBookkeepingScreenshot.png",
+        category: "open-source"
+    },
+    {
         title: "Snapchat Memories Downloader",
         description: "Bulk downloader for Snapchat memories with a simple HTML interface.",
         github: "https://github.com/tordar/Download-Snapchat-Memories",
         tags: ["Python", "Snapchat API"],
         image: "/SnapchatDownloader.png",
-        category: "open-source"
-    },
-    {
-        title: "Loxodonta Function API",
-        description: "Personal API with Vercel serverless functions and interactive Swagger UI docs.",
-        github: "https://github.com/tordar/loxodonta-function-api",
-        live: "https://api.tordar.no/",
-        tags: ["React", "Vercel", "Serverless"],
-        image: "/LoxodontaAPI.png",
         category: "open-source"
     }
 ]
