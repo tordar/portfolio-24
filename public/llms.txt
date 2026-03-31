@@ -1,0 +1,31 @@
+# Tordar Tømmervik — Personal Portfolio
+> Full-stack developer based in Oslo, Norway. Specialises in React, Next.js, and TypeScript.
+
+## About
+Tordar Tømmervik is a full-stack developer with experience at Norwegian Red Cross (maintaining the IFRC Nyss disease surveillance platform, deployed across Africa, Central Asia, and the Pacific) and digital product consultancy Umain. Largely self-taught, starting with Python in 2020 to complement a degree in international relations. Currently building React/Next.js applications for enterprise clients at Umain.
+
+## Projects
+
+### Professional
+- **Nyss** — Real-time disease surveillance platform for IFRC/Norwegian Red Cross. Deployed in 20+ countries across Africa, Central Asia, and the Pacific. Built with React, C#/.NET, and Azure.
+- **Fidem** — Financial technology platform. Built with React, Next.js, and TypeScript.
+
+### Personal
+- **Pulse** — Spotify listening statistics dashboard. Visualises top tracks, albums, and artists. (pulse.tordar.no)
+- **Strava Visualiser** — Personal fitness and activity data dashboard. (strava.tordar.no)
+- **Photography Portfolio** — Travel and street photography gallery. (gallery.tordar.no)
+- **EV Curator** — Electric vehicle test data intelligence dashboard. Aggregates and visualises EV review data.
+- **ezBookkeeping** — Personal finance and bookkeeping tool integration.
+- **Meal Planner** — Weekly meal planning application. (mealplanner.tordar.no)
+
+### Open Source
+- Portfolio source code available on GitHub (github.com/tordar)
+
+## Skills
+React, Next.js, TypeScript, JavaScript, Tailwind CSS, Python, MongoDB, Azure, Vercel, C#/.NET, Go, PostgreSQL
+
+## Links
+- Portfolio: https://tordar.no
+- GitHub: https://github.com/tordar
+- LinkedIn: https://www.linkedin.com/in/tordar
+- Strava: https://www.strava.com/athletes/29745314

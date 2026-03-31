@@ -4,6 +4,7 @@ import './globals.css'
 import { Github, Linkedin, Mail, MapPin } from 'lucide-react'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import Script from 'next/script'
 import { SongRecommendationButton } from '../components/SongRecommendation'
 import { ThemeProvider } from "../components/theme-provider"
 import { ThemeSwitcher } from "../components/ThemeSwitcher"
@@ -42,11 +43,11 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: 'https://tordar.no',
         title: 'Tordar Tømmervik | Web Developer',
-        description: 'Personal portfolio and projects by Tordar Tømmervik',
+        description: 'Personal portfolio of Tordar Tømmervik, a web developer specializing in React, Next.js, and modern JavaScript applications.',
         siteName: 'Tordar Portfolio',
         images: [
             {
-                url: '/og-image.png', // Create an Open Graph image
+                url: '/og-image.png',
                 width: 1200,
                 height: 630,
                 alt: 'Tordar Tømmervik Portfolio',
@@ -56,11 +57,11 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Tordar Tømmervik | Web Developer',
-        description: 'Personal portfolio and projects by Tordar Tømmervik',
+        description: 'Personal portfolio of Tordar Tømmervik, a web developer specializing in React, Next.js, and modern JavaScript applications.',
         images: ['/og-image.png'],
     },
     alternates: {
-        canonical: 'https://tordar.no/',
+        canonical: 'https://tordar.no',
     }
 }
 
@@ -72,11 +73,6 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning className="dark">
         <head>
-            <meta name="description" content={metadata.description as string}/>
-            <meta httpEquiv="Cache-Control" content="max-age=86400, public" />
-            <meta httpEquiv="Pragma" content="no-cache"/>
-            <meta httpEquiv="Expires" content="0"/>
-            <link rel="canonical" href="https://tordar.no/" />
             <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
             <link rel="icon" type="image/x-icon" href="/favicon.ico" />
             <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -131,6 +127,7 @@ export default function RootLayout({
                 </footer>
             </div>
         </ThemeProvider>
+        <Script defer src="https://cloud.umami.is/script.js" data-website-id="d18cf312-3157-4359-a4b8-39a7be2ea567" strategy="afterInteractive" />
         <SpeedInsights/>
         <Analytics/>
         </body>
