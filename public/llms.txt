@@ -1,31 +1,57 @@
 # Tordar Tømmervik — Personal Portfolio
 > Full-stack developer based in Oslo, Norway. Specialises in React, Next.js, and TypeScript.
 
+Last-Updated: 2026-03-31
+
 ## About
-Tordar Tømmervik is a full-stack developer with experience at Norwegian Red Cross (maintaining the IFRC Nyss disease surveillance platform, deployed across Africa, Central Asia, and the Pacific) and digital product consultancy Umain. Largely self-taught, starting with Python in 2020 to complement a degree in international relations. Currently building React/Next.js applications for enterprise clients at Umain.
+
+Tordar Tømmervik is a full-stack developer based in Oslo, Norway. He is largely self-taught, having started programming with Python in 2020 to complement a university degree in international relations. This non-traditional background informs a pragmatic, user-focused approach to software development.
+
+His first professional role was at the Norwegian Red Cross, where he maintained Nyss — a real-time disease outbreak surveillance platform built for the International Federation of Red Cross and Red Crescent Societies (IFRC). Nyss is deployed in 20+ countries across Africa, Central Asia, and the Pacific, and is used by public health teams to monitor and respond to disease outbreaks in the field. The platform is built with React, C#/.NET, and Azure.
+
+He currently works at Umain, a digital product consultancy based in Oslo and Stockholm, where he builds React and Next.js applications for enterprise clients. Current projects include Fidem, a financial technology platform for an American credit card company, covering acquisition, servicing, and backoffice administration.
+
+## Professional Experience
+
+- **Umain** (Oslo/Stockholm) — Full-stack developer. React, Next.js, TypeScript. Building enterprise web applications for clients in fintech and other sectors.
+- **Norwegian Red Cross / IFRC** — Developer on Nyss, an open-source disease surveillance platform. Deployed across 20+ countries in Africa, Central Asia, and the Pacific. Stack: React, C#/.NET, Azure Functions, Azure Storage, Azure Service Bus, SQL.
 
 ## Projects
 
 ### Professional
-- **Nyss** — Real-time disease surveillance platform for IFRC/Norwegian Red Cross. Deployed in 20+ countries across Africa, Central Asia, and the Pacific. Built with React, C#/.NET, and Azure.
-- **Fidem** — Financial technology platform. Built with React, Next.js, and TypeScript.
+- **Nyss** — Real-time disease surveillance platform for IFRC/Norwegian Red Cross. Used by public health teams in 20+ countries to monitor disease outbreaks. Open source on GitHub. Built with React, C#/.NET, and Azure.
+- **Fidem** — Financial technology platform for an American credit card company. Covers acquisition, servicing, and backoffice admin. Built with React, Next.js, and TypeScript.
 
 ### Personal
-- **Pulse** — Spotify listening statistics dashboard. Visualises top tracks, albums, and artists. (pulse.tordar.no)
-- **Strava Visualiser** — Personal fitness and activity data dashboard. (strava.tordar.no)
-- **Photography Portfolio** — Travel and street photography gallery. (gallery.tordar.no)
-- **EV Curator** — Electric vehicle test data intelligence dashboard. Aggregates and visualises EV review data.
-- **ezBookkeeping** — Personal finance and bookkeeping tool integration.
-- **Meal Planner** — Weekly meal planning application. (mealplanner.tordar.no)
+- **Pulse** — Spotify listening statistics dashboard. Visualises top tracks, albums, and artists from personal listening history. Built with Next.js and integrated with multiple listening sources. (pulse.tordar.no)
+- **Strava Visualiser** — Personal fitness and activity data dashboard. Visualises running and cycling data from Strava. (strava.tordar.no)
+- **Photography Portfolio** — Travel and street photography gallery. Personal photography from running, hiking, and travelling. (gallery.tordar.no)
+- **EV Curator** — Electric vehicle test data intelligence dashboard. Aggregates and visualises EV review data including range, acceleration, braking, and noise metrics sourced from YouTube reviews.
+- **ezBookkeeping** — Personal finance tracking tool. Forked and extended an open-source Go/Vue bookkeeping application with Enable Banking integration and iOS shortcut automation.
+- **Meal Planner** — Weekly meal planning web application. (mealplanner.tordar.no)
 
 ### Open Source
 - Portfolio source code available on GitHub (github.com/tordar)
+- Nyss platform: github.com/nyss-platform-norcross
 
 ## Skills
-React, Next.js, TypeScript, JavaScript, Tailwind CSS, Python, MongoDB, Azure, Vercel, C#/.NET, Go, PostgreSQL
+
+### Frontend
+React, Next.js, TypeScript, JavaScript, Tailwind CSS, shadcn/ui, Radix UI
+
+### Backend & Data
+Python, C#/.NET, Go, Node.js, MongoDB, PostgreSQL, Azure Functions, Azure Service Bus, Azure Storage
+
+### Tooling & Infrastructure
+Azure, Vercel, Git, Docker
+
+## Background
+
+Degree in international relations. Started coding in 2020 during the pandemic. Self-taught path from Python scripting to full-stack web development. First production role at Norwegian Red Cross maintaining a globally deployed public health platform.
 
 ## Links
 - Portfolio: https://tordar.no
 - GitHub: https://github.com/tordar
 - LinkedIn: https://www.linkedin.com/in/tordar
 - Strava: https://www.strava.com/athletes/29745314
+- CV: https://tordar.no/Tordar_Tommervik_CV.pdf
