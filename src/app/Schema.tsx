@@ -7,7 +7,12 @@ export default function Schema() {
         "@id": "https://tordar.no/#person",
         "name": "Tordar Tømmervik",
         "url": "https://tordar.no",
-        "image": "https://tordar.no/DSC09739.jpeg",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://tordar.no/DSC09739.jpeg",
+          "width": 1312,
+          "height": 1965
+        },
         "description": "Full-stack developer based in Oslo, Norway. Specialises in React, Next.js, and TypeScript. Previously at Norwegian Red Cross (IFRC Nyss disease surveillance platform), now at digital product consultancy Umain.",
         "sameAs": [
           "https://github.com/tordar",
@@ -33,7 +38,9 @@ export default function Schema() {
         "@type": "ProfilePage",
         "@id": "https://tordar.no/#profilepage",
         "url": "https://tordar.no",
-        "name": "Tordar Tømmervik | Web Developer",
+        "name": "Tordar Tømmervik | Full-stack Developer",
+        "dateCreated": "2024-01-01",
+        "dateModified": "2026-03-31",
         "mainEntity": { "@id": "https://tordar.no/#person" }
       }
     ]

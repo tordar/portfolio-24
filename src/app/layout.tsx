@@ -31,20 +31,20 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
     metadataBase: new URL('https://tordar.no'),
     title: {
-        default: 'Tordar Tømmervik | Web Developer',
+        default: 'Tordar Tømmervik | Full-stack Developer',
         template: '%s | Tordar Tømmervik'
     },
-    description: 'Personal portfolio of Tordar Tømmervik, a web developer specializing in React, Next.js, and modern JavaScript applications.',
-    keywords: 'Tordar, Tordar Tømmervik, web developer, software engineer, React developer, Next.js, JavaScript',
+    description: 'Personal portfolio of Tordar Tømmervik, a full-stack developer specializing in React, Next.js, and modern JavaScript applications.',
+    keywords: 'Tordar, Tordar Tømmervik, full-stack developer, software engineer, React developer, Next.js, JavaScript',
     authors: [{ name: 'Tordar Tømmervik' }],
     creator: 'Tordar Tømmervik',
     openGraph: {
         type: 'website',
         locale: 'en_US',
         url: 'https://tordar.no',
-        title: 'Tordar Tømmervik | Web Developer',
-        description: 'Personal portfolio of Tordar Tømmervik, a web developer specializing in React, Next.js, and modern JavaScript applications.',
-        siteName: 'Tordar Portfolio',
+        title: 'Tordar Tømmervik | Full-stack Developer',
+        description: 'Personal portfolio of Tordar Tømmervik, a full-stack developer specializing in React, Next.js, and modern JavaScript applications.',
+        siteName: 'Tordar Tømmervik',
         images: [
             {
                 url: '/og-image.png',
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Tordar Tømmervik | Web Developer',
-        description: 'Personal portfolio of Tordar Tømmervik, a web developer specializing in React, Next.js, and modern JavaScript applications.',
+        title: 'Tordar Tømmervik | Full-stack Developer',
+        description: 'Personal portfolio of Tordar Tømmervik, a full-stack developer specializing in React, Next.js, and modern JavaScript applications.',
         images: ['/og-image.png'],
     },
     alternates: {
@@ -73,7 +73,6 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning className="dark">
         <head>
-            <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
             <link rel="icon" type="image/x-icon" href="/favicon.ico" />
             <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
             <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

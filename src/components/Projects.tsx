@@ -25,7 +25,7 @@ const tabs: { label: string; value: Category }[] = [
 const projects: Project[] = [
     {
         title: "Pulse",
-        description: "Dashboard to visualise historical listening data from Spotify, integrated with several listening sources. Continously updated with new listening history.",
+        description: "Dashboard to visualise historical listening data from Spotify, integrated with several listening sources. Continuously updated with new listening history.",
         github: "https://github.com/tordar/spotify-pulse-data",
         live: "https://pulse.tordar.no/",
         tags: ["Next.js", "Data Viz"],
