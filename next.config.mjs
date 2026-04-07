@@ -6,7 +6,13 @@ const nextConfig = {
         NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
     },
     images: {
-        domains: ['cdn.sanity.io'],
+        formats: ['image/avif', 'image/webp'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'cdn.sanity.io',
+            },
+        ],
     },
     rewrites: async () => {
         return [

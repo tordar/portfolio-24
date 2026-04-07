@@ -39,8 +39,8 @@ export default function Schema() {
         "@id": "https://tordar.no/#profilepage",
         "url": "https://tordar.no",
         "name": "Tordar Tømmervik | Full-stack Developer",
-        "dateCreated": "2024-01-01",
-        "dateModified": "2026-03-31",
+        "dateCreated": "2024-01-01T00:00:00+00:00",
+        "dateModified": "2026-03-31T00:00:00+00:00",
         "mainEntity": { "@id": "https://tordar.no/#person" }
       }
     ]

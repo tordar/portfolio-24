@@ -73,6 +73,9 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning className="dark">
         <head>
+            <link rel="preconnect" href="https://www.googletagmanager.com" />
+            <link rel="preconnect" href="https://googletagmanager.com" />
+            <link rel="preconnect" href="https://region1.google-analytics.com" />
             <link rel="icon" type="image/x-icon" href="/favicon.ico" />
             <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
             <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -104,13 +107,13 @@ export default function RootLayout({
                 </main>
                 <footer className="border-t border-border py-8 mt-16">
                     <div className="container mx-auto px-4 flex justify-center space-x-6">
-                        <a href="https://github.com/tordar" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                        <a href="https://github.com/tordar" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                             <Github className="h-5 w-5"/>
                         </a>
-                        <a href="https://linkedin.com/in/tordar" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                        <a href="https://linkedin.com/in/tordar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                             <Linkedin className="h-5 w-5"/>
                         </a>
-                        <a href="mailto:tordar.tommervik@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                        <a href="mailto:tordar.tommervik@gmail.com" aria-label="Email" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                             <Mail className="h-5 w-5"/>
                         </a>
                         <a href="https://www.strava.com/athletes/29745314" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
