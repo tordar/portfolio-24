@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Download, Camera, Music, MapPin, Briefcase } from 'lucide-react'
+import { Download, Camera, Music, MapPin, Briefcase, BookOpen } from 'lucide-react'
 
 const profileImage = '/DSC09739.jpeg'
 
@@ -32,6 +32,12 @@ const links = [
         label: 'Spotify Stats',
         href: 'https://pulse.tordar.no/',
         icon: Music,
+        external: true,
+    },
+    {
+        label: 'Blog',
+        href: 'https://blog.tordar.no/',
+        icon: BookOpen,
         external: true,
     },
 ]
@@ -207,7 +213,7 @@ export default function AboutMe() {
                 </div>
 
                 {/* Links */}
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-2 gap-2">
                     {links.map((link) => (
                         <a
                             key={link.label}
