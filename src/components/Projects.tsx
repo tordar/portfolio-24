@@ -24,6 +24,15 @@ const tabs: { label: string; value: Category }[] = [
 
 const projects: Project[] = [
     {
+        title: "AI Daily",
+        description: "Daily AI news digest for developers. Top stories curated automatically by Claude every weekday at 08:00 CET, with weekly and monthly rollups.",
+        github: "https://github.com/tordar/ai-daily",
+        live: "https://ai-daily.dev",
+        tags: ["Astro", "Claude Routines"],
+        image: "/AIDailyScreenshot.png",
+        category: "personal"
+    },
+    {
         title: "Pulse",
         description: "Dashboard to visualise historical listening data from Spotify, integrated with several listening sources. Continuously updated with new listening history.",
         github: "https://github.com/tordar/spotify-pulse-data",
