@@ -103,6 +103,13 @@ const projects: Project[] = [
         category: "professional"
     },
     {
+        title: "Haukebøe Transport",
+        description: "Internal logistics dashboard and planning platform for a Norwegian transportation company. Dedicated Linux NUC firmware to run network based edge functions for order printing.",
+        tags: ["React", "TypeScript", "IoT", "Supabase"],
+        image: "/HaukeboeScreenshot.png",
+        category: "professional"
+    },
+    {
         title: "ezBookkeeping",
         description: "Forked version of popular open source and self hosted finance tracker where I integrated with Enable Banking for direct Norwegian bank integrations, together with iOS shortcut to automate Apple Pay transactions and a web app for manual transactions.",
         github: "https://github.com/tordar/ezbookkeeping",
